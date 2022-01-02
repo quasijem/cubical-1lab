@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+
+<head>
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta name="keywords" content="Agda,categories,topos"></meta>
+
+  <title>Algebra.Semigroup - 1Lab</title>
+
+  <link rel="stylesheet" href="/css/default.css"></link>
+  <link rel="stylesheet" href="/css/katex.min.css"></link>
+  <link rel="stylesheet" href="/css/agda-cats.css"></link>
+
+  <meta name="twitter:card" content="summary"></meta>
+  <meta name="twitter:title" content="Algebra.Semigroup - 1Lab"></meta>
+  <meta name="twitter:image" content="https://cubical.1lab.dev/static/cube-128x.png"></meta>
+
+  <meta name="og:title" content="Algebra.Semigroup - 1Lab"></meta>
+  <meta name="og:image" content="https://cubical.1lab.dev/static/cube-128x.png"></meta>
+  <meta name="og:site-name" content="The 1Lab"></meta>
+  <meta name="og:type" content="website"></meta>
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+  
+  <script src="/equations.js" type="text/javascript"></script> 
+  <script src="/highlight-hover.js" type="text/javascript"></script>
+
+  <noscript>
+    <style>
+      body span.reasoning-step .as-written {
+        display: inline;
+      }
+
+      body span.reasoning-step .alternate {
+        display: none;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+<main>
+<div id="post-toc-container" style="padding-left: 1em; padding-right: 1em;">
+
+  <!-- Table of contents (only if the page has a table of contents) -->
+    <aside id="toc">
+    <div id="toc-container" style="min-width: 10em;">
+      <!-- Title for the page -->
+      <h3 class="Agda" style="margin-top: 0; margin-bottom: 0;">
+                <a class="Module">Algebra.Semigroup</a>
+              </h3>
+
+      <!-- Cube logo -->
+      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto; height: 32px;"></img>
+      
+      <!-- Actual table of contents (separated from the rest by
+      horizontal rules) -->
+      <hr></hr>
+      <ul class="incremental">
+      <li><a href="#semigroups">Semigroups</a>
+      <ul class="incremental">
+      <li><a href="#the-min-semigroup">The “min” semigroup</a></li>
+      </ul></li>
+      </ul>
+      <hr></hr>
+
+      <!-- Sidebar controls -->
+      <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
+        <!-- Sidebar equations control -->
+        <span class="equations" style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
+          <input name="sidebar-eqns" type="checkbox" class="equations" id="sidebar-eqns">
+          <label for="sidebar-eqns">Equations</label>
+        </span>
+
+        <!-- Sidebar fonts control -->
+        <span style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
+          <input name="sidebar-font" type="checkbox" id="toggle-fonts">
+          <label for="toggle-fonts">Serif Font</label>
+        </span>
+      </div>
+
+      <hr></hr>
+
+      <!-- Navbar navigation (lol) -->
+      <div id="return" style="white-space: nowrap;">
+              <a href="index.html">️back to index</a> <br />
+              <a href="all-pages.html">view all pages</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/7478c245ac3ea8c67e02ba3aac5be88e5c31c312/src/Algebra/Semigroup.lagda.md">link to source</a> <br />
+      </div>
+    </div>
+  </aside>
+  
+  <article>
+    <!-- Article navigation (narrow screens only) -->
+    <div class="narrow-only" id="article-nav">
+      <!-- Index return anchor (only if the page is not the index) -->
+            <div id="return">
+        <a href="index.html">️back to index</a>
+      </div>
+      
+      <!-- Font toggle checkbox -->
+      <span class="equations" style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
+        <input name="navbar-eqns" type="checkbox" class="equations" id="navbar-eqns">
+        <label for="navbar-eqns">Equations</label>
+      </span>
+    </div>
+
+<pre class="Agda"><a id="9" class="Keyword">open</a> <a id="14" class="Keyword">import</a> <a id="21" href="1Lab.Prelude.html" class="Module">1Lab.Prelude</a>
+
+<a id="35" class="Keyword">open</a> <a id="40" class="Keyword">import</a> <a id="47" href="Algebra.Magma.html" class="Module">Algebra.Magma</a>
+
+<a id="62" class="Keyword">module</a> <a id="69" href="Algebra.Semigroup.html" class="Module">Algebra.Semigroup</a> <a id="87" class="Keyword">where</a>
+</pre>
+<!--
+<pre class="Agda"><a id="111" class="Keyword">private</a> <a id="119" class="Keyword">variable</a>
+  <a id="130" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a> <a id="132" href="Algebra.Semigroup.html#132" class="Generalizable">ℓ₁</a> <a id="135" class="Symbol">:</a> <a id="137" href="Agda.Primitive.html#597" class="Postulate">Level</a>
+  <a id="145" href="Algebra.Semigroup.html#145" class="Generalizable">A</a> <a id="147" class="Symbol">:</a> <a id="149" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="154" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a>
+</pre>-->
+<h1 id="semigroups">Semigroups</h1>
+<pre class="Agda"><a id="189" class="Keyword">record</a> <a id="isSemigroup"></a><a id="196" href="Algebra.Semigroup.html#196" class="Record">isSemigroup</a> <a id="208" class="Symbol">{</a><a id="209" href="Algebra.Semigroup.html#209" class="Bound">A</a> <a id="211" class="Symbol">:</a> <a id="213" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="218" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a><a id="219" class="Symbol">}</a> <a id="221" class="Symbol">(</a><a id="222" href="Algebra.Semigroup.html#222" class="Bound Operator">_⋆_</a> <a id="226" class="Symbol">:</a> <a id="228" href="Algebra.Semigroup.html#209" class="Bound">A</a> <a id="230" class="Symbol">→</a> <a id="232" href="Algebra.Semigroup.html#209" class="Bound">A</a> <a id="234" class="Symbol">→</a> <a id="236" href="Algebra.Semigroup.html#209" class="Bound">A</a><a id="237" class="Symbol">)</a> <a id="239" class="Symbol">:</a> <a id="241" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="246" href="Algebra.Semigroup.html#218" class="Bound">ℓ</a> <a id="248" class="Keyword">where</a>
+</pre>
+<p>A <strong>semigroup</strong> is an associative <span class="Agda"><a href="Algebra.Magma.html#1405" class="Record">magma</a></span>, that is, a set equipped with a choice of <em>associative</em> binary operation <code>⋆</code>.</p>
+<pre class="Agda">  <a id="411" class="Keyword">field</a>
+    <a id="isSemigroup.hasIsMagma"></a><a id="421" href="Algebra.Semigroup.html#421" class="Field">hasIsMagma</a> <a id="432" class="Symbol">:</a> <a id="434" href="Algebra.Magma.html#1405" class="Record">isMagma</a> <a id="442" href="Algebra.Semigroup.html#222" class="Bound Operator">_⋆_</a>
+    <a id="isSemigroup.associative"></a><a id="450" href="Algebra.Semigroup.html#450" class="Field">associative</a> <a id="462" class="Symbol">:</a> <a id="464" class="Symbol">{</a><a id="465" href="Algebra.Semigroup.html#465" class="Bound">x</a> <a id="467" href="Algebra.Semigroup.html#467" class="Bound">y</a> <a id="469" href="Algebra.Semigroup.html#469" class="Bound">z</a> <a id="471" class="Symbol">:</a> <a id="473" href="Algebra.Semigroup.html#209" class="Bound">A</a><a id="474" class="Symbol">}</a> <a id="476" class="Symbol">→</a> <a id="478" href="Algebra.Semigroup.html#465" class="Bound">x</a> <a id="480" href="Algebra.Semigroup.html#222" class="Bound Operator">⋆</a> <a id="482" class="Symbol">(</a><a id="483" href="Algebra.Semigroup.html#467" class="Bound">y</a> <a id="485" href="Algebra.Semigroup.html#222" class="Bound Operator">⋆</a> <a id="487" href="Algebra.Semigroup.html#469" class="Bound">z</a><a id="488" class="Symbol">)</a> <a id="490" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="492" class="Symbol">(</a><a id="493" href="Algebra.Semigroup.html#465" class="Bound">x</a> <a id="495" href="Algebra.Semigroup.html#222" class="Bound Operator">⋆</a> <a id="497" href="Algebra.Semigroup.html#467" class="Bound">y</a><a id="498" class="Symbol">)</a> <a id="500" href="Algebra.Semigroup.html#222" class="Bound Operator">⋆</a> <a id="502" href="Algebra.Semigroup.html#469" class="Bound">z</a>
+
+  <a id="507" class="Keyword">open</a> <a id="512" href="Algebra.Magma.html#1405" class="Module">isMagma</a> <a id="520" href="Algebra.Semigroup.html#421" class="Field">hasIsMagma</a> <a id="531" class="Keyword">public</a>
+
+<a id="539" class="Keyword">open</a> <a id="544" href="Algebra.Semigroup.html#196" class="Module">isSemigroup</a> <a id="556" class="Keyword">public</a>
+</pre>
+<p>To see why the set truncation is really necessary, it helps to explicitly describe the expected structure of a “∞-semigroup” in terms of the language of higher categories:</p>
+<ul class="incremental">
+<li><p>An ∞-groupoid <code>A</code>, equipped with</p></li>
+<li><p>A map <code>_⋆_ : A → A → A</code>, such that</p></li>
+<li><p><code>⋆</code> is <em>associative</em>: there exists an invertible 2-morphism <code>α : A ⋆ (B ⋆ C) ≡ (A ⋆ B) ⋆ C</code> (called the associator), satisfying</p></li>
+<li><p>The <em>pentagon identity</em>, i.e. there is an equality <code>π</code> (the pentagonator) witnessing commutativity of the diagram below, where all the faces are <code>α</code>:</p></li>
+</ul>
+<div class="diagram-container"> <img title="commutative diagram" src="687504fbf2db792e032abcbfc7737e81.svg" class="diagram  quiver tall-2"></img> </div>
+<ul class="incremental">
+<li>The pentagonator satisfies its own coherence law, which looks like the Stasheff polytope <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">K_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and so on, “all the way up to infinity”.</li>
+</ul>
+<p>By explicitly asking that <code>A</code> be truncated at the level of sets, we have that the associator automatically satisfies the pentagon identity - because all parallel paths in a set are equal. Furthermore, by the upwards closure of h-levels, any further coherence condition you could dream up and write down for these morphisms is automatically satisfied.</p>
+<p>As a consequence of this truncation, we get that being a semigroup operator is a <em>property</em> of the operator:</p>
+<pre class="Agda"><a id="isProp-isSemigroup"></a><a id="2177" href="Algebra.Semigroup.html#2177" class="Function">isProp-isSemigroup</a> <a id="2196" class="Symbol">:</a> <a id="2198" class="Symbol">{</a><a id="2199" href="Algebra.Semigroup.html#2199" class="Bound Operator">_⋆_</a> <a id="2203" class="Symbol">:</a> <a id="2205" href="Algebra.Semigroup.html#145" class="Generalizable">A</a> <a id="2207" class="Symbol">→</a> <a id="2209" href="Algebra.Semigroup.html#145" class="Generalizable">A</a> <a id="2211" class="Symbol">→</a> <a id="2213" href="Algebra.Semigroup.html#145" class="Generalizable">A</a><a id="2214" class="Symbol">}</a> <a id="2216" class="Symbol">→</a> <a id="2218" href="1Lab.HLevel.html#2594" class="Function">isProp</a> <a id="2225" class="Symbol">(</a><a id="2226" href="Algebra.Semigroup.html#196" class="Record">isSemigroup</a> <a id="2238" href="Algebra.Semigroup.html#2199" class="Bound Operator">_⋆_</a><a id="2241" class="Symbol">)</a>
+<a id="2243" href="Algebra.Semigroup.html#2177" class="Function">isProp-isSemigroup</a> <a id="2262" href="Algebra.Semigroup.html#2262" class="Bound">x</a> <a id="2264" href="Algebra.Semigroup.html#2264" class="Bound">y</a> <a id="2266" href="Algebra.Semigroup.html#2266" class="Bound">i</a> <a id="2268" class="Symbol">.</a><a id="2269" href="Algebra.Semigroup.html#421" class="Field">hasIsMagma</a> <a id="2280" class="Symbol">=</a> <a id="2282" href="Algebra.Magma.html#2067" class="Function">isProp-isMagma</a> <a id="2297" class="Symbol">(</a><a id="2298" href="Algebra.Semigroup.html#2262" class="Bound">x</a> <a id="2300" class="Symbol">.</a><a id="2301" href="Algebra.Semigroup.html#421" class="Field">hasIsMagma</a><a id="2311" class="Symbol">)</a> <a id="2313" class="Symbol">(</a><a id="2314" href="Algebra.Semigroup.html#2264" class="Bound">y</a> <a id="2316" class="Symbol">.</a><a id="2317" href="Algebra.Semigroup.html#421" class="Field">hasIsMagma</a><a id="2327" class="Symbol">)</a> <a id="2329" href="Algebra.Semigroup.html#2266" class="Bound">i</a>
+<a id="2331" href="Algebra.Semigroup.html#2177" class="Function">isProp-isSemigroup</a> <a id="2350" class="Symbol">{</a><a id="2351" class="Argument">_⋆_</a> <a id="2355" class="Symbol">=</a> <a id="2357" href="Algebra.Semigroup.html#2357" class="Bound Operator">_⋆_</a><a id="2360" class="Symbol">}</a> <a id="2362" href="Algebra.Semigroup.html#2362" class="Bound">x</a> <a id="2364" href="Algebra.Semigroup.html#2364" class="Bound">y</a> <a id="2366" href="Algebra.Semigroup.html#2366" class="Bound">i</a> <a id="2368" class="Symbol">.</a><a id="2369" href="Algebra.Semigroup.html#450" class="Field">associative</a> <a id="2381" class="Symbol">{</a><a id="2382" href="Algebra.Semigroup.html#2382" class="Bound">a</a><a id="2383" class="Symbol">}</a> <a id="2385" class="Symbol">{</a><a id="2386" href="Algebra.Semigroup.html#2386" class="Bound">b</a><a id="2387" class="Symbol">}</a> <a id="2389" class="Symbol">{</a><a id="2390" href="Algebra.Semigroup.html#2390" class="Bound">c</a><a id="2391" class="Symbol">}</a> <a id="2393" class="Symbol">=</a>
+  <a id="2397" href="Algebra.Semigroup.html#2362" class="Bound">x</a> <a id="2399" class="Symbol">.</a><a id="2400" href="Algebra.Magma.html#1615" class="Field">hasIsSet</a> <a id="2409" class="Symbol">(</a><a id="2410" href="Algebra.Semigroup.html#2382" class="Bound">a</a> <a id="2412" href="Algebra.Semigroup.html#2357" class="Bound Operator">⋆</a> <a id="2414" class="Symbol">(</a><a id="2415" href="Algebra.Semigroup.html#2386" class="Bound">b</a> <a id="2417" href="Algebra.Semigroup.html#2357" class="Bound Operator">⋆</a> <a id="2419" href="Algebra.Semigroup.html#2390" class="Bound">c</a><a id="2420" class="Symbol">))</a> <a id="2423" class="Symbol">((</a><a id="2425" href="Algebra.Semigroup.html#2382" class="Bound">a</a> <a id="2427" href="Algebra.Semigroup.html#2357" class="Bound Operator">⋆</a> <a id="2429" href="Algebra.Semigroup.html#2386" class="Bound">b</a><a id="2430" class="Symbol">)</a> <a id="2432" href="Algebra.Semigroup.html#2357" class="Bound Operator">⋆</a> <a id="2434" href="Algebra.Semigroup.html#2390" class="Bound">c</a><a id="2435" class="Symbol">)</a> <a id="2437" class="Symbol">(</a><a id="2438" href="Algebra.Semigroup.html#2362" class="Bound">x</a> <a id="2440" class="Symbol">.</a><a id="2441" href="Algebra.Semigroup.html#450" class="Field">associative</a><a id="2452" class="Symbol">)</a> <a id="2454" class="Symbol">(</a><a id="2455" href="Algebra.Semigroup.html#2364" class="Bound">y</a> <a id="2457" class="Symbol">.</a><a id="2458" href="Algebra.Semigroup.html#450" class="Field">associative</a><a id="2469" class="Symbol">)</a> <a id="2471" href="Algebra.Semigroup.html#2366" class="Bound">i</a>
+</pre>
+<p>A <strong>semigroup structure on</strong> a type packages up the binary operation and the axiom in a way equivalent to a <span class="Agda"><a href="1Lab.Univalence.SIP.html#1977" class="Record">structure</a></span>.</p>
+<pre class="Agda"><a id="SemigroupOn"></a><a id="2631" href="Algebra.Semigroup.html#2631" class="Function">SemigroupOn</a> <a id="2643" class="Symbol">:</a> <a id="2645" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="2650" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a> <a id="2652" class="Symbol">→</a> <a id="2654" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="2659" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a>
+<a id="2661" href="Algebra.Semigroup.html#2631" class="Function">SemigroupOn</a> <a id="2673" href="Algebra.Semigroup.html#2673" class="Bound">X</a> <a id="2675" class="Symbol">=</a> <a id="2677" href="1Lab.Type.html#1563" class="Function">Σ</a> <a id="2679" class="Symbol">(</a><a id="2680" href="Algebra.Semigroup.html#196" class="Record">isSemigroup</a> <a id="2692" class="Symbol">{</a><a id="2693" class="Argument">A</a> <a id="2695" class="Symbol">=</a> <a id="2697" href="Algebra.Semigroup.html#2673" class="Bound">X</a><a id="2698" class="Symbol">})</a>
+</pre>
+<p><span class="Agda"><a href="Algebra.Semigroup.html#2631" class="Function">SemigroupOn</a></span> is a univalent structure, because it is equivalent to a structure expressed as a <span class="Agda"><a href="1Lab.Univalence.SIP.html#27667" class="Record">structure description</a></span>. This is only the case because <span class="Agda"><a href="Algebra.Semigroup.html#196" class="Record">isSemigroup</a></span> is a proposition, i.e. <span class="Agda"><a href="Algebra.Semigroup.html#2631" class="Function">SemigroupOn</a></span> can be expressed as a “structure part” (the binary operation) and an “axiom part” (the associativity)!</p>
+<pre class="Agda"><a id="3062" class="Keyword">module</a> <a id="3069" href="Algebra.Semigroup.html#3069" class="Module">_</a> <a id="3071" class="Keyword">where</a>
+  <a id="3079" class="Keyword">private</a>
+    <a id="3091" href="Algebra.Semigroup.html#3091" class="Function">sg-desc</a> <a id="3099" class="Symbol">:</a> <a id="3101" href="1Lab.Univalence.SIP.html#27667" class="Record">StrDesc</a> <a id="3109" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a> <a id="3111" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a> <a id="3113" class="Symbol">(λ</a> <a id="3116" href="Algebra.Semigroup.html#3116" class="Bound">X</a> <a id="3118" class="Symbol">→</a> <a id="3120" class="Symbol">(</a><a id="3121" href="Algebra.Semigroup.html#3116" class="Bound">X</a> <a id="3123" class="Symbol">→</a> <a id="3125" href="Algebra.Semigroup.html#3116" class="Bound">X</a> <a id="3127" class="Symbol">→</a> <a id="3129" href="Algebra.Semigroup.html#3116" class="Bound">X</a><a id="3130" class="Symbol">))</a> <a id="3133" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a>
+    <a id="3139" href="Algebra.Semigroup.html#3091" class="Function">sg-desc</a> <a id="3147" class="Symbol">.</a><a id="3148" href="1Lab.Univalence.SIP.html#27711" class="Field">StrDesc.descriptor</a> <a id="3167" class="Symbol">=</a> <a id="3169" href="1Lab.Univalence.SIP.html#24128" class="InductiveConstructor">s∙</a> <a id="3172" href="1Lab.Univalence.SIP.html#24160" class="InductiveConstructor Operator">s→</a> <a id="3175" class="Symbol">(</a><a id="3176" href="1Lab.Univalence.SIP.html#24128" class="InductiveConstructor">s∙</a> <a id="3179" href="1Lab.Univalence.SIP.html#24160" class="InductiveConstructor Operator">s→</a> <a id="3182" href="1Lab.Univalence.SIP.html#24128" class="InductiveConstructor">s∙</a><a id="3184" class="Symbol">)</a>
+    <a id="3190" href="Algebra.Semigroup.html#3091" class="Function">sg-desc</a> <a id="3198" class="Symbol">.</a><a id="3199" href="1Lab.Univalence.SIP.html#27742" class="Field">StrDesc.axioms</a> <a id="3214" href="Algebra.Semigroup.html#3214" class="Bound">X</a> <a id="3216" class="Symbol">=</a> <a id="3218" href="Algebra.Semigroup.html#196" class="Record">isSemigroup</a>
+    <a id="3234" href="Algebra.Semigroup.html#3091" class="Function">sg-desc</a> <a id="3242" class="Symbol">.</a><a id="3243" href="1Lab.Univalence.SIP.html#27775" class="Field">StrDesc.axioms-prop</a> <a id="3263" href="Algebra.Semigroup.html#3263" class="Bound">X</a> <a id="3265" href="Algebra.Semigroup.html#3265" class="Bound">s</a> <a id="3267" class="Symbol">=</a> <a id="3269" href="Algebra.Semigroup.html#2177" class="Function">isProp-isSemigroup</a>
+
+  <a id="3291" href="Algebra.Semigroup.html#3291" class="Function">SemigroupStr</a> <a id="3304" class="Symbol">:</a> <a id="3306" href="1Lab.Univalence.SIP.html#1977" class="Record">Structure</a> <a id="3316" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a> <a id="3318" class="Symbol">(</a><a id="3319" href="Algebra.Semigroup.html#2631" class="Function">SemigroupOn</a> <a id="3331" class="Symbol">{</a><a id="3332" class="Argument">ℓ</a> <a id="3334" class="Symbol">=</a> <a id="3336" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a><a id="3337" class="Symbol">})</a>
+  <a id="3342" href="Algebra.Semigroup.html#3291" class="Function">SemigroupStr</a> <a id="3355" class="Symbol">=</a> <a id="3357" href="1Lab.Univalence.SIP.html#27955" class="Function">Desc→Str</a> <a id="3366" href="Algebra.Semigroup.html#3091" class="Function">sg-desc</a>
+
+  <a id="3377" href="Algebra.Semigroup.html#3377" class="Function">SemigroupStr-univ</a> <a id="3395" class="Symbol">:</a> <a id="3397" href="1Lab.Univalence.SIP.html#3864" class="Function">isUnivalent</a> <a id="3409" class="Symbol">(</a><a id="3410" href="Algebra.Semigroup.html#3291" class="Function">SemigroupStr</a> <a id="3423" class="Symbol">{</a><a id="3424" class="Argument">ℓ</a> <a id="3426" class="Symbol">=</a> <a id="3428" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a><a id="3429" class="Symbol">})</a>
+  <a id="3434" href="Algebra.Semigroup.html#3377" class="Function">SemigroupStr-univ</a> <a id="3452" class="Symbol">=</a> <a id="3454" href="1Lab.Univalence.SIP.html#28112" class="Function">Desc→isUnivalent</a> <a id="3471" href="Algebra.Semigroup.html#3091" class="Function">sg-desc</a>
+</pre>
+<p>One can check that the notion of semigroup homomorphism generated by <span class="Agda"><a href="Algebra.Semigroup.html#3291" class="Function">SemigroupStr</a></span> corresponds exactly to the expected definition, and does not have any superfluous information:</p>
+<pre class="Agda"><a id="3679" class="Keyword">module</a> <a id="3686" href="Algebra.Semigroup.html#3686" class="Module">_</a>
+  <a id="3690" class="Symbol">{</a><a id="3691" href="Algebra.Semigroup.html#3691" class="Bound">A</a> <a id="3693" class="Symbol">:</a> <a id="3695" href="1Lab.Type.html#394" class="Primitive">Type</a><a id="3699" class="Symbol">}</a> <a id="3701" class="Symbol">{</a><a id="3702" href="Algebra.Semigroup.html#3702" class="Bound Operator">_⋆_</a> <a id="3706" class="Symbol">:</a> <a id="3708" href="Algebra.Semigroup.html#3691" class="Bound">A</a> <a id="3710" class="Symbol">→</a> <a id="3712" href="Algebra.Semigroup.html#3691" class="Bound">A</a> <a id="3714" class="Symbol">→</a> <a id="3716" href="Algebra.Semigroup.html#3691" class="Bound">A</a><a id="3717" class="Symbol">}</a> <a id="3719" class="Symbol">{</a><a id="3720" href="Algebra.Semigroup.html#3720" class="Bound">as</a> <a id="3723" class="Symbol">:</a> <a id="3725" href="Algebra.Semigroup.html#196" class="Record">isSemigroup</a> <a id="3737" href="Algebra.Semigroup.html#3702" class="Bound Operator">_⋆_</a><a id="3740" class="Symbol">}</a>
+  <a id="3744" class="Symbol">{</a><a id="3745" href="Algebra.Semigroup.html#3745" class="Bound">B</a> <a id="3747" class="Symbol">:</a> <a id="3749" href="1Lab.Type.html#394" class="Primitive">Type</a><a id="3753" class="Symbol">}</a> <a id="3755" class="Symbol">{</a><a id="3756" href="Algebra.Semigroup.html#3756" class="Bound Operator">_*_</a> <a id="3760" class="Symbol">:</a> <a id="3762" href="Algebra.Semigroup.html#3745" class="Bound">B</a> <a id="3764" class="Symbol">→</a> <a id="3766" href="Algebra.Semigroup.html#3745" class="Bound">B</a> <a id="3768" class="Symbol">→</a> <a id="3770" href="Algebra.Semigroup.html#3745" class="Bound">B</a><a id="3771" class="Symbol">}</a> <a id="3773" class="Symbol">{</a><a id="3774" href="Algebra.Semigroup.html#3774" class="Bound">bs</a> <a id="3777" class="Symbol">:</a> <a id="3779" href="Algebra.Semigroup.html#196" class="Record">isSemigroup</a> <a id="3791" href="Algebra.Semigroup.html#3756" class="Bound Operator">_*_</a><a id="3794" class="Symbol">}</a>
+  <a id="3798" class="Symbol">{</a><a id="3799" href="Algebra.Semigroup.html#3799" class="Bound">f</a> <a id="3801" class="Symbol">:</a> <a id="3803" href="Algebra.Semigroup.html#3691" class="Bound">A</a> <a id="3805" href="1Lab.Equiv.html#2442" class="Function Operator">≃</a> <a id="3807" href="Algebra.Semigroup.html#3745" class="Bound">B</a><a id="3808" class="Symbol">}</a>
+  <a id="3812" class="Keyword">where</a>
+
+  <a id="3821" href="Algebra.Semigroup.html#3821" class="Function">_</a> <a id="3823" class="Symbol">:</a> <a id="3825" href="Algebra.Semigroup.html#3291" class="Function">SemigroupStr</a> <a id="3838" class="Symbol">.</a><a id="3839" href="1Lab.Univalence.SIP.html#2905" class="Field">is-hom</a> <a id="3846" class="Symbol">(</a><a id="3847" href="Algebra.Semigroup.html#3691" class="Bound">A</a> <a id="3849" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a id="3851" href="Algebra.Semigroup.html#3702" class="Bound Operator">_⋆_</a> <a id="3855" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a id="3857" href="Algebra.Semigroup.html#3720" class="Bound">as</a><a id="3859" class="Symbol">)</a> <a id="3861" class="Symbol">(</a><a id="3862" href="Algebra.Semigroup.html#3745" class="Bound">B</a> <a id="3864" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a id="3866" href="Algebra.Semigroup.html#3756" class="Bound Operator">_*_</a> <a id="3870" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a id="3872" href="Algebra.Semigroup.html#3774" class="Bound">bs</a><a id="3874" class="Symbol">)</a> <a id="3876" href="Algebra.Semigroup.html#3799" class="Bound">f</a>
+    <a id="3882" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="3884" class="Symbol">(</a> <a id="3886" class="Symbol">(</a><a id="3887" href="Algebra.Semigroup.html#3887" class="Bound">x</a> <a id="3889" href="Algebra.Semigroup.html#3889" class="Bound">y</a> <a id="3891" class="Symbol">:</a> <a id="3893" href="Algebra.Semigroup.html#3691" class="Bound">A</a><a id="3894" class="Symbol">)</a> <a id="3896" class="Symbol">→</a> <a id="3898" href="Algebra.Semigroup.html#3799" class="Bound">f</a> <a id="3900" class="Symbol">.</a><a id="3901" href="Agda.Builtin.Sigma.html#252" class="Field">fst</a> <a id="3905" class="Symbol">(</a><a id="3906" href="Algebra.Semigroup.html#3887" class="Bound">x</a> <a id="3908" href="Algebra.Semigroup.html#3702" class="Bound Operator">⋆</a> <a id="3910" href="Algebra.Semigroup.html#3889" class="Bound">y</a><a id="3911" class="Symbol">)</a> <a id="3913" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="3915" class="Symbol">(</a><a id="3916" href="Algebra.Semigroup.html#3799" class="Bound">f</a> <a id="3918" class="Symbol">.</a><a id="3919" href="Agda.Builtin.Sigma.html#252" class="Field">fst</a> <a id="3923" href="Algebra.Semigroup.html#3887" class="Bound">x</a><a id="3924" class="Symbol">)</a> <a id="3926" href="Algebra.Semigroup.html#3756" class="Bound Operator">*</a> <a id="3928" class="Symbol">(</a><a id="3929" href="Algebra.Semigroup.html#3799" class="Bound">f</a> <a id="3931" class="Symbol">.</a><a id="3932" href="Agda.Builtin.Sigma.html#252" class="Field">fst</a> <a id="3936" href="Algebra.Semigroup.html#3889" class="Bound">y</a><a id="3937" class="Symbol">))</a>
+  <a id="3942" class="Symbol">_</a> <a id="3944" class="Symbol">=</a> <a id="3946" href="1Lab.Path.html#2137" class="Function">refl</a>
+</pre>
+<h2 id="the-min-semigroup">The “min” semigroup</h2>
+<p>An example of a naturally-occuring semigroup are the natural numbers under taking <span class="Agda"><a href="Data.Nat.Base.html#5580" class="Function">minimums</a></span>.</p>
+<pre class="Agda"><a id="4101" class="Keyword">open</a> <a id="4106" class="Keyword">import</a> <a id="4113" href="Data.Nat.html" class="Module">Data.Nat</a>
+
+<a id="Nat-min"></a><a id="4123" href="Algebra.Semigroup.html#4123" class="Function">Nat-min</a> <a id="4131" class="Symbol">:</a> <a id="4133" href="Algebra.Semigroup.html#196" class="Record">isSemigroup</a> <a id="4145" href="Data.Nat.Base.html#5580" class="Function">min</a>
+<a id="4149" href="Algebra.Semigroup.html#4123" class="Function">Nat-min</a> <a id="4157" class="Symbol">.</a><a id="4158" href="Algebra.Semigroup.html#421" class="Field">hasIsMagma</a> <a id="4169" class="Symbol">.</a><a id="4170" href="Algebra.Magma.html#1615" class="Field">hasIsSet</a> <a id="4179" class="Symbol">=</a> <a id="4181" href="Data.Nat.Base.html#2528" class="Function">isSet-Nat</a>
+<a id="4191" href="Algebra.Semigroup.html#4123" class="Function">Nat-min</a> <a id="4199" class="Symbol">.</a><a id="4200" href="Algebra.Semigroup.html#450" class="Field">associative</a> <a id="4212" class="Symbol">=</a> <a id="4214" href="Data.Nat.Properties.html#7873" class="Function">min-assoc</a> <a id="4224" class="Symbol">_</a> <a id="4226" class="Symbol">_</a> <a id="4228" class="Symbol">_</a>
+</pre>
+<p>What is meant by “naturally occuring” is that this semigroup can not be made into a monoid: There is no natural number <code>unit</code> such that, for all <code>y</code>, <code>min unit y ≡ y</code> and <code>min y unit ≡ y</code>.</p>
+<pre class="Agda"><a id="4433" class="Keyword">private</a>
+  <a id="min-no-id"></a><a id="4443" href="Algebra.Semigroup.html#4443" class="Function">min-no-id</a> <a id="4453" class="Symbol">:</a> <a id="4455" class="Symbol">(</a><a id="4456" href="Algebra.Semigroup.html#4456" class="Bound">unit</a> <a id="4461" class="Symbol">:</a> <a id="4463" href="Agda.Builtin.Nat.html#192" class="Datatype">Nat</a><a id="4466" class="Symbol">)</a> <a id="4468" class="Symbol">→</a> <a id="4470" class="Symbol">((</a><a id="4472" href="Algebra.Semigroup.html#4472" class="Bound">y</a> <a id="4474" class="Symbol">:</a> <a id="4476" href="Agda.Builtin.Nat.html#192" class="Datatype">Nat</a><a id="4479" class="Symbol">)</a> <a id="4481" class="Symbol">→</a> <a id="4483" href="Data.Nat.Base.html#5580" class="Function">min</a> <a id="4487" href="Algebra.Semigroup.html#4456" class="Bound">unit</a> <a id="4492" href="Algebra.Semigroup.html#4472" class="Bound">y</a> <a id="4494" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="4496" href="Algebra.Semigroup.html#4472" class="Bound">y</a><a id="4497" class="Symbol">)</a> <a id="4499" class="Symbol">→</a> <a id="4501" href="1Lab.Type.html#1326" class="Datatype">⊥</a>
+  <a id="4505" href="Algebra.Semigroup.html#4443" class="Function">min-no-id</a> <a id="4515" href="Algebra.Semigroup.html#4515" class="Bound">x</a> <a id="4517" href="Algebra.Semigroup.html#4517" class="Bound">id</a> <a id="4520" class="Symbol">=</a>
+    <a id="4526" class="Keyword">let</a>
+      <a id="4536" href="Algebra.Semigroup.html#4536" class="Bound">sucx≤x</a> <a id="4543" class="Symbol">:</a> <a id="4545" href="Agda.Builtin.Nat.html#223" class="InductiveConstructor">suc</a> <a id="4549" href="Algebra.Semigroup.html#4515" class="Bound">x</a> <a id="4551" href="Data.Nat.Base.html#3681" class="Function Operator">≤</a> <a id="4553" href="Algebra.Semigroup.html#4515" class="Bound">x</a>
+      <a id="4561" href="Algebra.Semigroup.html#4536" class="Bound">sucx≤x</a> <a id="4568" class="Symbol">=</a> <a id="4570" href="1Lab.Path.html#13853" class="Function">subst</a> <a id="4576" class="Symbol">(λ</a> <a id="4579" href="Algebra.Semigroup.html#4579" class="Bound">e</a> <a id="4581" class="Symbol">→</a> <a id="4583" href="Algebra.Semigroup.html#4579" class="Bound">e</a> <a id="4585" href="Data.Nat.Base.html#3681" class="Function Operator">≤</a> <a id="4587" href="Algebra.Semigroup.html#4515" class="Bound">x</a><a id="4588" class="Symbol">)</a> <a id="4590" class="Symbol">(</a><a id="4591" href="Algebra.Semigroup.html#4517" class="Bound">id</a> <a id="4594" class="Symbol">(</a><a id="4595" href="Agda.Builtin.Nat.html#223" class="InductiveConstructor">suc</a> <a id="4599" href="Algebra.Semigroup.html#4515" class="Bound">x</a><a id="4600" class="Symbol">))</a> <a id="4603" class="Symbol">(</a><a id="4604" href="Data.Nat.Properties.html#8248" class="Function">min-≤ˡ</a> <a id="4611" href="Algebra.Semigroup.html#4515" class="Bound">x</a> <a id="4613" class="Symbol">(</a><a id="4614" href="Agda.Builtin.Nat.html#223" class="InductiveConstructor">suc</a> <a id="4618" href="Algebra.Semigroup.html#4515" class="Bound">x</a><a id="4619" class="Symbol">))</a>
+    <a id="4626" class="Keyword">in</a> <a id="4629" href="Data.Nat.Properties.html#5459" class="Function">¬sucx≤x</a> <a id="4637" href="Algebra.Semigroup.html#4515" class="Bound">x</a> <a id="4639" href="Algebra.Semigroup.html#4536" class="Bound">sucx≤x</a>
+</pre>
+  </article>
+</div>
+
+</main>
+</body>
+<style>.equations { display: none !important; }</style></html>

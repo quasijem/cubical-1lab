@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+
+<head>
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta name="keywords" content="Agda,categories,topos"></meta>
+
+  <title>index - 1Lab</title>
+
+  <link rel="stylesheet" href="/css/default.css"></link>
+  <link rel="stylesheet" href="/css/katex.min.css"></link>
+  <link rel="stylesheet" href="/css/agda-cats.css"></link>
+
+  <meta name="twitter:card" content="summary"></meta>
+  <meta name="twitter:title" content="index - 1Lab"></meta>
+  <meta name="twitter:image" content="https://cubical.1lab.dev/static/cube-128x.png"></meta>
+
+  <meta name="og:title" content="index - 1Lab"></meta>
+  <meta name="og:image" content="https://cubical.1lab.dev/static/cube-128x.png"></meta>
+  <meta name="og:site-name" content="The 1Lab"></meta>
+  <meta name="og:type" content="website"></meta>
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+  
+  <script src="/equations.js" type="text/javascript"></script> 
+  <script src="/highlight-hover.js" type="text/javascript"></script>
+
+  <noscript>
+    <style>
+      body span.reasoning-step .as-written {
+        display: inline;
+      }
+
+      body span.reasoning-step .alternate {
+        display: none;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+<main>
+<div id="post-toc-container" style="padding-left: 1em; padding-right: 1em;">
+
+  <!-- Table of contents (only if the page has a table of contents) -->
+    <aside id="toc">
+    <div id="toc-container" style="min-width: 10em;">
+      <!-- Title for the page -->
+      <h3 class="Agda" style="margin-top: 0; margin-bottom: 0;">
+                <a class="Module">index</a>
+              </h3>
+
+      <!-- Cube logo -->
+      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto; height: 32px;"></img>
+      
+      <!-- Actual table of contents (separated from the rest by
+      horizontal rules) -->
+      <hr></hr>
+      <ul class="incremental">
+      <li><a href="#cubical-1lab">Cubical 1lab</a>
+      <ul class="incremental">
+      <li><a href="#about">About</a></li>
+      <li><a href="#technology">Technology</a></li>
+      </ul></li>
+      <li><a href="#type-theory">Type Theory</a>
+      <ul class="incremental">
+      <li><a href="#data-types">Data types</a></li>
+      </ul></li>
+      <li><a href="#algebra">Algebra</a></li>
+      </ul>
+      <hr></hr>
+
+      <!-- Sidebar controls -->
+      <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
+        <!-- Sidebar equations control -->
+        <span class="equations" style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
+          <input name="sidebar-eqns" type="checkbox" class="equations" id="sidebar-eqns">
+          <label for="sidebar-eqns">Equations</label>
+        </span>
+
+        <!-- Sidebar fonts control -->
+        <span style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
+          <input name="sidebar-font" type="checkbox" id="toggle-fonts">
+          <label for="toggle-fonts">Serif Font</label>
+        </span>
+      </div>
+
+      <hr></hr>
+
+      <!-- Navbar navigation (lol) -->
+      <div id="return" style="white-space: nowrap;">
+              <a href="index.html">️back to index</a> <br />
+              <a href="all-pages.html">view all pages</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/7478c245ac3ea8c67e02ba3aac5be88e5c31c312/src/index.lagda.md">link to source</a> <br />
+      </div>
+    </div>
+  </aside>
+  
+  <article>
+    <!-- Article navigation (narrow screens only) -->
+    <div class="narrow-only" id="article-nav">
+      <!-- Index return anchor (only if the page is not the index) -->
+            <div id="return">
+        <a href="index.html">️back to index</a>
+      </div>
+      
+      <!-- Font toggle checkbox -->
+      <span class="equations" style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
+        <input name="navbar-eqns" type="checkbox" class="equations" id="navbar-eqns">
+        <label for="navbar-eqns">Equations</label>
+      </span>
+    </div>
+
+<pre class="Agda"><a id="9" class="Keyword">module</a> <a id="16" href="index.html" class="Module">index</a> <a id="22" class="Keyword">where</a>
+</pre>
+<h1 style="margin-top: 0;" id="cubical-1lab">Cubical 1lab</h1>
+<p>A formalised, cross-linked reference resource for mathematics done in Homotopy Type Theory. Unlike the <a href="https://homotopytypetheory.org/book/">HoTT book</a>, the 1lab is not a “linear” resource: Concepts are presented as a directed graph, with links indicating <em>dependencies</em>. For instance, the statement of the univalence axiom depends on <a href="1Lab.Type.html"><em>universes</em></a>, <a href="1Lab.Path.html"><em>propositional equality</em></a> (paths) and <a href="1Lab.Equiv.html"><em>equivalences</em></a>:</p>
+<!--
+<pre class="Agda"><a id="564" class="Keyword">open</a> <a id="569" class="Keyword">import</a> <a id="576" href="1Lab.Type.html" class="Module">1Lab.Type</a>
+<a id="586" class="Keyword">open</a> <a id="591" class="Keyword">import</a> <a id="598" href="1Lab.Equiv.html" class="Module">1Lab.Equiv</a>
+<a id="609" class="Keyword">open</a> <a id="614" class="Keyword">import</a> <a id="621" href="1Lab.Path.html" class="Module">1Lab.Path</a>
+<a id="631" class="Keyword">open</a> <a id="636" class="Keyword">import</a> <a id="643" href="1Lab.Univalence.html" class="Module">1Lab.Univalence</a>
+<a id="659" class="Keyword">open</a> <a id="664" class="Keyword">import</a> <a id="671" href="1Lab.HLevel.html" class="Module">1Lab.HLevel</a>
+</pre>-->
+<pre class="Agda"><a id="700" href="index.html#700" class="Function">_</a> <a id="702" class="Symbol">:</a> <a id="704" class="Symbol">∀</a> <a id="706" class="Symbol">{</a><a id="707" href="index.html#707" class="Bound">ℓ</a><a id="708" class="Symbol">}</a> <a id="710" class="Symbol">{</a><a id="711" href="index.html#711" class="Bound">A</a> <a id="713" href="index.html#713" class="Bound">B</a> <a id="715" class="Symbol">:</a> <a id="717" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="722" href="index.html#707" class="Bound">ℓ</a><a id="723" class="Symbol">}</a> <a id="725" class="Symbol">→</a> <a id="727" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a> <a id="735" class="Symbol">(</a><a id="736" href="1Lab.Univalence.html#11007" class="Function">pathToEquiv</a> <a id="748" class="Symbol">{</a><a id="749" class="Argument">A</a> <a id="751" class="Symbol">=</a> <a id="753" href="index.html#711" class="Bound">A</a><a id="754" class="Symbol">}</a> <a id="756" class="Symbol">{</a><a id="757" href="index.html#713" class="Bound">B</a><a id="758" class="Symbol">})</a>
+<a id="761" class="Symbol">_</a> <a id="763" class="Symbol">=</a> <a id="765" href="1Lab.Univalence.html#11327" class="Function">univalence</a>
+</pre>
+<p>If you don’t know what those concepts refer to, it could be challenging to figure out what the definition above is even saying - or how it’s proven. Fortunately, every single element there is a link! Try clicking on the word <span class="Agda"><a href="1Lab.Equiv.html#2293" class="Record">isEquiv</a></span> - either here in the text, or there in the code. It’ll take you to the definition, which will be highlighted in orange to draw your attention.</p>
+<p>Links are colour-coded to indicate what they point to. In body text, links rendered in <a href="index.html">blue (or purple) sans-serif font</a> link to <em>pages</em>; Links rendered in one of the syntax highlighting colours and <code class="sourceCode agda" data-ident="Category">monospace</code> link to a <em>definition</em>. Specifically, the following colours are used:</p>
+<ul class="incremental">
+<li><p>Blue for records and functions: <span class="Agda"><a href="1Lab.Equiv.html#2293" class="Record">isEquiv</a></span>, <span class="Agda"><a href="1Lab.Path.html#9128" class="Function">sym</a></span></p></li>
+<li><p>Green for inductive constructors, coinductive constructors, and the endpoints of the interval: <span class="Agda"><a href="Agda.Primitive.Cubical.html#143" class="InductiveConstructor">i0</a></span></p></li>
+<li><p>Maroon for modules: <span class="Agda"><a href="1Lab.Type.html" class="Module">1Lab.Type</a></span></p></li>
+<li><p>Purple for record selectors: <span class="Agda"><a href="1Lab.Equiv.html#2382" class="Field">isEqv</a></span></p></li>
+</ul>
+<!--
+<pre class="Agda"><a id="1784" href="index.html#1784" class="Function">_</a> <a id="1786" class="Symbol">=</a> <a id="1788" href="Agda.Primitive.Cubical.html#143" class="InductiveConstructor">i0</a>
+<a id="1791" href="index.html#1791" class="Function">_</a> <a id="1793" class="Symbol">=</a> <a id="1795" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a>
+<a id="1803" href="index.html#1803" class="Function">_</a> <a id="1805" class="Symbol">=</a> <a id="1807" href="1Lab.Equiv.html#2382" class="Field">isEquiv.isEqv</a>
+<a id="1821" href="index.html#1821" class="Function">_</a> <a id="1823" class="Symbol">=</a> <a id="1825" href="1Lab.Path.html#9128" class="Function">sym</a>
+</pre>-->
+<h2 id="about">About</h2>
+<p>The 1lab is an <a href="https://github.com/plt-amy/cubical-1lab">open-source</a> project with the goal of making formalised mathematics, and especially formalised mathematics done in Homotopy Type Theory, accessible to as wide as audience as possible. However, the pages here still do assume a baseline level of knowledge: Nothing specific to HoTT, but familiarity with MLTT, especially with Agda, is helpful.</p>
+<p>Contributions are, of course, welcome! If you need help getting set up, want to discuss a contribution, or just ask a question, <a href="https://discord.gg/NvXkUVYcxV">join our Discord server</a>! If you don’t feel like your contribution merits a pull request (i.e.: it’s just fixing a typo), it’s fine to just mention it on the server and I’ll see that it gets addressed as soon as possible.</p>
+<p>Since this website is about mathematics, and mathematics is done by people, there is a page where contributors can write short profiles about themselves: Keeping with the theme, it’s an Agda module: <span class="Agda"><a href="Authors.html" class="Module">Authors</a></span> (there isn’t any code there, though!)</p>
+<!--
+<pre class="Agda"><a id="2941" class="Keyword">open</a> <a id="2946" class="Keyword">import</a> <a id="2953" href="Authors.html" class="Module">Authors</a>
+</pre>-->
+<p>It’d be very unfair of me not to mention other resources that could be helpful for learning about Homotopy Type Theory:</p>
+<ul class="incremental">
+<li><p>The “canonical” reference is <a href="https://homotopytypetheory.org/book">the HoTT Book</a>, written by a variety of mathematicians at the IAS Special Year for Univalent Mathematics, held between 2012-2013 and organised by Steve Awodey, Thierry Coquand, and the late Vladimir Voevodsky.</p>
+<p>The Book is often referred to on this site - with those words - so if you don’t know which book “The Book” is, it’s the HoTT book! It’s split into two parts: Type Theory, which introduces the concepts of Homotopy Type Theory with no previous knowledge of type theory assumed; and Mathematics, which develops some mathematics (homotopy theory, category theory, set theory, and real analysis) in this theory.</p></li>
+</ul>
+<ul class="incremental">
+<li><p>Prof. Martín Escardó, at Birmingham, has done a great service to the community by <em>also</em> formalising a great deal of univalent mathematics in Literate Agda, in his <a href="https://www.cs.bham.ac.uk/~mhe/HoTT-UF-in-Agda-Lecture-Notes/HoTT-UF-Agda.html">Introduction to Univalent Foundations of Mathematics with Agda</a>.</p>
+<p>Prof. Escardó’s notes, unlike the 1lab, are done in base Agda, with univalence assumed explicitly in the theorems that need it. This is a principled decision when the goal is introducing univalent mathematics, but it is not practical when the goal is to <em>practice</em> univalent mathematics in Agda.</p>
+<p>Even still, that document is <em>much better</em> than this site will <em>ever</em> be as an introduction to the subject! While many of the pages of the 1lab have introductory <em>flavour</em>, it is not meant as an introduction to the subject of univalent mathematics.</p></li>
+</ul>
+<p>With those two references in mind, the 1lab aims to:</p>
+<ul class="incremental">
+<li>Provide a comprehensibly documented example of mathematics done in HoTT, formalised entirely in safe<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Cubical Agda, for other students of homotopy type theory to consult. This doesn’t bring anything new to the table for HoTT: Many, if not most, of the theorems in the book were already formalised in Coq.</li>
+</ul>
+<ul class="incremental">
+<li><p>Provide an introduction to HoTT as it’s done in Cubical Type Theory to those who are already familiar with “Book HoTT”. There are significant differences, including, but very much not limited to, univalence having computational content!</p></li>
+<li><p>Do both of these in a <em>discoverable</em> manner:</p>
+<ul class="incremental">
+<li><p>All Agda identifiers are cross-linked (this is an Agda feature and requires no effort on my part);</p></li>
+<li><p>Concepts are linked to the first time they are used in a page<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>;</p></li>
+<li><p>Diagrams are employed where appropriate, and there is infrastructure in place to make this easy to do;</p></li>
+<li><p>Definitions are done in multiple ways, when appropriate, so it is possible to compare different approaches.</p></li>
+</ul></li>
+</ul>
+<p>Again, I want to stress that <em>the 1lab is free and open-source software</em>. If you feel like <em>any</em> of the goals above are not being achieved, <a href="https://github.com/plt-amy/cubical-1lab/pulls">submit a merge request</a>!</p>
+<h2 id="technology">Technology</h2>
+<p>The 1Lab uses <a href="https://typeof.net/Iosevka/">Iosevka</a> as its monospace typeface. Iosevka is licensed under the SIL Open Font License, v1.1, a copy of which can be found <a href="/static/licenses/LICENSE.Iosevka">here</a>.</p>
+<p>Mathematics is rendered using <a href="https://katex.org">KaTeX</a>, and as so, the 1Lab redistributes KaTeX’s fonts and stylesheets, even though the rendering is done entirely at build-time. KaTeX is licensed under the MIT License, a copy of which can be found <a href="/static/licenses/LICENSE.KaTeX">here</a>.</p>
+<p>Our favicon is Noto Emoji’s ice cube (cubical type theory - get it?), codepoint U+1F9CA. This is the only image from Noto we redistribute. Noto fonts are licensed under the Apache 2.0 License, a copy of which can be found <a href="/static/licenses/LICENSE.Noto">here</a>.</p>
+<p>Commutative diagrams appearing in body text are created using <a href="https://q.uiver.app">quiver</a>, and rendered to SVG using a combination of <a href="https://github.com/petrhosek/rubber">rubber-pipe</a> and <a href="https://poppler.freedesktop.org/">pdftocairo</a>, part of the Poppler project. No part of these projects is redistributed.</p>
+<p>And, of course, the formalisation would not be possible without <a href="https://github.com/agda/agda">Agda</a>.</p>
+<h1 id="type-theory">Type Theory</h1>
+<div class="warning">
+<p>Specifically for the type theory namespace, there is a <strong><a href="1Lab.index.html">recommended reading order</a></strong> for modules, which should be useful as a first introduction to Cubical Type Theory.</p>
+</div>
+<p>The first things to be explained are the foundational constructions in (cubical) type theory - things like types themselves, <a href="1Lab.Type.html">universes</a>, <a href="1Lab.Path.html">paths</a>, <a href="1Lab.Equiv.html">equivalences</a>, <a href="1Lab.Univalence.html#3381">glueing</a> and the <a href="1Lab.Univalence.html#11327">univalence</a> “axiom”. These are developed under the <code>1Lab</code> namespace. Start here:</p>
+<pre class="Agda"><a id="8391" class="Comment">-- All of these module names are links you can click!</a>
+
+<a id="8446" class="Keyword">open</a> <a id="8451" class="Keyword">import</a> <a id="8458" href="1Lab.Type.html" class="Module">1Lab.Type</a> <a id="8468" class="Comment">-- Universes</a>
+
+<a id="8482" class="Keyword">open</a> <a id="8487" class="Keyword">import</a> <a id="8494" href="1Lab.Path.html" class="Module">1Lab.Path</a>          <a id="8513" class="Comment">-- Path types</a>
+<a id="8527" class="Keyword">open</a> <a id="8532" class="Keyword">import</a> <a id="8539" href="1Lab.Path.Groupoid.html" class="Module">1Lab.Path.Groupoid</a> <a id="8558" class="Comment">-- Groupoid structure of types</a>
+
+<a id="8590" class="Keyword">open</a> <a id="8595" class="Keyword">import</a> <a id="8602" href="1Lab.Equiv.html" class="Module">1Lab.Equiv</a>             <a id="8625" class="Comment">-- “Contractible fibres” equivalences</a>
+<a id="8663" class="Keyword">open</a> <a id="8668" class="Keyword">import</a> <a id="8675" href="1Lab.Equiv.Biinv.html" class="Module">1Lab.Equiv.Biinv</a>       <a id="8698" class="Comment">-- Biinvertible maps</a>
+<a id="8719" class="Keyword">open</a> <a id="8724" class="Keyword">import</a> <a id="8731" href="1Lab.Equiv.FromPath.html" class="Module">1Lab.Equiv.FromPath</a>    <a id="8754" class="Comment">-- Transport is an equivalence, cubically</a>
+<a id="8796" class="Keyword">open</a> <a id="8801" class="Keyword">import</a> <a id="8808" href="1Lab.Equiv.Embedding.html" class="Module">1Lab.Equiv.Embedding</a>   <a id="8831" class="Comment">-- Embeddings</a>
+<a id="8845" class="Keyword">open</a> <a id="8850" class="Keyword">import</a> <a id="8857" href="1Lab.Equiv.Fibrewise.html" class="Module">1Lab.Equiv.Fibrewise</a>   <a id="8880" class="Comment">-- Fibrewise equivalences</a>
+<a id="8906" class="Keyword">open</a> <a id="8911" class="Keyword">import</a> <a id="8918" href="1Lab.Equiv.HalfAdjoint.html" class="Module">1Lab.Equiv.HalfAdjoint</a> <a id="8941" class="Comment">-- Half-adjoint equivalences</a>
+
+<a id="8971" class="Keyword">open</a> <a id="8976" class="Keyword">import</a> <a id="8983" href="1Lab.HLevel.html" class="Module">1Lab.HLevel</a>          <a id="9004" class="Comment">-- h-levels</a>
+<a id="9016" class="Keyword">open</a> <a id="9021" class="Keyword">import</a> <a id="9028" href="1Lab.HLevel.Sets.html" class="Module">1Lab.HLevel.Sets</a>     <a id="9049" class="Comment">-- K, Rijke&#39;s theorem, Hedberg&#39;s theorem</a>
+<a id="9090" class="Keyword">open</a> <a id="9095" class="Keyword">import</a> <a id="9102" href="1Lab.HLevel.Retracts.html" class="Module">1Lab.HLevel.Retracts</a> <a id="9123" class="Comment">-- Closure of h-levels under retractions/isos</a>
+<a id="9169" class="Keyword">open</a> <a id="9174" class="Keyword">import</a> <a id="9181" href="1Lab.HLevel.Universe.html" class="Module">1Lab.HLevel.Universe</a> <a id="9202" class="Comment">-- The type of n-types is a (n+1)-type</a>
+
+<a id="9242" class="Keyword">open</a> <a id="9247" class="Keyword">import</a> <a id="9254" href="1Lab.Univalence.html" class="Module">1Lab.Univalence</a>            <a id="9281" class="Comment">-- Equivalence is equivalent to equality</a>
+<a id="9322" class="Keyword">open</a> <a id="9327" class="Keyword">import</a> <a id="9334" href="1Lab.Univalence.SIP.html" class="Module">1Lab.Univalence.SIP</a>        <a id="9361" class="Comment">-- Univalence + preservation of structure</a>
+<a id="9403" class="Keyword">open</a> <a id="9408" class="Keyword">import</a> <a id="9415" href="1Lab.Univalence.SIP.Auto.html" class="Module">1Lab.Univalence.SIP.Auto</a>   <a id="9442" class="Comment">-- Derive isUnivalent for families of types</a>
+<a id="9486" class="Keyword">open</a> <a id="9491" class="Keyword">import</a> <a id="9498" href="1Lab.Univalence.SIP.Record.html" class="Module">1Lab.Univalence.SIP.Record</a> <a id="9525" class="Comment">-- Derive isUnivalent for record types</a>
+
+<a id="9565" class="Keyword">open</a> <a id="9570" class="Keyword">import</a> <a id="9577" href="1Lab.Type.Dec.html" class="Module">1Lab.Type.Dec</a>   <a id="9593" class="Comment">-- Decidable types, discrete types</a>
+<a id="9628" class="Keyword">open</a> <a id="9633" class="Keyword">import</a> <a id="9640" href="1Lab.Type.Pi.html" class="Module">1Lab.Type.Pi</a>    <a id="9656" class="Comment">-- Properties of dependent products</a>
+<a id="9692" class="Keyword">open</a> <a id="9697" class="Keyword">import</a> <a id="9704" href="1Lab.Type.Sigma.html" class="Module">1Lab.Type.Sigma</a> <a id="9720" class="Comment">-- Properties of dependent coproducts</a>
+
+<a id="9759" class="Keyword">open</a> <a id="9764" class="Keyword">import</a> <a id="9771" href="1Lab.HIT.S1.html" class="Module">1Lab.HIT.S1</a>         <a id="9791" class="Comment">-- The circle as a cell complex</a>
+<a id="9823" class="Keyword">open</a> <a id="9828" class="Keyword">import</a> <a id="9835" href="1Lab.HIT.Sphere.html" class="Module">1Lab.HIT.Sphere</a>     <a id="9855" class="Comment">-- Spheres of arbitrary dimension</a>
+<a id="9889" class="Keyword">open</a> <a id="9894" class="Keyword">import</a> <a id="9901" href="1Lab.HIT.Sinfty.html" class="Module">1Lab.HIT.Sinfty</a>     <a id="9921" class="Comment">-- The infinity-dimensional sphere</a>
+<a id="9956" class="Keyword">open</a> <a id="9961" class="Keyword">import</a> <a id="9968" href="1Lab.HIT.Suspension.html" class="Module">1Lab.HIT.Suspension</a> <a id="9988" class="Comment">-- The suspension operation</a>
+<a id="10016" class="Keyword">open</a> <a id="10021" class="Keyword">import</a> <a id="10028" href="1Lab.HIT.Truncation.html" class="Module">1Lab.HIT.Truncation</a> <a id="10048" class="Comment">-- Propositional truncation</a>
+
+<a id="10077" class="Keyword">open</a> <a id="10082" class="Keyword">import</a> <a id="10089" href="1Lab.Counterexamples.IsIso.html" class="Module">1Lab.Counterexamples.IsIso</a>   <a id="10118" class="Comment">-- Counterexample: isIso is not a prop</a>
+<a id="10157" class="Keyword">open</a> <a id="10162" class="Keyword">import</a> <a id="10169" href="1Lab.Counterexamples.Russell.html" class="Module">1Lab.Counterexamples.Russell</a> <a id="10198" class="Comment">-- Counterexample: Russell&#39;s paradox</a>
+<a id="10235" class="Keyword">open</a> <a id="10240" class="Keyword">import</a> <a id="10247" href="1Lab.Counterexamples.Sigma.html" class="Module">1Lab.Counterexamples.Sigma</a>   <a id="10276" class="Comment">-- Counterexample: Sigma is not prop</a>
+</pre>
+<h2 id="data-types">Data types</h2>
+<p>The <code>Data</code> namespace contains definitions of oft-used data types, which are fundamental to the rest of the development but not “basic type theory”. These modules contain (or re-export) the types themselves, useful operations on them, characterisation of their path spaces, etc.</p>
+<pre class="Agda"><a id="10620" class="Keyword">open</a> <a id="10625" class="Keyword">import</a> <a id="10632" href="Data.Nat.html" class="Module">Data.Nat</a>  <a id="10642" class="Comment">-- The natural numbers</a>
+<a id="10665" class="Keyword">open</a> <a id="10670" class="Keyword">import</a> <a id="10677" href="Data.Int.html" class="Module">Data.Int</a>  <a id="10687" class="Comment">-- The integers</a>
+<a id="10703" class="Keyword">open</a> <a id="10708" class="Keyword">import</a> <a id="10715" href="Data.Sum.html" class="Module">Data.Sum</a>  <a id="10725" class="Comment">-- Coproduct types</a>
+<a id="10744" class="Keyword">open</a> <a id="10749" class="Keyword">import</a> <a id="10756" href="Data.Bool.html" class="Module">Data.Bool</a> <a id="10766" class="Comment">-- The booleans</a>
+<a id="10782" class="Keyword">open</a> <a id="10787" class="Keyword">import</a> <a id="10794" href="Data.List.html" class="Module">Data.List</a> <a id="10804" class="Comment">-- Finite lists</a>
+</pre>
+<!--
+# Relation
+
+Here, we define often-used types of relations like partial orders as well as
+actual relations themselves, for example, lexicographic orderings on lists.
+
+<pre class="Agda"><a id="11004" class="Keyword">open</a> <a id="11009" class="Keyword">import</a> <a id="11016" href="Relation.Order.html" class="Module">Relation.Order</a>               <a id="11045" class="Comment">-- Prop-valued ordering relations</a>
+<a id="11079" class="Keyword">open</a> <a id="11084" class="Keyword">import</a> <a id="11091" href="Relation.Order.Lexicographic.html" class="Module">Relation.Order.Lexicographic</a> <a id="11120" class="Comment">-- Lexicographic orderings</a>
+</pre>-->
+<h1 id="algebra">Algebra</h1>
+<p>In the <code>Algebra</code> namespace, the theory of universal algebra is developed from a univalent perspective. Specifically, every definition of an algebraic structure comes with an associated proof that it is univalent — concretely, equality of groups is group isomorphism (for instance).</p>
+<pre class="Agda"><a id="11460" class="Keyword">open</a> <a id="11465" class="Keyword">import</a> <a id="11472" href="Algebra.Magma.html" class="Module">Algebra.Magma</a>                      <a id="11507" class="Comment">-- Binary operations </a>
+<a id="11529" class="Keyword">open</a> <a id="11534" class="Keyword">import</a> <a id="11541" href="Algebra.Magma.Unital.html" class="Module">Algebra.Magma.Unital</a>               <a id="11576" class="Comment">-- Operations with two-sided units</a>
+<a id="11611" class="Keyword">open</a> <a id="11616" class="Keyword">import</a> <a id="11623" href="Algebra.Magma.Unital.EckmannHilton.html" class="Module">Algebra.Magma.Unital.EckmannHilton</a> <a id="11658" class="Comment">-- The Eckmann-Hilton argument</a>
+
+<a id="11690" class="Keyword">open</a> <a id="11695" class="Keyword">import</a> <a id="11702" href="Algebra.Semigroup.html" class="Module">Algebra.Semigroup</a>                  <a id="11737" class="Comment">-- Semigroups (associative magmas)</a>
+<a id="11772" class="Keyword">open</a> <a id="11777" class="Keyword">import</a> <a id="11784" href="Algebra.Monoid.html" class="Module">Algebra.Monoid</a>                     <a id="11819" class="Comment">-- Monoids as unital semigroups</a>
+<a id="11851" class="Keyword">open</a> <a id="11856" class="Keyword">import</a> <a id="11863" href="Algebra.Group.html" class="Module">Algebra.Group</a>                      <a id="11898" class="Comment">-- Groups as monoids with inverses</a>
+<a id="11933" class="Keyword">open</a> <a id="11938" class="Keyword">import</a> <a id="11945" href="Algebra.Group.Cayley.html" class="Module">Algebra.Group.Cayley</a>               <a id="11980" class="Comment">-- Cayley&#39;s theorem</a>
+</pre>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr></hr>
+<ol>
+<li id="fn1" role="doc-endnote"><p>The 1lab is not compiled with <code>--safe</code> because some modules explicitly assume inconsistent principles with the goal of providing <em>counterexamples</em>. For instance, to formalise how <a href="1Lab.Counterexamples.Russell.html">type-in-type leads to Russell’s paradox</a>, we need to enable type-in-type!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>If you encounter a case where this isn’t true, please do not hesitate to contribute!<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+  </article>
+</div>
+
+</main>
+</body>
+<style>.equations { display: none !important; }</style></html>
