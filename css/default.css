@@ -120,6 +120,9 @@ ol, ul {
       margin-top: 5px;
       margin-bottom: 5px; }
 
+span.katex {
+  font-size: 18pt; }
+
 .katex-display > span.katex {
   white-space: normal; }
 
