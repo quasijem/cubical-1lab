@@ -22,37 +22,6 @@ body {
   body.sans-serif {
     --tg-pagella: ""; }
 
-body > header {
-  background-color: #9333ea;
-  display: flex;
-  height: 48px;
-  width: 100%;
-  z-index: 999;
-  position: fixed;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 1em;
-  padding-right: 1em;
-  border-bottom: 3px solid #7e22ce;
-  box-sizing: border-box; }
-  body > header div, body > header nav > a {
-    height: 48px;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
-    display: flex;
-    align-items: center; }
-  body > header div:hover, body > header nav > a:hover {
-    background-color: #a855f7;
-    transition: background-color 0.3s ease-in-out; }
-  body > header a {
-    color: white;
-    font-size: 18pt;
-    text-decoration: none; }
-  body > header nav {
-    display: flex;
-    align-items: center;
-    gap: 0.5em; }
-
 main {
   max-width: 100ch;
   width: 100%;
@@ -144,7 +113,6 @@ div.columns blockquote, div.columns details.blockquote {
   border: 0; }
 
 code, pre, .sourceCode {
-  font-size: 15pt;
   font-family: 'Iosevka', 'Fantasque Sans Mono', Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
   font-weight: 500; }
 
@@ -192,61 +160,6 @@ table {
     text-align: center;
     padding: 0px 1em 0px 1em;
     border: 2px solid #c084fc; }
-
-ul#post-list {
-  list-style-type: none;
-  display: flex;
-  flex-direction: column; }
-  ul#post-list .post-list-item {
-    padding-left: 1em;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    border-left: 5px dashed #eab308;
-    padding: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    box-shadow: 2px 2px 6px black;
-    border-radius: 10px;
-    background-color: #fefce8; }
-    ul#post-list .post-list-item .post-list-header {
-      margin-top: 0.2em;
-      display: flex;
-      justify-content: space-between;
-      line-height: 14pt;
-      font-style: italic;
-      font-size: 10pt; }
-      ul#post-list .post-list-item .post-list-header a {
-        font-size: 14pt;
-        font-style: normal;
-        color: #1e293b; }
-
-div.contact-list {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: stretch;
-  gap: 3em; }
-  div.contact-list div.contact-card {
-    background-color: #e9d5ff;
-    padding: 1em;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    box-shadow: 2px 2px 6px black;
-    border-radius: 10px;
-    width: 33%;
-    max-width: 33%;
-    flex-grow: 1; }
-    div.contact-list div.contact-card p {
-      margin: 0; }
-    div.contact-list div.contact-card div.contact-header {
-      display: flex;
-      align-items: center;
-      gap: 1em;
-      margin-bottom: 10px; }
-      div.contact-list div.contact-card div.contact-header img {
-        height: 48px;
-        clip-path: url(#squircle); }
-      div.contact-list div.contact-card div.contact-header span.username {
-        font-size: 16pt; }
 
 @media only screen and (max-width: 450px) {
   body > header div#logo {

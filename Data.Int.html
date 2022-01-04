@@ -93,7 +93,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/e8a5036abd8b717920913d468aa0218168c894d1/src/Data/Int.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/ea8a1c0ad8482a81dbf47808644a70d06ab658d2/src/Data/Int.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -241,9 +241,9 @@
     <a id="6287" href="Data.Int.html#6203" class="Function">fromToInt&#39;</a> <a id="6298" class="Symbol">(</a><a id="6299" href="Agda.Builtin.Int.html#291" class="InductiveConstructor">negsuc</a> <a id="6306" href="Data.Int.html#6306" class="Bound">x</a><a id="6307" class="Symbol">)</a> <a id="6309" class="Symbol">=</a> <a id="6311" href="1Lab.Path.html#2137" class="Function">refl</a>
 
     <a id="6321" href="Data.Int.html#6321" class="Function">Int&#39;≡Int</a> <a id="6330" class="Symbol">:</a> <a id="6332" href="Data.Int.html#5086" class="Datatype">Int&#39;</a> <a id="6337" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="6339" href="Data.Int.html#784" class="Datatype">Int</a>
-    <a id="6347" href="Data.Int.html#6321" class="Function">Int&#39;≡Int</a> <a id="6356" class="Symbol">=</a> <a id="6358" href="1Lab.Univalence.html#11280" class="Function">Iso→path</a> <a id="6367" class="Symbol">(</a><a id="6368" href="Data.Int.html#5529" class="Function">fromInt&#39;</a> <a id="6377" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a id="6379" href="1Lab.Equiv.html#6064" class="InductiveConstructor">iso</a> <a id="6383" href="Data.Int.html#5440" class="Function">toInt&#39;</a> <a id="6390" href="Data.Int.html#5762" class="Function">toFromInt&#39;</a> <a id="6401" href="Data.Int.html#6203" class="Function">fromToInt&#39;</a><a id="6411" class="Symbol">)</a>
+    <a id="6347" href="Data.Int.html#6321" class="Function">Int&#39;≡Int</a> <a id="6356" class="Symbol">=</a> <a id="6358" href="1Lab.Univalence.html#11308" class="Function">Iso→path</a> <a id="6367" class="Symbol">(</a><a id="6368" href="Data.Int.html#5529" class="Function">fromInt&#39;</a> <a id="6377" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a id="6379" href="1Lab.Equiv.html#6064" class="InductiveConstructor">iso</a> <a id="6383" href="Data.Int.html#5440" class="Function">toInt&#39;</a> <a id="6390" href="Data.Int.html#5762" class="Function">toFromInt&#39;</a> <a id="6401" href="Data.Int.html#6203" class="Function">fromToInt&#39;</a><a id="6411" class="Symbol">)</a>
 </pre>
-<p>With a quick appeal to <span class="Agda"><a href="1Lab.Univalence.html#11280" class="Function">univalence</a></span>, we get that our desired type of integers is a set:</p>
+<p>With a quick appeal to <span class="Agda"><a href="1Lab.Univalence.html#11308" class="Function">univalence</a></span>, we get that our desired type of integers is a set:</p>
 <pre class="Agda">  <a id="6539" href="Data.Int.html#6539" class="Function">Discrete-Int</a> <a id="6552" class="Symbol">:</a> <a id="6554" href="1Lab.Type.Dec.html#528" class="Function">Discrete</a> <a id="6563" href="Data.Int.html#784" class="Datatype">Int</a>
   <a id="6569" href="Data.Int.html#6539" class="Function">Discrete-Int</a> <a id="6582" class="Symbol">=</a> <a id="6584" href="1Lab.Path.html#13853" class="Function">subst</a> <a id="6590" href="1Lab.Type.Dec.html#528" class="Function">Discrete</a> <a id="6599" href="Data.Int.html#6321" class="Function">Int&#39;≡Int</a> <a id="6608" href="Data.Int.html#5122" class="Function">Discrete-Int&#39;</a>
 
