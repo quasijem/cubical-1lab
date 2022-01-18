@@ -58,9 +58,9 @@
       horizontal rules) -->
       <hr></hr>
       <ul class="incremental">
-      <li><a href="#semigroups">Semigroups</a>
+      <li><a href="#semigroups"><a href="#semigroups" class="header-link">Semigroups<span class="header-link-emoji">🔗</span></a></a>
       <ul class="incremental">
-      <li><a href="#the-min-semigroup">The “min” semigroup</a></li>
+      <li><a href="#the-min-semigroup"><a href="#the-min-semigroup" class="header-link">The “min” semigroup<span class="header-link-emoji">🔗</span></a></a></li>
       </ul></li>
       </ul>
       <hr></hr>
@@ -86,7 +86,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/b6db1b6bb5cc86fd051b269537f66d88678aefb1/src/Algebra/Semigroup.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/8b3ca76e0310708bb06aa57162e6d5021ce54f82/src/Algebra/Semigroup.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -117,7 +117,7 @@
   <a id="130" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a> <a id="132" href="Algebra.Semigroup.html#132" class="Generalizable">ℓ₁</a> <a id="135" class="Symbol">:</a> <a id="137" href="Agda.Primitive.html#597" class="Postulate">Level</a>
   <a id="145" href="Algebra.Semigroup.html#145" class="Generalizable">A</a> <a id="147" class="Symbol">:</a> <a id="149" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="154" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a>
 </pre>-->
-<h1 id="semigroups">Semigroups</h1>
+<h1 id="semigroups"><a href="#semigroups" class="header-link">Semigroups<span class="header-link-emoji">🔗</span></a></h1>
 <pre class="Agda"><a id="189" class="Keyword">record</a> <a id="isSemigroup"></a><a id="196" href="Algebra.Semigroup.html#196" class="Record">isSemigroup</a> <a id="208" class="Symbol">{</a><a id="209" href="Algebra.Semigroup.html#209" class="Bound">A</a> <a id="211" class="Symbol">:</a> <a id="213" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="218" href="Algebra.Semigroup.html#130" class="Generalizable">ℓ</a><a id="219" class="Symbol">}</a> <a id="221" class="Symbol">(</a><a id="222" href="Algebra.Semigroup.html#222" class="Bound Operator">_⋆_</a> <a id="226" class="Symbol">:</a> <a id="228" href="Algebra.Semigroup.html#209" class="Bound">A</a> <a id="230" class="Symbol">→</a> <a id="232" href="Algebra.Semigroup.html#209" class="Bound">A</a> <a id="234" class="Symbol">→</a> <a id="236" href="Algebra.Semigroup.html#209" class="Bound">A</a><a id="237" class="Symbol">)</a> <a id="239" class="Symbol">:</a> <a id="241" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="246" href="Algebra.Semigroup.html#218" class="Bound">ℓ</a> <a id="248" class="Keyword">where</a>
 </pre>
 <p>A <strong>semigroup</strong> is an associative <span class="Agda"><a href="Algebra.Magma.html#1405" class="Record">magma</a></span>, that is, a set equipped with a choice of <em>associative</em> binary operation <code>⋆</code>.</p>
@@ -138,7 +138,7 @@
 </ul>
 <div class="diagram-container"> <img title="commutative diagram" src="687504fbf2db792e032abcbfc7737e81.svg" class="diagram  quiver tall-2"></img> </div>
 <ul class="incremental">
-<li>The pentagonator satisfies its own coherence law, which looks like the Stasheff polytope <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">K_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>, and so on, “all the way up to infinity”.</li>
+<li>The pentagonator satisfies its own coherence law, which looks like the Stasheff polytope <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>K</mi><mn>5</mn></msub></mrow><annotation encoding="application/x-tex">K_5</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">K</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">5</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>,</span> and so on, “all the way up to infinity”.</li>
 </ul>
 <p>By explicitly asking that <code>A</code> be truncated at the level of sets, we have that the associator automatically satisfies the pentagon identity - because all parallel paths in a set are equal. Furthermore, by the upwards closure of h-levels, any further coherence condition you could dream up and write down for these morphisms is automatically satisfied.</p>
 <p>As a consequence of this truncation, we get that being a semigroup operator is a <em>property</em> of the operator:</p>
@@ -176,7 +176,7 @@
     <a id="3882" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="3884" class="Symbol">(</a> <a id="3886" class="Symbol">(</a><a id="3887" href="Algebra.Semigroup.html#3887" class="Bound">x</a> <a id="3889" href="Algebra.Semigroup.html#3889" class="Bound">y</a> <a id="3891" class="Symbol">:</a> <a id="3893" href="Algebra.Semigroup.html#3691" class="Bound">A</a><a id="3894" class="Symbol">)</a> <a id="3896" class="Symbol">→</a> <a id="3898" href="Algebra.Semigroup.html#3799" class="Bound">f</a> <a id="3900" class="Symbol">.</a><a id="3901" href="Agda.Builtin.Sigma.html#252" class="Field">fst</a> <a id="3905" class="Symbol">(</a><a id="3906" href="Algebra.Semigroup.html#3887" class="Bound">x</a> <a id="3908" href="Algebra.Semigroup.html#3702" class="Bound Operator">⋆</a> <a id="3910" href="Algebra.Semigroup.html#3889" class="Bound">y</a><a id="3911" class="Symbol">)</a> <a id="3913" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="3915" class="Symbol">(</a><a id="3916" href="Algebra.Semigroup.html#3799" class="Bound">f</a> <a id="3918" class="Symbol">.</a><a id="3919" href="Agda.Builtin.Sigma.html#252" class="Field">fst</a> <a id="3923" href="Algebra.Semigroup.html#3887" class="Bound">x</a><a id="3924" class="Symbol">)</a> <a id="3926" href="Algebra.Semigroup.html#3756" class="Bound Operator">*</a> <a id="3928" class="Symbol">(</a><a id="3929" href="Algebra.Semigroup.html#3799" class="Bound">f</a> <a id="3931" class="Symbol">.</a><a id="3932" href="Agda.Builtin.Sigma.html#252" class="Field">fst</a> <a id="3936" href="Algebra.Semigroup.html#3889" class="Bound">y</a><a id="3937" class="Symbol">))</a>
   <a id="3942" class="Symbol">_</a> <a id="3944" class="Symbol">=</a> <a id="3946" href="1Lab.Path.html#2137" class="Function">refl</a>
 </pre>
-<h2 id="the-min-semigroup">The “min” semigroup</h2>
+<h2 id="the-min-semigroup"><a href="#the-min-semigroup" class="header-link">The “min” semigroup<span class="header-link-emoji">🔗</span></a></h2>
 <p>An example of a naturally-occuring semigroup are the natural numbers under taking <span class="Agda"><a href="Data.Nat.Base.html#5580" class="Function">minimums</a></span>.</p>
 <pre class="Agda"><a id="4101" class="Keyword">open</a> <a id="4106" class="Keyword">import</a> <a id="4113" href="Data.Nat.html" class="Module">Data.Nat</a>
 

@@ -58,7 +58,7 @@
       horizontal rules) -->
       <hr></hr>
       <ul class="incremental">
-      <li><a href="#russells-paradox">Russell’s Paradox</a></li>
+      <li><a href="#russells-paradox"><a href="#russells-paradox" class="header-link">Russell’s Paradox<span class="header-link-emoji">🔗</span></a></a></li>
       </ul>
       <hr></hr>
 
@@ -83,7 +83,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/b6db1b6bb5cc86fd051b269537f66d88678aefb1/src/1Lab/Counterexamples/Russell.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/8b3ca76e0310708bb06aa57162e6d5021ce54f82/src/1Lab/Counterexamples/Russell.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -109,7 +109,7 @@
 
 <a id="85" class="Keyword">module</a> <a id="92" href="1Lab.Counterexamples.Russell.html" class="Module">1Lab.Counterexamples.Russell</a> <a id="121" class="Keyword">where</a>
 </pre>
-<h1 id="russells-paradox">Russell’s Paradox</h1>
+<h1 id="russells-paradox"><a href="#russells-paradox" class="header-link">Russell’s Paradox<span class="header-link-emoji">🔗</span></a></h1>
 <p>This page reproduces <a href="https://en.wikipedia.org/wiki/Russell%27s_paradox">Russell’s paradox</a> from naïve set theory using an inductive type of <span class="Agda"><a href="1Lab.Type.html#394" class="Primitive">Type</a></span>-indexed trees. By default, Agda places the type <code>Type₀</code> in <code>Type₁</code>, meaning the definition of <span class="Agda"><a href="1Lab.Counterexamples.Russell.html#561" class="Datatype">V</a></span> below would not be accepted. The <code>--type-in-type</code> flag disables this check, meaning the definition goes through.</p>
 <pre class="Agda"><a id="556" class="Keyword">data</a> <a id="V"></a><a id="561" href="1Lab.Counterexamples.Russell.html#561" class="Datatype">V</a> <a id="563" class="Symbol">:</a> <a id="565" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="570" class="Keyword">where</a>
   <a id="V.set"></a><a id="578" href="1Lab.Counterexamples.Russell.html#578" class="InductiveConstructor">set</a> <a id="582" class="Symbol">:</a> <a id="584" class="Symbol">(</a><a id="585" href="1Lab.Counterexamples.Russell.html#585" class="Bound">A</a> <a id="587" class="Symbol">:</a> <a id="589" href="1Lab.Type.html#394" class="Primitive">Type</a><a id="593" class="Symbol">)</a> <a id="595" class="Symbol">→</a> <a id="597" class="Symbol">(</a><a id="598" href="1Lab.Counterexamples.Russell.html#585" class="Bound">A</a> <a id="600" class="Symbol">→</a> <a id="602" href="1Lab.Counterexamples.Russell.html#561" class="Datatype">V</a><a id="603" class="Symbol">)</a> <a id="605" class="Symbol">→</a> <a id="607" href="1Lab.Counterexamples.Russell.html#561" class="Datatype">V</a>

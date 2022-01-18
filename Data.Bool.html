@@ -58,12 +58,12 @@
       horizontal rules) -->
       <hr></hr>
       <ul class="incremental">
-      <li><a href="#the-booleans">The Booleans</a>
+      <li><a href="#the-booleans"><a href="#the-booleans" class="header-link">The Booleans<span class="header-link-emoji">🔗</span></a></a>
       <ul class="incremental">
-      <li><a href="#basic-algebraic-properties">Basic algebraic properties</a></li>
-      <li><a href="#discreteness">Discreteness</a></li>
-      <li><a href="#the-not-equivalence">The “not” equivalence</a></li>
-      <li><a href="#autbool">Aut(Bool)</a></li>
+      <li><a href="#basic-algebraic-properties"><a href="#basic-algebraic-properties" class="header-link">Basic algebraic properties<span class="header-link-emoji">🔗</span></a></a></li>
+      <li><a href="#discreteness"><a href="#discreteness" class="header-link">Discreteness<span class="header-link-emoji">🔗</span></a></a></li>
+      <li><a href="#the-not-equivalence"><a href="#the-not-equivalence" class="header-link">The “not” equivalence<span class="header-link-emoji">🔗</span></a></a></li>
+      <li><a href="#autbool"><a href="#autbool" class="header-link">Aut(Bool)<span class="header-link-emoji">🔗</span></a></a></li>
       </ul></li>
       </ul>
       <hr></hr>
@@ -89,7 +89,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/b6db1b6bb5cc86fd051b269537f66d88678aefb1/src/Data/Bool.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/8b3ca76e0310708bb06aa57162e6d5021ce54f82/src/Data/Bool.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -127,7 +127,7 @@
 
 <a id="277" class="Keyword">open</a> <a id="282" href="Agda.Builtin.Bool.html" class="Module">Agda.Builtin.Bool</a> <a id="300" class="Keyword">public</a>
 </pre>
-<h1 id="the-booleans">The Booleans</h1>
+<h1 id="the-booleans"><a href="#the-booleans" class="header-link">The Booleans<span class="header-link-emoji">🔗</span></a></h1>
 <p>The type of booleans is interesting in homotopy type theory because it is the simplest type where its automorphisms in <span class="Agda"><a href="1Lab.Type.html#394" class="Primitive">Type</a></span> are non-trivial. In particular, there are two: negation, and the identity.</p>
 <p>But first, true isn’t false.</p>
 <pre class="Agda"><a id="true≠false"></a><a id="575" href="Data.Bool.html#575" class="Function">true≠false</a> <a id="586" class="Symbol">:</a> <a id="588" href="Agda.Builtin.Bool.html#188" class="InductiveConstructor">true</a> <a id="593" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="595" href="Agda.Builtin.Bool.html#182" class="InductiveConstructor">false</a> <a id="601" class="Symbol">→</a> <a id="603" href="1Lab.Type.html#1326" class="Datatype">⊥</a>
@@ -137,7 +137,7 @@
   <a id="673" href="Data.Bool.html#641" class="Function">P</a> <a id="675" href="Agda.Builtin.Bool.html#188" class="InductiveConstructor">true</a> <a id="680" class="Symbol">=</a> <a id="682" href="Agda.Builtin.Unit.html#164" class="Record">⊤</a>
 </pre>
 <p>It’s worth noting how to prove two things are <strong>not</strong> equal. We write a predicate that distinguishes them by mapping one to <span class="Agda"><a href="Agda.Builtin.Unit.html#164" class="Record">⊤</a></span>, and one to <span class="Agda"><a href="1Lab.Type.html#1326" class="Datatype">⊥</a></span>. Then we can substitute under P along the claimed equality to get an element of <span class="Agda"><a href="1Lab.Type.html#1326" class="Datatype">⊥</a></span> - a contradiction.</p>
-<h2 id="basic-algebraic-properties">Basic algebraic properties</h2>
+<h2 id="basic-algebraic-properties"><a href="#basic-algebraic-properties" class="header-link">Basic algebraic properties<span class="header-link-emoji">🔗</span></a></h2>
 <p>The booleans form a <a href="https://en.wikipedia.org/wiki/Boolean_algebra_(structure)" title="Boolean algebra">Boolean algebra</a>, as one might already expect, given its name. The operations required to define such a structure are straightforward to define using pattern matching:</p>
 <pre class="Agda"><a id="not"></a><a id="1190" href="Data.Bool.html#1190" class="Function">not</a> <a id="1194" class="Symbol">:</a> <a id="1196" href="Agda.Builtin.Bool.html#163" class="Datatype">Bool</a> <a id="1201" class="Symbol">→</a> <a id="1203" href="Agda.Builtin.Bool.html#163" class="Datatype">Bool</a>
 <a id="1208" href="Data.Bool.html#1190" class="Function">not</a> <a id="1212" href="Agda.Builtin.Bool.html#188" class="InductiveConstructor">true</a> <a id="1217" class="Symbol">=</a> <a id="1219" href="Agda.Builtin.Bool.html#182" class="InductiveConstructor">false</a>
@@ -280,7 +280,7 @@
 <a id="5821" href="Data.Bool.html#5778" class="Function">imp-trueʳ</a> <a id="5831" href="Agda.Builtin.Bool.html#182" class="InductiveConstructor">false</a> <a id="5837" class="Symbol">=</a> <a id="5839" href="1Lab.Path.html#2137" class="Function">refl</a>
 <a id="5844" href="Data.Bool.html#5778" class="Function">imp-trueʳ</a> <a id="5854" href="Agda.Builtin.Bool.html#188" class="InductiveConstructor">true</a> <a id="5859" class="Symbol">=</a> <a id="5861" href="1Lab.Path.html#2137" class="Function">refl</a>
 </pre>
-<h2 id="discreteness">Discreteness</h2>
+<h2 id="discreteness"><a href="#discreteness" class="header-link">Discreteness<span class="header-link-emoji">🔗</span></a></h2>
 <p>Using pattern matching, and the fact that <span class="Agda"><a href="Data.Bool.html#575" class="Function">true isn&#39;t false</a></span>, one can write an algorithm to tell whether or not two booleans are the same:</p>
 <pre class="Agda"><a id="Discrete-Bool"></a><a id="6061" href="Data.Bool.html#6061" class="Function">Discrete-Bool</a> <a id="6075" class="Symbol">:</a> <a id="6077" href="1Lab.Type.Dec.html#528" class="Function">Discrete</a> <a id="6086" href="Agda.Builtin.Bool.html#163" class="Datatype">Bool</a>
 <a id="6091" href="Data.Bool.html#6061" class="Function">Discrete-Bool</a> <a id="6105" href="Agda.Builtin.Bool.html#182" class="InductiveConstructor">false</a> <a id="6111" href="Agda.Builtin.Bool.html#182" class="InductiveConstructor">false</a> <a id="6117" class="Symbol">=</a> <a id="6119" href="1Lab.Type.Dec.html#235" class="InductiveConstructor">yes</a> <a id="6123" href="1Lab.Path.html#2137" class="Function">refl</a>
@@ -300,12 +300,12 @@
 <a id="6628" href="Data.Bool.html#6571" class="Function">x≠false→x≡true</a> <a id="6643" href="Agda.Builtin.Bool.html#182" class="InductiveConstructor">false</a> <a id="6649" href="Data.Bool.html#6649" class="Bound">p</a> <a id="6651" class="Symbol">=</a> <a id="6653" href="1Lab.Type.html#1342" class="Function">absurd</a> <a id="6660" class="Symbol">(</a><a id="6661" href="Data.Bool.html#6649" class="Bound">p</a> <a id="6663" href="1Lab.Path.html#2137" class="Function">refl</a><a id="6667" class="Symbol">)</a>
 <a id="6669" href="Data.Bool.html#6571" class="Function">x≠false→x≡true</a> <a id="6684" href="Agda.Builtin.Bool.html#188" class="InductiveConstructor">true</a> <a id="6689" href="Data.Bool.html#6689" class="Bound">p</a> <a id="6691" class="Symbol">=</a> <a id="6693" href="1Lab.Path.html#2137" class="Function">refl</a>
 </pre>
-<h2 id="the-not-equivalence">The “not” equivalence</h2>
+<h2 id="the-not-equivalence"><a href="#the-not-equivalence" class="header-link">The “not” equivalence<span class="header-link-emoji">🔗</span></a></h2>
 <p>The construction of <span class="Agda"><a href="Data.Bool.html#1190" class="Function">not</a></span> as an equivalence factors through showing that <code>not</code> is an isomorphism. In particular, <span class="Agda"><a href="Data.Bool.html#1190" class="Function">not</a></span> is its own inverse, so we need a proof that it’s involutive, as is proven in <span class="Agda"><a href="Data.Bool.html#3684" class="Function">not-involutive</a></span>. With this, we can get a proof that it’s an equivalence:</p>
 <pre class="Agda"><a id="isEquiv-not"></a><a id="7030" href="Data.Bool.html#7030" class="Function">isEquiv-not</a> <a id="7042" class="Symbol">:</a> <a id="7044" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a> <a id="7052" href="Data.Bool.html#1190" class="Function">not</a>
 <a id="7056" href="Data.Bool.html#7030" class="Function">isEquiv-not</a> <a id="7068" class="Symbol">=</a> <a id="7070" href="1Lab.Equiv.html#19765" class="Function">isIso→isEquiv</a> <a id="7084" class="Symbol">(</a><a id="7085" href="1Lab.Equiv.html#6064" class="InductiveConstructor">iso</a> <a id="7089" href="Data.Bool.html#1190" class="Function">not</a> <a id="7093" href="Data.Bool.html#3684" class="Function">not-involutive</a> <a id="7108" href="Data.Bool.html#3684" class="Function">not-involutive</a><a id="7122" class="Symbol">)</a>
 </pre>
-<h2 id="autbool">Aut(Bool)</h2>
+<h2 id="autbool"><a href="#autbool" class="header-link">Aut(Bool)<span class="header-link-emoji">🔗</span></a></h2>
 <p>We characterise the type <code>Bool ≡ Bool</code>. There are exactly two paths, and we can decide which path we’re looking at by seeing how it acts on the element <span class="Agda"><a href="Agda.Builtin.Bool.html#188" class="InductiveConstructor">true</a></span>.</p>
 <p>First, two small lemmas: we can tell whether we’re looking at the identity equivalence or the “not” equivalence by seeing how it acts on the constructors.</p>
 <pre class="Agda"><a id="7475" class="Keyword">private</a>

@@ -58,10 +58,10 @@
       horizontal rules) -->
       <hr></hr>
       <ul class="incremental">
-      <li><a href="#magmas">∞-Magmas</a></li>
-      <li><a href="#magmas-1">Magmas</a>
+      <li><a href="#magmas"><a href="#magmas" class="header-link">∞-Magmas<span class="header-link-emoji">🔗</span></a></a></li>
+      <li><a href="#magmas-1"><a href="#magmas-1" class="header-link">Magmas<span class="header-link-emoji">🔗</span></a></a>
       <ul class="incremental">
-      <li><a href="#the-boolean-implication-magma">The boolean implication magma</a></li>
+      <li><a href="#the-boolean-implication-magma"><a href="#the-boolean-implication-magma" class="header-link">The boolean implication magma<span class="header-link-emoji">🔗</span></a></a></li>
       </ul></li>
       </ul>
       <hr></hr>
@@ -87,7 +87,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/b6db1b6bb5cc86fd051b269537f66d88678aefb1/src/Algebra/Magma.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/8b3ca76e0310708bb06aa57162e6d5021ce54f82/src/Algebra/Magma.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -116,7 +116,7 @@
   <a id="99" href="Algebra.Magma.html#99" class="Generalizable">ℓ</a> <a id="101" href="Algebra.Magma.html#101" class="Generalizable">ℓ₁</a> <a id="104" class="Symbol">:</a> <a id="106" href="Agda.Primitive.html#597" class="Postulate">Level</a>
   <a id="114" href="Algebra.Magma.html#114" class="Generalizable">A</a> <a id="116" class="Symbol">:</a> <a id="118" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="123" href="Algebra.Magma.html#99" class="Generalizable">ℓ</a>
 </pre>-->
-<h1 id="magmas">∞-Magmas</h1>
+<h1 id="magmas"><a href="#magmas" class="header-link">∞-Magmas<span class="header-link-emoji">🔗</span></a></h1>
 <p>In common mathematical parlance, a <strong>magma</strong> is a set equipped with a binary operation. In HoTT, we free ourselves from considering sets as a primitive, and generalise to ∞-groupoids: An <strong>∞-magma</strong> is a <em>type</em> equipped with a binary operation.</p>
 <pre class="Agda"><a id="is∞Magma"></a><a id="400" href="Algebra.Magma.html#400" class="Function">is∞Magma</a> <a id="409" class="Symbol">:</a> <a id="411" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="416" href="Algebra.Magma.html#99" class="Generalizable">ℓ</a> <a id="418" class="Symbol">→</a> <a id="420" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="425" href="Algebra.Magma.html#99" class="Generalizable">ℓ</a>
 <a id="427" href="Algebra.Magma.html#400" class="Function">is∞Magma</a> <a id="436" href="Algebra.Magma.html#436" class="Bound">X</a> <a id="438" class="Symbol">=</a> <a id="440" href="Algebra.Magma.html#436" class="Bound">X</a> <a id="442" class="Symbol">→</a> <a id="444" href="Algebra.Magma.html#436" class="Bound">X</a> <a id="446" class="Symbol">→</a> <a id="448" href="Algebra.Magma.html#436" class="Bound">X</a>
@@ -129,7 +129,7 @@
 <a id="862" href="Algebra.Magma.html#813" class="Function">∞MagmaStr-univ</a> <a id="877" class="Symbol">=</a> <a id="879" href="1Lab.Univalence.SIP.html#26443" class="Function">tm→Structure-univalent</a> <a id="902" class="Symbol">(</a><a id="903" href="1Lab.Univalence.SIP.html#24095" class="InductiveConstructor">s∙</a> <a id="906" href="1Lab.Univalence.SIP.html#24127" class="InductiveConstructor Operator">s→</a> <a id="909" class="Symbol">(</a><a id="910" href="1Lab.Univalence.SIP.html#24095" class="InductiveConstructor">s∙</a> <a id="913" href="1Lab.Univalence.SIP.html#24127" class="InductiveConstructor Operator">s→</a> <a id="916" href="1Lab.Univalence.SIP.html#24095" class="InductiveConstructor">s∙</a><a id="918" class="Symbol">))</a>
 </pre>
 <p>∞-magmas form a viable structure because magmas (and therefore their higher version) do not axiomatize any <em>paths</em> that would require further coherence conditions. However, when considering structures with equalities, like semigroups or loops, we must restrict ourselves to sets to get a reasonable object, hence the field <span class="Agda"><a href="Algebra.Magma.html#1615" class="Field">hasIsSet</a></span>. To be able to properly generalize over these notions, we define magmas as ∞-magmas whose carrier type is a set.</p>
-<h1 id="magmas-1">Magmas</h1>
+<h1 id="magmas-1"><a href="#magmas-1" class="header-link">Magmas<span class="header-link-emoji">🔗</span></a></h1>
 <pre class="Agda"><a id="1398" class="Keyword">record</a> <a id="isMagma"></a><a id="1405" href="Algebra.Magma.html#1405" class="Record">isMagma</a> <a id="1413" class="Symbol">{</a><a id="1414" href="Algebra.Magma.html#1414" class="Bound">A</a> <a id="1416" class="Symbol">:</a> <a id="1418" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="1423" href="Algebra.Magma.html#99" class="Generalizable">ℓ</a><a id="1424" class="Symbol">}</a> <a id="1426" class="Symbol">(</a><a id="1427" href="Algebra.Magma.html#1427" class="Bound Operator">_⋆_</a> <a id="1431" class="Symbol">:</a> <a id="1433" href="Algebra.Magma.html#1414" class="Bound">A</a> <a id="1435" class="Symbol">→</a> <a id="1437" href="Algebra.Magma.html#1414" class="Bound">A</a> <a id="1439" class="Symbol">→</a> <a id="1441" href="Algebra.Magma.html#1414" class="Bound">A</a><a id="1442" class="Symbol">)</a> <a id="1444" class="Symbol">:</a> <a id="1446" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="1451" href="Algebra.Magma.html#1423" class="Bound">ℓ</a> <a id="1453" class="Keyword">where</a>
 </pre>
 <p>A <strong>magma</strong> is a <span class="Agda"><a href="1Lab.HLevel.html#3342" class="Function">set</a></span> equipped with an arbitrary binary operation <code>⋆</code>, on which no further laws are imposed.</p>
@@ -181,7 +181,7 @@
 <a id="Magma≡"></a><a id="3661" href="Algebra.Magma.html#3661" class="Function">Magma≡</a> <a id="3668" class="Symbol">:</a> <a id="3670" class="Symbol">{</a><a id="3671" href="Algebra.Magma.html#3671" class="Bound">A</a> <a id="3673" href="Algebra.Magma.html#3673" class="Bound">B</a> <a id="3675" class="Symbol">:</a> <a id="3677" href="Algebra.Magma.html#2566" class="Function">Magma</a> <a id="3683" href="Algebra.Magma.html#99" class="Generalizable">ℓ</a><a id="3684" class="Symbol">}</a> <a id="3686" class="Symbol">→</a> <a id="3688" class="Symbol">(</a><a id="3689" href="Algebra.Magma.html#3671" class="Bound">A</a> <a id="3691" href="1Lab.Univalence.SIP.html#4204" class="Function Operator">≃[</a> <a id="3694" href="1Lab.Univalence.SIP.html#2047" class="InductiveConstructor">HomT→Str</a> <a id="3703" href="Algebra.Magma.html#2815" class="Record">Magma≃</a> <a id="3710" href="1Lab.Univalence.SIP.html#4204" class="Function Operator">]</a> <a id="3712" href="Algebra.Magma.html#3673" class="Bound">B</a><a id="3713" class="Symbol">)</a> <a id="3715" href="1Lab.Equiv.html#2442" class="Function Operator">≃</a> <a id="3717" class="Symbol">(</a><a id="3718" href="Algebra.Magma.html#3671" class="Bound">A</a> <a id="3720" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="3722" href="Algebra.Magma.html#3673" class="Bound">B</a><a id="3723" class="Symbol">)</a>
 <a id="3725" href="Algebra.Magma.html#3661" class="Function">Magma≡</a> <a id="3732" class="Symbol">=</a> <a id="3734" href="1Lab.Univalence.SIP.html#4629" class="Function">SIP</a> <a id="3738" href="Algebra.Magma.html#3413" class="Function">Magma-univalent</a>
 </pre>
-<h2 id="the-boolean-implication-magma">The boolean implication magma</h2>
+<h2 id="the-boolean-implication-magma"><a href="#the-boolean-implication-magma" class="header-link">The boolean implication magma<span class="header-link-emoji">🔗</span></a></h2>
 <pre class="Agda"><a id="3801" class="Keyword">open</a> <a id="3806" class="Keyword">import</a> <a id="3813" href="Data.Bool.html" class="Module">Data.Bool</a>
 </pre>
 <p>To give a somewhat natural example for a magma that is neither associative, commutative, nor has a two-sided identity element, consider <code>boolean implication</code>{.Agda imp}. Since the booleans form a set, this obviously defines a magma:</p>

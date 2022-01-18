@@ -58,7 +58,7 @@
       horizontal rules) -->
       <hr></hr>
       <ul class="incremental">
-      <li><a href="#prosets">Prosets</a></li>
+      <li><a href="#prosets"><a href="#prosets" class="header-link">Prosets<span class="header-link-emoji">🔗</span></a></a></li>
       </ul>
       <hr></hr>
 
@@ -83,7 +83,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/b6db1b6bb5cc86fd051b269537f66d88678aefb1/src/Order/Proset.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/8b3ca76e0310708bb06aa57162e6d5021ce54f82/src/Order/Proset.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -112,7 +112,7 @@
   <a id="98" href="Order.Proset.html#98" class="Generalizable">ℓ</a> <a id="100" href="Order.Proset.html#100" class="Generalizable">ℓ&#39;</a> <a id="103" class="Symbol">:</a> <a id="105" href="Agda.Primitive.html#597" class="Postulate">Level</a>
   <a id="113" href="Order.Proset.html#113" class="Generalizable">A</a> <a id="115" class="Symbol">:</a> <a id="117" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="122" href="Order.Proset.html#98" class="Generalizable">ℓ</a>
 </pre>-->
-<h1 id="prosets">Prosets</h1>
+<h1 id="prosets"><a href="#prosets" class="header-link">Prosets<span class="header-link-emoji">🔗</span></a></h1>
 <p>A <strong>preorder</strong> is a relation, valued in propositions, which is reflexive and transitive. Preorders generalise partial orders by dropping the requirement for antisymmetry. A type equipped with a preorder is called a <strong>protype</strong>.</p>
 <pre class="Agda"><a id="381" class="Keyword">record</a> <a id="isPreorder"></a><a id="388" href="Order.Proset.html#388" class="Record">isPreorder</a> <a id="399" class="Symbol">(</a><a id="400" href="Order.Proset.html#400" class="Bound">R</a> <a id="402" class="Symbol">:</a> <a id="404" href="Order.Proset.html#113" class="Generalizable">A</a> <a id="406" class="Symbol">→</a> <a id="408" href="Order.Proset.html#113" class="Generalizable">A</a> <a id="410" class="Symbol">→</a> <a id="412" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="417" href="Order.Proset.html#100" class="Generalizable">ℓ&#39;</a><a id="419" class="Symbol">)</a> <a id="421" class="Symbol">:</a> <a id="423" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="428" class="Symbol">(</a><a id="429" href="1Lab.Type.html#924" class="Function">level-of</a> <a id="438" href="Order.Proset.html#404" class="Bound">A</a> <a id="440" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="442" href="Order.Proset.html#417" class="Bound">ℓ&#39;</a><a id="444" class="Symbol">)</a> <a id="446" class="Keyword">where</a>
   <a id="454" class="Keyword">field</a>
@@ -122,7 +122,7 @@
 
 <a id="594" class="Keyword">open</a> <a id="599" href="Order.Proset.html#388" class="Module">isPreorder</a>
 </pre>
-<p>A <strong>proset structure</strong> on a type equips the type with a choice of preorder <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≤</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x \le y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>. Additionally, we require that the type <span class="Agda"><a href="Order.Proset.html#943" class="Field">be a set</a></span>, so that prosets and monotone maps form a category.</p>
+<p>A <strong>proset structure</strong> on a type equips the type with a choice of preorder <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≤</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x \le y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7719em;vertical-align:-0.136em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span>.</span> Additionally, we require that the type <span class="Agda"><a href="Order.Proset.html#943" class="Field">be a set</a></span>, so that prosets and monotone maps form a category.</p>
 <pre class="Agda"><a id="834" class="Keyword">record</a> <a id="ProsetOn"></a><a id="841" href="Order.Proset.html#841" class="Record">ProsetOn</a> <a id="850" class="Symbol">{</a><a id="851" href="Order.Proset.html#851" class="Bound">ℓ&#39;</a><a id="853" class="Symbol">}</a> <a id="855" class="Symbol">(</a><a id="856" href="Order.Proset.html#856" class="Bound">A</a> <a id="858" class="Symbol">:</a> <a id="860" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="865" href="Order.Proset.html#98" class="Generalizable">ℓ</a><a id="866" class="Symbol">)</a> <a id="868" class="Symbol">:</a> <a id="870" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="875" class="Symbol">(</a><a id="876" href="Order.Proset.html#865" class="Bound">ℓ</a> <a id="878" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="880" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="885" href="Order.Proset.html#851" class="Bound">ℓ&#39;</a><a id="887" class="Symbol">)</a> <a id="889" class="Keyword">where</a>
   <a id="897" class="Keyword">field</a>
     <a id="ProsetOn._≤_"></a><a id="907" href="Order.Proset.html#907" class="Field Operator">_≤_</a>           <a id="921" class="Symbol">:</a> <a id="923" href="Order.Proset.html#856" class="Bound">A</a> <a id="925" class="Symbol">→</a> <a id="927" href="Order.Proset.html#856" class="Bound">A</a> <a id="929" class="Symbol">→</a> <a id="931" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="936" href="Order.Proset.html#851" class="Bound">ℓ&#39;</a>

@@ -58,7 +58,7 @@
       horizontal rules) -->
       <hr></hr>
       <ul class="incremental">
-      <li><a href="#propositional-truncation">Propositional Truncation</a></li>
+      <li><a href="#propositional-truncation"><a href="#propositional-truncation" class="header-link">Propositional Truncation<span class="header-link-emoji">🔗</span></a></a></li>
       </ul>
       <hr></hr>
 
@@ -83,7 +83,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/b6db1b6bb5cc86fd051b269537f66d88678aefb1/src/1Lab/HIT/Truncation.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/8b3ca76e0310708bb06aa57162e6d5021ce54f82/src/1Lab/HIT/Truncation.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -111,7 +111,7 @@
 
 <a id="134" class="Keyword">module</a> <a id="141" href="1Lab.HIT.Truncation.html" class="Module">1Lab.HIT.Truncation</a> <a id="161" class="Keyword">where</a>
 </pre>
-<h1 id="propositional-truncation">Propositional Truncation</h1>
+<h1 id="propositional-truncation"><a href="#propositional-truncation" class="header-link">Propositional Truncation<span class="header-link-emoji">🔗</span></a></h1>
 <p>Let <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> be a type. The <strong>propositional truncation</strong> of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> is a type which represents the <a href="1Lab.HLevel.html#2594">proposition</a> “A is inhabited”. In MLTT, propositional truncations can not be constructed without postulates, even in the presence of impredicative prop. However, Cubical Agda provides a tool to define them: <em>higher inductive types</em>.</p>
 <pre class="Agda"><a id="575" class="Keyword">data</a> <a id="∥_∥"></a><a id="580" href="1Lab.HIT.Truncation.html#580" class="Datatype Operator">∥_∥</a> <a id="584" class="Symbol">{</a><a id="585" href="1Lab.HIT.Truncation.html#585" class="Bound">ℓ</a><a id="586" class="Symbol">}</a> <a id="588" class="Symbol">(</a><a id="589" href="1Lab.HIT.Truncation.html#589" class="Bound">A</a> <a id="591" class="Symbol">:</a> <a id="593" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="598" href="1Lab.HIT.Truncation.html#585" class="Bound">ℓ</a><a id="599" class="Symbol">)</a> <a id="601" class="Symbol">:</a> <a id="603" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="608" href="1Lab.HIT.Truncation.html#585" class="Bound">ℓ</a> <a id="610" class="Keyword">where</a>
   <a id="∥_∥.inc"></a><a id="618" href="1Lab.HIT.Truncation.html#618" class="InductiveConstructor">inc</a>    <a id="625" class="Symbol">:</a> <a id="627" href="1Lab.HIT.Truncation.html#589" class="Bound">A</a> <a id="629" class="Symbol">→</a> <a id="631" href="1Lab.HIT.Truncation.html#580" class="Datatype Operator">∥</a> <a id="633" href="1Lab.HIT.Truncation.html#589" class="Bound">A</a> <a id="635" href="1Lab.HIT.Truncation.html#580" class="Datatype Operator">∥</a>

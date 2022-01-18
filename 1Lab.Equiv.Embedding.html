@@ -58,7 +58,7 @@
       horizontal rules) -->
       <hr></hr>
       <ul class="incremental">
-      <li><a href="#embeddings">Embeddings</a></li>
+      <li><a href="#embeddings"><a href="#embeddings" class="header-link">Embeddings<span class="header-link-emoji">🔗</span></a></a></li>
       </ul>
       <hr></hr>
 
@@ -83,7 +83,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/b6db1b6bb5cc86fd051b269537f66d88678aefb1/src/1Lab/Equiv/Embedding.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/8b3ca76e0310708bb06aa57162e6d5021ce54f82/src/1Lab/Equiv/Embedding.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -118,7 +118,7 @@
   <a id="239" href="1Lab.Equiv.Embedding.html#239" class="Generalizable">A</a> <a id="241" href="1Lab.Equiv.Embedding.html#241" class="Generalizable">B</a> <a id="243" class="Symbol">:</a> <a id="245" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="250" href="1Lab.Equiv.Embedding.html#224" class="Generalizable">ℓ</a>
   <a id="254" href="1Lab.Equiv.Embedding.html#254" class="Generalizable">w</a> <a id="256" href="1Lab.Equiv.Embedding.html#256" class="Generalizable">x</a> <a id="258" class="Symbol">:</a> <a id="260" href="1Lab.Equiv.Embedding.html#239" class="Generalizable">A</a>
 </pre>-->
-<h1 id="embeddings">Embeddings</h1>
+<h1 id="embeddings"><a href="#embeddings" class="header-link">Embeddings<span class="header-link-emoji">🔗</span></a></h1>
 <p>In HoTT, the notion of <em>injective map</em> is not well-behaved for types that are not sets. Thus, we strengthen the notion: Rather than using <span class="Agda"><a href="1Lab.Equiv.Embedding.html#481" class="Function">injective</a></span>, we use <span class="Agda"><a href="1Lab.Equiv.Embedding.html#555" class="Function">isEmbedding</a></span>.</p>
 <pre class="Agda"><a id="injective"></a><a id="481" href="1Lab.Equiv.Embedding.html#481" class="Function">injective</a> <a id="491" class="Symbol">:</a> <a id="493" class="Symbol">(</a><a id="494" href="1Lab.Equiv.Embedding.html#239" class="Generalizable">A</a> <a id="496" class="Symbol">→</a> <a id="498" href="1Lab.Equiv.Embedding.html#241" class="Generalizable">B</a><a id="499" class="Symbol">)</a> <a id="501" class="Symbol">→</a> <a id="503" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="508" class="Symbol">_</a>
 <a id="510" href="1Lab.Equiv.Embedding.html#481" class="Function">injective</a> <a id="520" href="1Lab.Equiv.Embedding.html#520" class="Bound">f</a> <a id="522" class="Symbol">=</a> <a id="524" class="Symbol">{</a><a id="525" href="1Lab.Equiv.Embedding.html#525" class="Bound">x</a> <a id="527" href="1Lab.Equiv.Embedding.html#527" class="Bound">y</a> <a id="529" class="Symbol">:</a> <a id="531" class="Symbol">_}</a> <a id="534" class="Symbol">→</a> <a id="536" href="1Lab.Equiv.Embedding.html#520" class="Bound">f</a> <a id="538" href="1Lab.Equiv.Embedding.html#525" class="Bound">x</a> <a id="540" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="542" href="1Lab.Equiv.Embedding.html#520" class="Bound">f</a> <a id="544" href="1Lab.Equiv.Embedding.html#527" class="Bound">y</a> <a id="546" class="Symbol">→</a> <a id="548" href="1Lab.Equiv.Embedding.html#525" class="Bound">x</a> <a id="550" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="552" href="1Lab.Equiv.Embedding.html#527" class="Bound">y</a>
