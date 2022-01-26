@@ -238,6 +238,7 @@ table {
           flex-direction: column;
           align-items: center; }
         main div#post-toc-container aside#toc div#toc-container {
+          box-sizing: border-box;
           overflow-x: hidden;
           position: sticky;
           top: 2em;
