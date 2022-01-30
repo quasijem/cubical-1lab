@@ -57,14 +57,14 @@
       <!-- Actual table of contents (separated from the rest by
       horizontal rules) -->
       <hr></hr>
-      <ul class="incremental">
+      <ul>
       <li><a href="#cubical-1lab"><a href="#cubical-1lab" class="header-link">Cubical 1lab<span class="header-link-emoji">🔗</span></a></a>
-      <ul class="incremental">
+      <ul>
       <li><a href="#about"><a href="#about" class="header-link">About<span class="header-link-emoji">🔗</span></a></a></li>
       <li><a href="#technology"><a href="#technology" class="header-link">Technology<span class="header-link-emoji">🔗</span></a></a></li>
       </ul></li>
       <li><a href="#type-theory"><a href="#type-theory" class="header-link">Type Theory<span class="header-link-emoji">🔗</span></a></a>
-      <ul class="incremental">
+      <ul>
       <li><a href="#data-types"><a href="#data-types" class="header-link">Data types<span class="header-link-emoji">🔗</span></a></a></li>
       </ul></li>
       <li><a href="#algebra"><a href="#algebra" class="header-link">Algebra<span class="header-link-emoji">🔗</span></a></a></li>
@@ -90,8 +90,7 @@
 
       <!-- Navbar navigation (lol) -->
       <div id="return" style="white-space: nowrap;">
-              <a href="index.html">️back to index</a> <br />
-              <a href="all-pages.html">view all pages</a> <br />
+                    <a href="all-pages.html">view all pages</a> <br />
         <a href="https://github.com/plt-amy/cubical-1lab/blob/a721298e3cb52cb776dc587cf3d0a3c5e88627d6/src/index.lagda.md">link to source</a> <br />
       </div>
     </div>
@@ -101,10 +100,7 @@
     <!-- Article navigation (narrow screens only) -->
     <div class="narrow-only" id="article-nav">
       <!-- Index return anchor (only if the page is not the index) -->
-            <div id="return">
-        <a href="index.html">️back to index</a>
-      </div>
-      
+            
       <!-- Font toggle checkbox -->
       <span class="equations" style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
         <input name="navbar-eqns" type="checkbox" class="equations" id="navbar-eqns">
@@ -128,9 +124,9 @@
 </pre>
 <p>If you don’t know what those concepts refer to, it could be challenging to figure out what the definition above is even saying - or how it’s proven. Fortunately, every single text element there is a link! Try clicking on the word <span class="Agda"><a data-type="(f : A → B) → Type (A.ℓ₁ ⊔ B.ℓ₁)" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a></span> - either here in the text, or there in the code. It’ll take you to the definition, which will be highlighted in orange to draw your attention.</p>
 <p>Links are colour-coded to indicate what they point to. In body text, links rendered in <a href="index.html">blue (or purple) sans-serif font</a> link to <em>pages</em>; Links rendered in one of the syntax highlighting colours and <code class="sourceCode agda" data-ident="Category">monospace</code> link to a <em>definition</em>. Specifically, the following colours are used:</p>
-<ul class="incremental">
+<ul>
 <li><p>Blue for records and functions: <span class="Agda"><a data-type="(f : A → B) → Type (A.ℓ₁ ⊔ B.ℓ₁)" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a></span>, <span class="Agda"><a data-type="x ≡ y → y ≡ x" href="1Lab.Path.html#9128" class="Function">sym</a></span></p></li>
-<li><p>Green for inductive constructors, coinductive constructors, and the endpoints of the interval: <span class="Agda"><a data-type="I" href="Agda.Primitive.Cubical.html#143" class="InductiveConstructor">i0</a></span></p></li>
+<li><p>Green for inductive constructors, coinductive constructors, and the endpoints of the interval: <span class="Agda"><a href="Agda.Primitive.Cubical.html#143" class="InductiveConstructor">i0</a></span></p></li>
 <li><p>Maroon for modules: <span class="Agda"><a href="1Lab.Type.html" class="Module">1Lab.Type</a></span></p></li>
 <li><p>Purple for record selectors: <span class="Agda"><a data-type="isEquiv f → (y : B) → isContr (fibre f y)" href="1Lab.Equiv.html#2382" class="Field">isEqv</a></span></p></li>
 </ul>
@@ -148,23 +144,23 @@
 <pre class="Agda"><a id="3108" class="Keyword">open</a> <a id="3113" class="Keyword">import</a> <a id="3120" href="Authors.html" class="Module">Authors</a>
 </pre>-->
 <p>It’d be very unfair of me not to mention other resources that could be helpful for learning about Homotopy Type Theory:</p>
-<ul class="incremental">
+<ul>
 <li><p>The “canonical” reference is <a href="https://homotopytypetheory.org/book">the HoTT Book</a>, written by a variety of mathematicians at the IAS Special Year for Univalent Mathematics, held between 2012-2013 and organised by Steve Awodey, Thierry Coquand, and the late Vladimir Voevodsky.</p>
 <p>The Book is often referred to on this site - with those words - so if you don’t know which book “The Book” is, it’s the HoTT book! It’s split into two parts: Type Theory, which introduces the concepts of Homotopy Type Theory with no previous knowledge of type theory assumed; and Mathematics, which develops some mathematics (homotopy theory, category theory, set theory, and real analysis) in this theory.</p></li>
 </ul>
-<ul class="incremental">
+<ul>
 <li><p>Prof. Martín Escardó, at Birmingham, has done a great service to the community by <em>also</em> formalising a great deal of univalent mathematics in Literate Agda, in his <a href="https://www.cs.bham.ac.uk/~mhe/HoTT-UF-in-Agda-Lecture-Notes/HoTT-UF-Agda.html">Introduction to Univalent Foundations of Mathematics with Agda</a>.</p>
 <p>Prof. Escardó’s notes, unlike the 1lab, are done in base Agda, with univalence assumed explicitly in the theorems that need it. This is a principled decision when the goal is introducing univalent mathematics, but it is not practical when the goal is to <em>practice</em> univalent mathematics in Agda.</p>
 <p>Even still, that document is <em>much better</em> than this site will <em>ever</em> be as an introduction to the subject! While many of the pages of the 1lab have introductory <em>flavour</em>, it is not meant as an introduction to the subject of univalent mathematics.</p></li>
 </ul>
 <p>With those two references in mind, the 1lab aims to:</p>
-<ul class="incremental">
+<ul>
 <li>Provide a comprehensibly documented example of mathematics done in HoTT, formalised entirely in safe<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Cubical Agda, for other students of homotopy type theory to consult. This doesn’t bring anything new to the table for HoTT: Many, if not most, of the theorems in the book were already formalised in Coq.</li>
 </ul>
-<ul class="incremental">
+<ul>
 <li><p>Provide an introduction to HoTT as it’s done in Cubical Type Theory to those who are already familiar with “Book HoTT”. There are significant differences, including, but very much not limited to, univalence having computational content!</p></li>
 <li><p>Do both of these in a <em>discoverable</em> manner:</p>
-<ul class="incremental">
+<ul>
 <li><p>All Agda identifiers are cross-linked (this is an Agda feature and requires no effort on my part);</p></li>
 <li><p>Concepts are linked to the first time they are used in a page<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>;</p></li>
 <li><p>Diagrams are employed where appropriate, and there is infrastructure in place to make this easy to do;</p></li>
