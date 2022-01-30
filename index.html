@@ -91,7 +91,7 @@
       <!-- Navbar navigation (lol) -->
       <div id="return" style="white-space: nowrap;">
                     <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/bef1a39e4cecf4d53019ab98d6285267eb8b20ac/src/index.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/49026c6c9f8ead3a77003ec072e40a6204ed4b60/src/index.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -209,21 +209,25 @@
 
 <a id="9844" class="Keyword">open</a> <a id="9849" class="Keyword">import</a> <a id="9856" href="1Lab.HIT.S1.html" class="Module">1Lab.HIT.S1</a>         <a id="9876" class="Comment">-- The circle as a cell complex</a>
 <a id="9908" class="Keyword">open</a> <a id="9913" class="Keyword">import</a> <a id="9920" href="1Lab.HIT.Sphere.html" class="Module">1Lab.HIT.Sphere</a>     <a id="9940" class="Comment">-- Spheres of arbitrary dimension</a>
-<a id="9974" class="Keyword">open</a> <a id="9979" class="Keyword">import</a> <a id="9986" href="1Lab.HIT.Sinfty.html" class="Module">1Lab.HIT.Sinfty</a>     <a id="10006" class="Comment">-- The infinity-dimensional sphere</a>
-<a id="10041" class="Keyword">open</a> <a id="10046" class="Keyword">import</a> <a id="10053" href="1Lab.HIT.Suspension.html" class="Module">1Lab.HIT.Suspension</a> <a id="10073" class="Comment">-- The suspension operation</a>
-<a id="10101" class="Keyword">open</a> <a id="10106" class="Keyword">import</a> <a id="10113" href="1Lab.HIT.Truncation.html" class="Module">1Lab.HIT.Truncation</a> <a id="10133" class="Comment">-- Propositional truncation</a>
+<a id="9974" class="Keyword">open</a> <a id="9979" class="Keyword">import</a> <a id="9986" href="1Lab.HIT.Torus.html" class="Module">1Lab.HIT.Torus</a>      <a id="10006" class="Comment">-- Torus as a cell complex and as a product space</a>
+<a id="10056" class="Keyword">open</a> <a id="10061" class="Keyword">import</a> <a id="10068" href="1Lab.HIT.Sinfty.html" class="Module">1Lab.HIT.Sinfty</a>     <a id="10088" class="Comment">-- The infinity-dimensional sphere</a>
+<a id="10123" class="Keyword">open</a> <a id="10128" class="Keyword">import</a> <a id="10135" href="1Lab.HIT.Suspension.html" class="Module">1Lab.HIT.Suspension</a> <a id="10155" class="Comment">-- The suspension operation</a>
+<a id="10183" class="Keyword">open</a> <a id="10188" class="Keyword">import</a> <a id="10195" href="1Lab.HIT.Truncation.html" class="Module">1Lab.HIT.Truncation</a> <a id="10215" class="Comment">-- Propositional truncation</a>
 
-<a id="10162" class="Keyword">open</a> <a id="10167" class="Keyword">import</a> <a id="10174" href="1Lab.Counterexamples.IsIso.html" class="Module">1Lab.Counterexamples.IsIso</a>   <a id="10203" class="Comment">-- Counterexample: isIso is not a prop</a>
-<a id="10242" class="Keyword">open</a> <a id="10247" class="Keyword">import</a> <a id="10254" href="1Lab.Counterexamples.Russell.html" class="Module">1Lab.Counterexamples.Russell</a> <a id="10283" class="Comment">-- Counterexample: Russell&#39;s paradox</a>
-<a id="10320" class="Keyword">open</a> <a id="10325" class="Keyword">import</a> <a id="10332" href="1Lab.Counterexamples.Sigma.html" class="Module">1Lab.Counterexamples.Sigma</a>   <a id="10361" class="Comment">-- Counterexample: Sigma is not prop</a>
+<a id="10244" class="Keyword">open</a> <a id="10249" class="Keyword">import</a> <a id="10256" href="1Lab.Counterexamples.IsIso.html" class="Module">1Lab.Counterexamples.IsIso</a>   <a id="10285" class="Comment">-- Counterexample: isIso is not a prop</a>
+<a id="10324" class="Keyword">open</a> <a id="10329" class="Keyword">import</a> <a id="10336" href="1Lab.Counterexamples.Russell.html" class="Module">1Lab.Counterexamples.Russell</a> <a id="10365" class="Comment">-- Counterexample: Russell&#39;s paradox</a>
+<a id="10402" class="Keyword">open</a> <a id="10407" class="Keyword">import</a> <a id="10414" href="1Lab.Counterexamples.Sigma.html" class="Module">1Lab.Counterexamples.Sigma</a>   <a id="10443" class="Comment">-- Counterexample: Sigma is not prop</a>
 </pre>
 <h2 id="data-types"><a href="#data-types" class="header-link">Data types<span class="header-link-emoji">🔗</span></a></h2>
 <p>The <code>Data</code> namespace contains definitions of oft-used data types, which are fundamental to the rest of the development but not “basic type theory”. These modules contain (or re-export) the types themselves, useful operations on them, characterisation of their path spaces, etc.</p>
-<pre class="Agda"><a id="10705" class="Keyword">open</a> <a id="10710" class="Keyword">import</a> <a id="10717" href="Data.Nat.html" class="Module">Data.Nat</a>  <a id="10727" class="Comment">-- The natural numbers</a>
-<a id="10750" class="Keyword">open</a> <a id="10755" class="Keyword">import</a> <a id="10762" href="Data.Int.html" class="Module">Data.Int</a>  <a id="10772" class="Comment">-- The integers</a>
-<a id="10788" class="Keyword">open</a> <a id="10793" class="Keyword">import</a> <a id="10800" href="Data.Sum.html" class="Module">Data.Sum</a>  <a id="10810" class="Comment">-- Coproduct types</a>
-<a id="10829" class="Keyword">open</a> <a id="10834" class="Keyword">import</a> <a id="10841" href="Data.Bool.html" class="Module">Data.Bool</a> <a id="10851" class="Comment">-- The booleans</a>
-<a id="10867" class="Keyword">open</a> <a id="10872" class="Keyword">import</a> <a id="10879" href="Data.List.html" class="Module">Data.List</a> <a id="10889" class="Comment">-- Finite lists</a>
+<pre class="Agda"><a id="10787" class="Keyword">open</a> <a id="10792" class="Keyword">import</a> <a id="10799" href="Data.Nat.html" class="Module">Data.Nat</a>  <a id="10809" class="Comment">-- The natural numbers</a>
+<a id="10832" class="Keyword">open</a> <a id="10837" class="Keyword">import</a> <a id="10844" href="Data.Int.html" class="Module">Data.Int</a>  <a id="10854" class="Comment">-- The integers</a>
+<a id="10870" class="Keyword">open</a> <a id="10875" class="Keyword">import</a> <a id="10882" href="Data.Sum.html" class="Module">Data.Sum</a>  <a id="10892" class="Comment">-- Coproduct types</a>
+<a id="10911" class="Keyword">open</a> <a id="10916" class="Keyword">import</a> <a id="10923" href="Data.Bool.html" class="Module">Data.Bool</a> <a id="10933" class="Comment">-- The booleans</a>
+<a id="10949" class="Keyword">open</a> <a id="10954" class="Keyword">import</a> <a id="10961" href="Data.List.html" class="Module">Data.List</a> <a id="10971" class="Comment">-- Finite lists</a>
+<a id="10987" class="Keyword">open</a> <a id="10992" class="Keyword">import</a> <a id="10999" href="Data.Power.html" class="Module">Data.Power</a>         <a id="11018" class="Comment">-- Power sets</a>
+<a id="11032" class="Keyword">open</a> <a id="11037" class="Keyword">import</a> <a id="11044" href="Data.Power.Lattice.html" class="Module">Data.Power.Lattice</a> <a id="11063" class="Comment">-- Power sets form a lattice</a>
+<a id="11092" class="Keyword">open</a> <a id="11097" class="Keyword">import</a> <a id="11104" href="Data.Set.Quotient.html" class="Module">Data.Set.Quotient</a>  <a id="11123" class="Comment">-- Set quotients</a>
 </pre>
 <!--
 # Relation
@@ -231,19 +235,24 @@
 Here, we define often-used types of relations like partial orders as well as
 actual relations themselves, for example, lexicographic orderings on lists.
 
-<pre class="Agda"><a id="11089" class="Keyword">open</a> <a id="11094" class="Keyword">import</a> <a id="11101" href="Relation.Order.html" class="Module">Relation.Order</a>               <a id="11130" class="Comment">-- Prop-valued ordering relations</a>
-<a id="11164" class="Keyword">open</a> <a id="11169" class="Keyword">import</a> <a id="11176" href="Relation.Order.Lexicographic.html" class="Module">Relation.Order.Lexicographic</a> <a id="11205" class="Comment">-- Lexicographic orderings</a>
+<pre class="Agda"><a id="11324" class="Keyword">open</a> <a id="11329" class="Keyword">import</a> <a id="11336" href="Relation.Order.html" class="Module">Relation.Order</a>               <a id="11365" class="Comment">-- Prop-valued ordering relations</a>
+<a id="11399" class="Keyword">open</a> <a id="11404" class="Keyword">import</a> <a id="11411" href="Relation.Order.Lexicographic.html" class="Module">Relation.Order.Lexicographic</a> <a id="11440" class="Comment">-- Lexicographic orderings</a>
 </pre>-->
 <h1 id="algebra"><a href="#algebra" class="header-link">Algebra<span class="header-link-emoji">🔗</span></a></h1>
 <p>In the <code>Algebra</code> namespace, the theory of universal algebra is developed from a univalent perspective. Specifically, every definition of an algebraic structure comes with an associated proof that it is univalent — concretely, equality of groups is group isomorphism (for instance).</p>
-<pre class="Agda"><a id="11545" class="Keyword">open</a> <a id="11550" class="Keyword">import</a> <a id="11557" href="Algebra.Magma.html" class="Module">Algebra.Magma</a>                      <a id="11592" class="Comment">-- Binary operations </a>
-<a id="11614" class="Keyword">open</a> <a id="11619" class="Keyword">import</a> <a id="11626" href="Algebra.Magma.Unital.html" class="Module">Algebra.Magma.Unital</a>               <a id="11661" class="Comment">-- Operations with two-sided units</a>
-<a id="11696" class="Keyword">open</a> <a id="11701" class="Keyword">import</a> <a id="11708" href="Algebra.Magma.Unital.EckmannHilton.html" class="Module">Algebra.Magma.Unital.EckmannHilton</a> <a id="11743" class="Comment">-- The Eckmann-Hilton argument</a>
+<pre class="Agda"><a id="11780" class="Keyword">open</a> <a id="11785" class="Keyword">import</a> <a id="11792" href="Algebra.Magma.html" class="Module">Algebra.Magma</a>                      <a id="11827" class="Comment">-- Binary operations </a>
+<a id="11849" class="Keyword">open</a> <a id="11854" class="Keyword">import</a> <a id="11861" href="Algebra.Magma.Unital.html" class="Module">Algebra.Magma.Unital</a>               <a id="11896" class="Comment">-- Operations with two-sided units</a>
+<a id="11931" class="Keyword">open</a> <a id="11936" class="Keyword">import</a> <a id="11943" href="Algebra.Magma.Unital.EckmannHilton.html" class="Module">Algebra.Magma.Unital.EckmannHilton</a> <a id="11978" class="Comment">-- The Eckmann-Hilton argument</a>
 
-<a id="11775" class="Keyword">open</a> <a id="11780" class="Keyword">import</a> <a id="11787" href="Algebra.Semigroup.html" class="Module">Algebra.Semigroup</a>                  <a id="11822" class="Comment">-- Semigroups (associative magmas)</a>
-<a id="11857" class="Keyword">open</a> <a id="11862" class="Keyword">import</a> <a id="11869" href="Algebra.Monoid.html" class="Module">Algebra.Monoid</a>                     <a id="11904" class="Comment">-- Monoids as unital semigroups</a>
-<a id="11936" class="Keyword">open</a> <a id="11941" class="Keyword">import</a> <a id="11948" href="Algebra.Group.html" class="Module">Algebra.Group</a>                      <a id="11983" class="Comment">-- Groups as monoids with inverses</a>
-<a id="12018" class="Keyword">open</a> <a id="12023" class="Keyword">import</a> <a id="12030" href="Algebra.Group.Cayley.html" class="Module">Algebra.Group.Cayley</a>               <a id="12065" class="Comment">-- Cayley&#39;s theorem</a>
+<a id="12010" class="Keyword">open</a> <a id="12015" class="Keyword">import</a> <a id="12022" href="Algebra.Semigroup.html" class="Module">Algebra.Semigroup</a>   <a id="12042" class="Comment">-- Semigroups (associative magmas)</a>
+<a id="12077" class="Keyword">open</a> <a id="12082" class="Keyword">import</a> <a id="12089" href="Algebra.Monoid.html" class="Module">Algebra.Monoid</a>      <a id="12109" class="Comment">-- Monoids as unital semigroups</a>
+
+<a id="12142" class="Keyword">open</a> <a id="12147" class="Keyword">import</a> <a id="12154" href="Algebra.Group.html" class="Module">Algebra.Group</a>                   <a id="12186" class="Comment">-- Groups as monoids with inverses</a>
+<a id="12221" class="Keyword">open</a> <a id="12226" class="Keyword">import</a> <a id="12233" href="Algebra.Group.Cayley.html" class="Module">Algebra.Group.Cayley</a>            <a id="12265" class="Comment">-- Cayley&#39;s theorem</a>
+<a id="12285" class="Keyword">open</a> <a id="12290" class="Keyword">import</a> <a id="12297" href="Algebra.Group.Homotopy.html" class="Module">Algebra.Group.Homotopy</a>          <a id="12329" class="Comment">-- Homotopy groups</a>
+<a id="12348" class="Keyword">open</a> <a id="12353" class="Keyword">import</a> <a id="12360" href="Algebra.Group.Subgroup.html" class="Module">Algebra.Group.Subgroup</a>          <a id="12392" class="Comment">-- Subgroups; Images and kernels</a>
+<a id="12425" class="Keyword">open</a> <a id="12430" class="Keyword">import</a> <a id="12437" href="Algebra.Group.Quotients.html" class="Module">Algebra.Group.Quotients</a>         <a id="12469" class="Comment">-- Quotients by normal subgroups</a>
+<a id="12502" class="Keyword">open</a> <a id="12507" class="Keyword">import</a> <a id="12514" href="Algebra.Group.Quotients.IsoThms.html" class="Module">Algebra.Group.Quotients.IsoThms</a> <a id="12546" class="Comment">-- Isomorphism theorems</a>
 </pre>
 <section class="footnotes" role="doc-endnotes">
 <hr></hr>
