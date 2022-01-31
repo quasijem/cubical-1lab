@@ -80,7 +80,8 @@ a[href].hover-highlight {
   font-family: 'iosevka', 'Iosevka', 'Fantasque Sans Mono', 'Roboto Mono', monospace;
   font-weight: 400; }
   .Agda .Comment {
-    color: #7F848E; }
+    color: #222;
+    font-style: italic; }
   .Agda .Background {
     background-color: #fff; }
   .Agda .Markup {
