@@ -91,7 +91,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/e9cc7e9178ca22c67ffb1c793c9531f2d4f4df9a/src/Algebra/Group.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/9eaa0514bac440433b328ba546191859a2f73f3a/src/Algebra/Group.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -368,10 +368,10 @@ isPropProperty R₁ ι previous-fields P → RecordFields R₁ ι" id="7164" hre
 <h2 id="making-groups"><a href="#making-groups" class="header-link">Making groups<span class="header-link-emoji">🔗</span></a></h2>
 <p>Since the interface of <span class="Agda"><a data-type="(A : Type ℓ) → Type ℓ" href="Algebra.Group.html#5227" class="Record">GroupOn</a></span> is very deeply nested, we introduce a helper function for arranging the data of a group into a record.</p>
 <pre class="Agda"><a id="makeGroup"></a><a data-type="isSet G →
-(unit : G) (_⋆_ : G → G → G) (inv : G → G) →
+(unit : G) (_⋆_ : G → G → G) (inv₁ : G → G) →
 ((x y z : G) → ((x ⋆ y) ⋆ z) ≡ (x ⋆ (y ⋆ z))) →
-((x : G) → (inv x ⋆ x) ≡ unit) →
-((x : G) → (x ⋆ inv x) ≡ unit) →
+((x : G) → (inv₁ x ⋆ x) ≡ unit) →
+((x : G) → (x ⋆ inv₁ x) ≡ unit) →
 ((x : G) → (unit ⋆ x) ≡ x) → GroupOn G" id="7343" href="Algebra.Group.html#7343" class="Function">makeGroup</a> 
   <a id="7356" class="Symbol">:</a> <a id="7358" class="Symbol">∀</a> <a id="7360" class="Symbol">{</a><a id="7361" href="Algebra.Group.html#7361" class="Bound">ℓ</a><a id="7362" class="Symbol">}</a> <a id="7364" class="Symbol">{</a><a id="7365" href="Algebra.Group.html#7365" class="Bound">G</a> <a id="7367" class="Symbol">:</a> <a id="7369" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="7374" href="Algebra.Group.html#7361" class="Bound">ℓ</a><a id="7375" class="Symbol">}</a>
   <a id="7379" class="Symbol">→</a> <a data-type="Type ℓ → Type ℓ" id="7381" href="1Lab.HLevel.html#3342" class="Function">isSet</a> <a id="7387" href="Algebra.Group.html#7365" class="Bound">G</a>
@@ -381,10 +381,10 @@ isPropProperty R₁ ι previous-fields P → RecordFields R₁ ι" id="7164" hre
   <a id="7536" class="Symbol">→</a> <a id="7538" class="Symbol">(∀</a> <a id="7541" href="Algebra.Group.html#7541" class="Bound">x</a> <a id="7543" class="Symbol">→</a> <a id="7545" href="Algebra.Group.html#7394" class="Bound">unit</a> <a id="7550" href="Algebra.Group.html#7405" class="Bound Operator">⋆</a> <a id="7552" href="Algebra.Group.html#7541" class="Bound">x</a> <a data-type="A → A → Type ℓ" id="7554" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="7556" href="Algebra.Group.html#7541" class="Bound">x</a><a id="7557" class="Symbol">)</a>
   <a id="7561" class="Symbol">→</a> <a data-type="(A : Type ℓ) → Type ℓ" id="7563" href="Algebra.Group.html#5227" class="Record">GroupOn</a> <a id="7571" href="Algebra.Group.html#7365" class="Bound">G</a>
 <a data-type="isSet G →
-(unit : G) (_⋆_ : G → G → G) (inv : G → G) →
+(unit : G) (_⋆_ : G → G → G) (inv₁ : G → G) →
 ((x y z : G) → ((x ⋆ y) ⋆ z) ≡ (x ⋆ (y ⋆ z))) →
-((x : G) → (inv x ⋆ x) ≡ unit) →
-((x : G) → (x ⋆ inv x) ≡ unit) →
+((x : G) → (inv₁ x ⋆ x) ≡ unit) →
+((x : G) → (x ⋆ inv₁ x) ≡ unit) →
 ((x : G) → (unit ⋆ x) ≡ x) → GroupOn G" id="7573" href="Algebra.Group.html#7343" class="Function">makeGroup</a> <a id="7583" href="Algebra.Group.html#7583" class="Bound">gset</a> <a id="7588" href="Algebra.Group.html#7588" class="Bound">id</a> <a id="7591" href="Algebra.Group.html#7591" class="Bound">star</a> <a id="7596" href="Algebra.Group.html#7596" class="Bound">inv</a> <a id="7600" href="Algebra.Group.html#7600" class="Bound">assoc</a> <a id="7606" href="Algebra.Group.html#7606" class="Bound">invl</a> <a id="7611" href="Algebra.Group.html#7611" class="Bound">invr</a> <a id="7616" href="Algebra.Group.html#7616" class="Bound">idl</a> <a id="7620" class="Symbol">=</a> <a id="7622" href="Algebra.Group.html#7650" class="Function">r</a> <a id="7624" class="Keyword">where</a>
   <a id="7632" class="Keyword">open</a> <a data-type="(_*₁_ : A → A → A) → Type ℓ" id="7637" href="Algebra.Group.html#911" class="Module">isGroup</a>
   

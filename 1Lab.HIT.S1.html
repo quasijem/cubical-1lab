@@ -86,7 +86,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/e9cc7e9178ca22c67ffb1c793c9531f2d4f4df9a/src/1Lab/HIT/S1.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/9eaa0514bac440433b328ba546191859a2f73f3a/src/1Lab/HIT/S1.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -280,8 +280,8 @@ outS u0 ≡ hcomp u (outS u0)" id="8541" href="1Lab.Path.html#34039" class="Func
 </pre>
 <p>Thus we have that the loop space of the circle is the type of integers:</p>
 <pre class="Agda">  <a id="S¹Path.ΩS¹≃Int"></a><a data-type="(base ≡ base) ≃ Int" id="9460" href="1Lab.HIT.S1.html#9460" class="Function">ΩS¹≃Int</a> <a id="9468" class="Symbol">:</a> <a id="9470" class="Symbol">(</a><a data-type="S¹" id="9471" href="1Lab.HIT.S1.html#534" class="InductiveConstructor">base</a> <a data-type="A → A → Type ℓ" id="9476" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a data-type="S¹" id="9478" href="1Lab.HIT.S1.html#534" class="InductiveConstructor">base</a><a id="9482" class="Symbol">)</a> <a data-type="Type ℓ₁ → Type ℓ₂ → Type (ℓ₁ ⊔ ℓ₂)" id="9484" href="1Lab.Equiv.html#2442" class="Function Operator">≃</a> <a data-type="Type" id="9486" href="Agda.Builtin.Int.html#246" class="Datatype">Int</a>
-  <a data-type="(base ≡ base) ≃ Int" id="9492" href="1Lab.HIT.S1.html#9460" class="Function">ΩS¹≃Int</a> <a id="9500" class="Symbol">=</a> <a data-type="Iso A B → A ≃ B" id="9502" href="1Lab.Equiv.html#20090" class="Function">Iso→Equiv</a> <a id="9512" class="Symbol">(</a><a data-type="(x : S¹) → base ≡ x → Cover x" id="9513" href="1Lab.HIT.S1.html#3196" class="Function">encode</a> <a data-type="S¹" id="9520" href="1Lab.HIT.S1.html#534" class="InductiveConstructor">base</a> <a data-type="(fst₁ : A) (snd₁ : B fst₁) → ∑ A B" id="9525" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a data-type="(inv : B → A) (rinv₁ : isRightInverse inv f)
-(linv₁ : isLeftInverse inv f) →
+  <a data-type="(base ≡ base) ≃ Int" id="9492" href="1Lab.HIT.S1.html#9460" class="Function">ΩS¹≃Int</a> <a id="9500" class="Symbol">=</a> <a data-type="Iso A B → A ≃ B" id="9502" href="1Lab.Equiv.html#20090" class="Function">Iso→Equiv</a> <a id="9512" class="Symbol">(</a><a data-type="(x : S¹) → base ≡ x → Cover x" id="9513" href="1Lab.HIT.S1.html#3196" class="Function">encode</a> <a data-type="S¹" id="9520" href="1Lab.HIT.S1.html#534" class="InductiveConstructor">base</a> <a data-type="(fst₁ : A) (snd₁ : B fst₁) → ∑ A B" id="9525" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a data-type="(inv₁ : B → A) (rinv₁ : isRightInverse inv₁ f)
+(linv₁ : isLeftInverse inv₁ f) →
 isIso f" id="9527" href="1Lab.Equiv.html#6064" class="InductiveConstructor">iso</a> <a data-type="Int → base ≡ base" id="9531" href="1Lab.HIT.S1.html#3564" class="Function">loop^</a> <a data-type="(n : Int) → encode base (loop^ n) ≡ n" id="9537" href="1Lab.HIT.S1.html#4025" class="Function">encode-loop^</a> <a data-type="(p : base ≡ x) → decode x (encode x p) ≡ p" id="9550" href="1Lab.HIT.S1.html#9243" class="Function">decode-encode</a><a id="9563" class="Symbol">)</a>
 </pre>
   </article>

@@ -83,7 +83,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/e9cc7e9178ca22c67ffb1c793c9531f2d4f4df9a/src/1Lab/Equiv/Embedding.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/9eaa0514bac440433b328ba546191859a2f73f3a/src/1Lab/Equiv/Embedding.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -144,8 +144,8 @@
 </pre>
 <p>In this case, we have that both <code>f x ≡ f y</code> and <code>x ≡ y</code> are mere propositions, so biimplication becomes equivalence:</p>
 <pre class="Agda"><a data-type="isSet A → isSet B → (f : A → B) → injective f → isEmbedding f" id="1679" href="1Lab.Equiv.Embedding.html#1409" class="Function">injective-sets→embedding</a> <a id="1704" href="1Lab.Equiv.Embedding.html#1704" class="Bound">Aset</a> <a id="1709" href="1Lab.Equiv.Embedding.html#1709" class="Bound">Bset</a> <a id="1714" href="1Lab.Equiv.Embedding.html#1714" class="Bound">f</a> <a id="1716" href="1Lab.Equiv.Embedding.html#1716" class="Bound">injective</a> <a id="1726" class="Symbol">=</a>
-  <a data-type="(i : isIso f) → isEquiv f" id="1730" href="1Lab.Equiv.html#19765" class="Function">isIso→isEquiv</a> <a id="1744" class="Symbol">(</a><a data-type="(inv : B → A) (rinv₁ : isRightInverse inv f)
-(linv₁ : isLeftInverse inv f) →
+  <a data-type="(i : isIso f) → isEquiv f" id="1730" href="1Lab.Equiv.html#19765" class="Function">isIso→isEquiv</a> <a id="1744" class="Symbol">(</a><a data-type="(inv₁ : B → A) (rinv₁ : isRightInverse inv₁ f)
+(linv₁ : isLeftInverse inv₁ f) →
 isIso f" id="1745" href="1Lab.Equiv.html#6064" class="InductiveConstructor">iso</a> <a id="1749" href="1Lab.Equiv.Embedding.html#1716" class="Bound">injective</a> <a id="1759" class="Symbol">(λ</a> <a id="1762" href="1Lab.Equiv.Embedding.html#1762" class="Bound">_</a> <a id="1764" class="Symbol">→</a> <a id="1766" href="1Lab.Equiv.Embedding.html#1709" class="Bound">Bset</a> <a id="1771" class="Symbol">_</a> <a id="1773" class="Symbol">_</a> <a id="1775" class="Symbol">_</a> <a id="1777" class="Symbol">_)</a> <a id="1780" class="Symbol">(λ</a> <a id="1783" href="1Lab.Equiv.Embedding.html#1783" class="Bound">_</a> <a id="1785" class="Symbol">→</a> <a id="1787" href="1Lab.Equiv.Embedding.html#1704" class="Bound">Aset</a> <a id="1792" class="Symbol">_</a> <a id="1794" class="Symbol">_</a> <a id="1796" class="Symbol">_</a> <a id="1798" class="Symbol">_))</a>
 </pre>
 <p>An equivalent characterisation of the embeddings is that they are the types with <span class="Agda"><a data-type="Type ℓ → Type ℓ" href="1Lab.HLevel.html#2594" class="Function">propositional</a></span> <span class="Agda"><a data-type="(A → B) → B → Type (A.ℓ₁ ⊔ B.ℓ₁)" href="1Lab.Equiv.html#1881" class="Function">fibres</a></span>.</p>

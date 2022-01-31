@@ -89,7 +89,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/e9cc7e9178ca22c67ffb1c793c9531f2d4f4df9a/src/Data/Bool.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/9eaa0514bac440433b328ba546191859a2f73f3a/src/Data/Bool.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -303,8 +303,8 @@
 <h2 id="the-not-equivalence"><a href="#the-not-equivalence" class="header-link">The “not” equivalence<span class="header-link-emoji">🔗</span></a></h2>
 <p>The construction of <span class="Agda"><a data-type="Bool → Bool" href="Data.Bool.html#1190" class="Function">not</a></span> as an equivalence factors through showing that <code>not</code> is an isomorphism. In particular, <span class="Agda"><a data-type="Bool → Bool" href="Data.Bool.html#1190" class="Function">not</a></span> is its own inverse, so we need a proof that it’s involutive, as is proven in <span class="Agda"><a data-type="(x : Bool) → not (not x) ≡ x" href="Data.Bool.html#3684" class="Function">not-involutive</a></span>. With this, we can get a proof that it’s an equivalence:</p>
 <pre class="Agda"><a id="isEquiv-not"></a><a data-type="isEquiv not" id="7030" href="Data.Bool.html#7030" class="Function">isEquiv-not</a> <a id="7042" class="Symbol">:</a> <a data-type="(f : A → B) → Type (A.ℓ₁ ⊔ B.ℓ₁)" id="7044" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a> <a data-type="Bool → Bool" id="7052" href="Data.Bool.html#1190" class="Function">not</a>
-<a data-type="isEquiv not" id="7056" href="Data.Bool.html#7030" class="Function">isEquiv-not</a> <a id="7068" class="Symbol">=</a> <a data-type="(i : isIso f) → isEquiv f" id="7070" href="1Lab.Equiv.html#19765" class="Function">isIso→isEquiv</a> <a id="7084" class="Symbol">(</a><a data-type="(inv : B → A) (rinv₁ : isRightInverse inv f)
-(linv₁ : isLeftInverse inv f) →
+<a data-type="isEquiv not" id="7056" href="Data.Bool.html#7030" class="Function">isEquiv-not</a> <a id="7068" class="Symbol">=</a> <a data-type="(i : isIso f) → isEquiv f" id="7070" href="1Lab.Equiv.html#19765" class="Function">isIso→isEquiv</a> <a id="7084" class="Symbol">(</a><a data-type="(inv₁ : B → A) (rinv₁ : isRightInverse inv₁ f)
+(linv₁ : isLeftInverse inv₁ f) →
 isIso f" id="7085" href="1Lab.Equiv.html#6064" class="InductiveConstructor">iso</a> <a data-type="Bool → Bool" id="7089" href="Data.Bool.html#1190" class="Function">not</a> <a data-type="(x : Bool) → not (not x) ≡ x" id="7093" href="Data.Bool.html#3684" class="Function">not-involutive</a> <a data-type="(x : Bool) → not (not x) ≡ x" id="7108" href="Data.Bool.html#3684" class="Function">not-involutive</a><a id="7122" class="Symbol">)</a>
 </pre>
 <h2 id="autbool"><a href="#autbool" class="header-link">Aut(Bool)<span class="header-link-emoji">🔗</span></a></h2>

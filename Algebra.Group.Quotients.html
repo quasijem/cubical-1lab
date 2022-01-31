@@ -83,7 +83,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/e9cc7e9178ca22c67ffb1c793c9531f2d4f4df9a/src/Algebra/Group/Quotients.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/9eaa0514bac440433b328ba546191859a2f73f3a/src/Algebra/Group/Quotients.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -223,10 +223,10 @@ x ∈ r .subgroup → inverse (G .snd) x ∈ r .subgroup" id="2828" href="Algebr
  rather directly:</p>
 <pre class="Agda">    <a id="3084" href="Algebra.Group.Quotients.html#3084" class="Function">GroupOn-T</a> <a id="3094" class="Symbol">:</a> <a data-type="(A : Type ℓ) → Type ℓ" id="3096" href="Algebra.Group.html#5227" class="Record">GroupOn</a> <a id="3104" href="Algebra.Group.Quotients.html#1160" class="Function">T</a>
     <a id="3110" href="Algebra.Group.Quotients.html#3084" class="Function">GroupOn-T</a> <a id="3120" class="Symbol">=</a> <a data-type="isSet G →
-(unit : G) (_⋆_ : G → G → G) (inv : G → G) →
+(unit : G) (_⋆_ : G → G → G) (inv₁ : G → G) →
 ((x y z : G) → ((x ⋆ y) ⋆ z) ≡ (x ⋆ (y ⋆ z))) →
-((x : G) → (inv x ⋆ x) ≡ unit) →
-((x : G) → (x ⋆ inv x) ≡ unit) →
+((x : G) → (inv₁ x ⋆ x) ≡ unit) →
+((x : G) → (x ⋆ inv₁ x) ≡ unit) →
 ((x : G) → (unit ⋆ x) ≡ x) → GroupOn G" id="3122" href="Algebra.Group.html#7343" class="Function">makeGroup</a> <a data-type="isSet (A / R₁)" id="3132" href="Data.Set.Quotient.html#1407" class="InductiveConstructor">squash</a> <a id="3139" class="Symbol">(</a><a data-type="A → A / R₁" id="3140" href="Data.Set.Quotient.html#1001" class="InductiveConstructor">inc</a> <a data-type="(r : GroupOn A) → A" id="3144" href="Algebra.Group.html#981" class="Function">unit</a><a id="3148" class="Symbol">)</a> <a id="3150" href="Algebra.Group.Quotients.html#1467" class="Function">op</a> <a id="3153" href="Algebra.Group.Quotients.html#2602" class="Function">inverse</a>
       <a id="3167" class="Symbol">(</a><a data-type="((x : A / R₁) (y : B / S₁) (z : C / T) → isProp (B x y z)) →
 ((x : A) (y : B) (z : C) → B (inc x) (inc y) (inc z)) →

@@ -87,7 +87,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/e9cc7e9178ca22c67ffb1c793c9531f2d4f4df9a/src/Algebra/Group/Subgroup.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/9eaa0514bac440433b328ba546191859a2f73f3a/src/Algebra/Group/Subgroup.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -149,10 +149,10 @@ x ∈ r .subgroup → inverse (G .snd) x ∈ r .subgroup" id="554" href="Algebra
   <a id="772" class="Symbol">:</a> <a id="774" class="Symbol">(</a><a id="775" href="Algebra.Group.Subgroup.html#775" class="Bound">H</a> <a id="777" class="Symbol">:</a> <a data-type="Type ℓ → Type (lsuc ℓ)" id="779" href="Data.Power.html#592" class="Function">ℙ</a> <a id="781" class="Symbol">(</a><a id="782" href="Algebra.Group.Subgroup.html#174" class="Generalizable">G</a> <a id="784" class="Symbol">.</a><a data-type="∑ A B → A" id="785" href="Agda.Builtin.Sigma.html#252" class="Field">fst</a><a id="788" class="Symbol">))</a> <a id="791" class="Symbol">→</a> <a data-type="(G : Group ℓ) (H : ℙ (G .fst)) → Type ℓ" id="793" href="Algebra.Group.Subgroup.html#383" class="Record">isSubgroup</a> <a id="804" href="Algebra.Group.Subgroup.html#174" class="Generalizable">G</a> <a id="806" href="Algebra.Group.Subgroup.html#775" class="Bound">H</a> <a id="808" class="Symbol">→</a> <a data-type="(A : Type ℓ) → Type ℓ" id="810" href="Algebra.Group.html#5227" class="Record">GroupOn</a> <a id="818" class="Symbol">(</a><a data-type="(B : A → Type b) → Type (a ⊔ b)" id="819" href="1Lab.Type.html#1563" class="Function">Σ[</a> <a id="822" href="Algebra.Group.Subgroup.html#822" class="Bound">x</a> <a data-type="(B : A → Type b) → Type (a ⊔ b)" id="824" href="1Lab.Type.html#1563" class="Function">∈</a> <a id="826" href="Algebra.Group.Subgroup.html#174" class="Generalizable">G</a> <a id="828" class="Symbol">.</a><a data-type="∑ A B → A" id="829" href="Agda.Builtin.Sigma.html#252" class="Field">fst</a> <a data-type="(B : A → Type b) → Type (a ⊔ b)" id="833" href="1Lab.Type.html#1563" class="Function">]</a> <a id="835" href="Algebra.Group.Subgroup.html#822" class="Bound">x</a> <a data-type="X → ℙ X → Type X.ℓ" id="837" href="Data.Power.html#898" class="Function Operator">∈</a> <a id="839" href="Algebra.Group.Subgroup.html#775" class="Bound">H</a><a id="840" class="Symbol">)</a>
 <a data-type="(H : ℙ (G .fst)) → isSubgroup G H → GroupOn (Σ (λ x → x ∈ H))" id="842" href="Algebra.Group.Subgroup.html#750" class="Function">isSubgroup→GroupOn</a> <a id="861" class="Symbol">{</a><a id="862" class="Argument">G</a> <a id="864" class="Symbol">=</a> <a id="866" href="Algebra.Group.Subgroup.html#866" class="Bound">G</a><a id="867" class="Symbol">}</a> <a id="869" href="Algebra.Group.Subgroup.html#869" class="Bound">H</a> <a id="871" href="Algebra.Group.Subgroup.html#871" class="Bound">sg</a> <a id="874" class="Symbol">=</a> 
   <a data-type="isSet G →
-(unit : G) (_⋆_ : G → G → G) (inv : G → G) →
+(unit : G) (_⋆_ : G → G → G) (inv₁ : G → G) →
 ((x y z : G) → ((x ⋆ y) ⋆ z) ≡ (x ⋆ (y ⋆ z))) →
-((x : G) → (inv x ⋆ x) ≡ unit) →
-((x : G) → (x ⋆ inv x) ≡ unit) →
+((x : G) → (inv₁ x ⋆ x) ≡ unit) →
+((x : G) → (x ⋆ inv₁ x) ≡ unit) →
 ((x : G) → (unit ⋆ x) ≡ x) → GroupOn G" id="879" href="Algebra.Group.html#7343" class="Function">makeGroup</a>
     <a id="893" class="Symbol">(</a><a data-type="(n : Nat) →
 isHLevel A n → ((x : A) → isHLevel (B x) n) → isHLevel (Σ B) n" id="894" href="1Lab.HLevel.Retracts.html#5094" class="Function">isHLevelΣ</a> <a id="904" class="Number">2</a> <a data-type="(r : UnitalMagmaOn A) → isSet A" id="906" href="Algebra.Magma.html#1615" class="Function">hasIsSet</a> <a id="915" class="Symbol">λ</a> <a id="917" href="Algebra.Group.Subgroup.html#917" class="Bound">x</a> <a id="919" class="Symbol">→</a> <a data-type="isProp A → isSet A" id="921" href="1Lab.HLevel.html#5654" class="Function">isProp→isSet</a> <a id="934" class="Symbol">(</a><a id="935" href="Algebra.Group.Subgroup.html#869" class="Bound">H</a> <a id="937" href="Algebra.Group.Subgroup.html#917" class="Bound">x</a> <a id="939" class="Symbol">.</a><a data-type="(r : ∑ A B) → B (r .fst)" id="940" href="Agda.Builtin.Sigma.html#264" class="Field">snd</a><a id="943" class="Symbol">))</a>

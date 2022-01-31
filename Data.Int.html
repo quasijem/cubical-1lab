@@ -93,7 +93,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/e9cc7e9178ca22c67ffb1c793c9531f2d4f4df9a/src/Data/Int.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/9eaa0514bac440433b328ba546191859a2f73f3a/src/Data/Int.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -287,8 +287,8 @@ Square (quot a b) (quot a b) (quot (suc a) (suc b))
     <a id="6287" href="Data.Int.html#6203" class="Function">fromToInt&#39;</a> <a id="6298" class="Symbol">(</a><a data-type="Nat → Int" id="6299" href="Agda.Builtin.Int.html#291" class="InductiveConstructor">negsuc</a> <a id="6306" href="Data.Int.html#6306" class="Bound">x</a><a id="6307" class="Symbol">)</a> <a id="6309" class="Symbol">=</a> <a data-type="x ≡ x" id="6311" href="1Lab.Path.html#2137" class="Function">refl</a>
 
     <a id="6321" href="Data.Int.html#6321" class="Function">Int&#39;≡Int</a> <a id="6330" class="Symbol">:</a> <a id="6332" href="Data.Int.html#5086" class="Datatype">Int&#39;</a> <a data-type="A → A → Type ℓ" id="6337" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a data-type="Type" id="6339" href="Data.Int.html#784" class="Datatype">Int</a>
-    <a id="6347" href="Data.Int.html#6321" class="Function">Int&#39;≡Int</a> <a id="6356" class="Symbol">=</a> <a data-type="Iso A B → A ≡ B" id="6358" href="1Lab.Univalence.html#11339" class="Function">Iso→path</a> <a id="6367" class="Symbol">(</a><a id="6368" href="Data.Int.html#5529" class="Function">fromInt&#39;</a> <a data-type="(fst₁ : A) (snd₁ : B fst₁) → ∑ A B" id="6377" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a data-type="(inv : B → A) (rinv₁ : isRightInverse inv f)
-(linv₁ : isLeftInverse inv f) →
+    <a id="6347" href="Data.Int.html#6321" class="Function">Int&#39;≡Int</a> <a id="6356" class="Symbol">=</a> <a data-type="Iso A B → A ≡ B" id="6358" href="1Lab.Univalence.html#11339" class="Function">Iso→path</a> <a id="6367" class="Symbol">(</a><a id="6368" href="Data.Int.html#5529" class="Function">fromInt&#39;</a> <a data-type="(fst₁ : A) (snd₁ : B fst₁) → ∑ A B" id="6377" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a data-type="(inv₁ : B → A) (rinv₁ : isRightInverse inv₁ f)
+(linv₁ : isLeftInverse inv₁ f) →
 isIso f" id="6379" href="1Lab.Equiv.html#6064" class="InductiveConstructor">iso</a> <a id="6383" href="Data.Int.html#5440" class="Function">toInt&#39;</a> <a id="6390" href="Data.Int.html#5762" class="Function">toFromInt&#39;</a> <a id="6401" href="Data.Int.html#6203" class="Function">fromToInt&#39;</a><a id="6411" class="Symbol">)</a>
 </pre>
 <p>With a quick appeal to <span class="Agda"><a data-type="Iso A B → A ≡ B" href="1Lab.Univalence.html#11339" class="Function">univalence</a></span>, we get that our desired type of integers is a set:</p>
@@ -512,13 +512,13 @@ Square (quot a b) (quot a b) (quot (suc a) (suc b))
 (quot (suc a) (suc b))" id="12337" href="Data.Int.html#3614" class="Function">quot-diamond</a> <a id="12350" href="Data.Int.html#12326" class="Bound">m</a> <a id="12352" href="Data.Int.html#12328" class="Bound">n</a> <a id="12354" href="Data.Int.html#12330" class="Bound">i</a> <a id="12356" class="Symbol">(</a><a id="12357" href="1Lab.Path.html#800" class="Primitive Operator">~</a> <a id="12359" href="Data.Int.html#12333" class="Bound">j</a><a id="12360" class="Symbol">)</a>
 
 <a id="isEquiv-sucℤ"></a><a data-type="isEquiv sucℤ" id="12363" href="Data.Int.html#12363" class="Function">isEquiv-sucℤ</a> <a id="12376" class="Symbol">:</a> <a data-type="(f : A → B) → Type (A.ℓ₁ ⊔ B.ℓ₁)" id="12378" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a> <a data-type="Int → Int" id="12386" href="Data.Int.html#11641" class="Function">sucℤ</a>
-<a data-type="isEquiv sucℤ" id="12391" href="Data.Int.html#12363" class="Function">isEquiv-sucℤ</a> <a id="12404" class="Symbol">=</a> <a data-type="(i : isIso f) → isEquiv f" id="12406" href="1Lab.Equiv.html#19765" class="Function">isIso→isEquiv</a> <a id="12420" class="Symbol">(</a><a data-type="(inv : B → A) (rinv₁ : isRightInverse inv f)
-(linv₁ : isLeftInverse inv f) →
+<a data-type="isEquiv sucℤ" id="12391" href="Data.Int.html#12363" class="Function">isEquiv-sucℤ</a> <a id="12404" class="Symbol">=</a> <a data-type="(i : isIso f) → isEquiv f" id="12406" href="1Lab.Equiv.html#19765" class="Function">isIso→isEquiv</a> <a id="12420" class="Symbol">(</a><a data-type="(inv₁ : B → A) (rinv₁ : isRightInverse inv₁ f)
+(linv₁ : isLeftInverse inv₁ f) →
 isIso f" id="12421" href="1Lab.Equiv.html#6064" class="InductiveConstructor">iso</a> <a data-type="Int → Int" id="12425" href="Data.Int.html#11729" class="Function">predℤ</a> <a data-type="(x : Int) → sucℤ (predℤ x) ≡ x" id="12431" href="Data.Int.html#12232" class="Function">sucPredℤ</a> <a data-type="(x : Int) → predℤ (sucℤ x) ≡ x" id="12440" href="Data.Int.html#12101" class="Function">predSucℤ</a><a id="12448" class="Symbol">)</a>
 
 <a id="isEquiv-predℤ"></a><a data-type="isEquiv predℤ" id="12451" href="Data.Int.html#12451" class="Function">isEquiv-predℤ</a> <a id="12465" class="Symbol">:</a> <a data-type="(f : A → B) → Type (A.ℓ₁ ⊔ B.ℓ₁)" id="12467" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a> <a data-type="Int → Int" id="12475" href="Data.Int.html#11729" class="Function">predℤ</a>
-<a data-type="isEquiv predℤ" id="12481" href="Data.Int.html#12451" class="Function">isEquiv-predℤ</a> <a id="12495" class="Symbol">=</a> <a data-type="(i : isIso f) → isEquiv f" id="12497" href="1Lab.Equiv.html#19765" class="Function">isIso→isEquiv</a> <a id="12511" class="Symbol">(</a><a data-type="(inv : B → A) (rinv₁ : isRightInverse inv f)
-(linv₁ : isLeftInverse inv f) →
+<a data-type="isEquiv predℤ" id="12481" href="Data.Int.html#12451" class="Function">isEquiv-predℤ</a> <a id="12495" class="Symbol">=</a> <a data-type="(i : isIso f) → isEquiv f" id="12497" href="1Lab.Equiv.html#19765" class="Function">isIso→isEquiv</a> <a id="12511" class="Symbol">(</a><a data-type="(inv₁ : B → A) (rinv₁ : isRightInverse inv₁ f)
+(linv₁ : isLeftInverse inv₁ f) →
 isIso f" id="12512" href="1Lab.Equiv.html#6064" class="InductiveConstructor">iso</a> <a data-type="Int → Int" id="12516" href="Data.Int.html#11641" class="Function">sucℤ</a> <a data-type="(x : Int) → predℤ (sucℤ x) ≡ x" id="12521" href="Data.Int.html#12101" class="Function">predSucℤ</a> <a data-type="(x : Int) → sucℤ (predℤ x) ≡ x" id="12530" href="Data.Int.html#12232" class="Function">sucPredℤ</a><a id="12538" class="Symbol">)</a>
 </pre>
 <h2 id="addition"><a href="#addition" class="header-link">Addition<span class="header-link-emoji">🔗</span></a></h2>

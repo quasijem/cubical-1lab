@@ -90,7 +90,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/e9cc7e9178ca22c67ffb1c793c9531f2d4f4df9a/src/1Lab/Equiv.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/9eaa0514bac440433b328ba546191859a2f73f3a/src/1Lab/Equiv.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -241,8 +241,8 @@ Even though the proof above works, we use the direct cubical proof in this <code
 .</span></p>
 <pre class="Agda"><a id="5968" class="Keyword">record</a> <a id="isIso"></a><a data-type="(f : A → B) → Type (A.ℓ₁ ⊔ B.ℓ₁)" id="5975" href="1Lab.Equiv.html#5975" class="Record">isIso</a> <a id="5981" class="Symbol">(</a><a id="5982" href="1Lab.Equiv.html#5982" class="Bound">f</a> <a id="5984" class="Symbol">:</a> <a id="5986" href="1Lab.Equiv.html#1596" class="Generalizable">A</a> <a id="5988" class="Symbol">→</a> <a id="5990" href="1Lab.Equiv.html#1598" class="Generalizable">B</a><a id="5991" class="Symbol">)</a> <a id="5993" class="Symbol">:</a> <a id="5995" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="6000" class="Symbol">(</a><a data-type="Type ℓ → Level" id="6001" href="1Lab.Type.html#924" class="Function">level-of</a> <a id="6010" href="1Lab.Equiv.html#5986" class="Bound">A</a> <a data-type="Level → Level → Level" id="6012" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a data-type="Type ℓ → Level" id="6014" href="1Lab.Type.html#924" class="Function">level-of</a> <a id="6023" href="1Lab.Equiv.html#5990" class="Bound">B</a><a id="6024" class="Symbol">)</a> <a id="6026" class="Keyword">where</a>
   <a id="6034" class="Keyword">no-eta-equality</a>
-  <a id="6052" class="Keyword">constructor</a> <a id="iso"></a><a data-type="(inv : B → A) (rinv₁ : isRightInverse inv f)
-(linv₁ : isLeftInverse inv f) →
+  <a id="6052" class="Keyword">constructor</a> <a id="iso"></a><a data-type="(inv₁ : B → A) (rinv₁ : isRightInverse inv₁ f)
+(linv₁ : isLeftInverse inv₁ f) →
 isIso f" id="6064" href="1Lab.Equiv.html#6064" class="InductiveConstructor">iso</a>
   <a id="6070" class="Keyword">field</a>
     <a id="isIso.inv"></a><a data-type="isIso f → B → A" id="6080" href="1Lab.Equiv.html#6080" class="Field">inv</a> <a id="6084" class="Symbol">:</a> <a id="6086" href="1Lab.Equiv.html#5990" class="Bound">B</a> <a id="6088" class="Symbol">→</a> <a id="6090" href="1Lab.Equiv.html#5986" class="Bound">A</a>
