@@ -319,31 +319,31 @@ details {
     margin-right: 1em; }
 
 code.kw, span.kw {
-  color: #8a1060; }
+  color: #8A1060; }
 
 /* Keyword */
 code.dt, span.dt {
-  color: #0054f4; }
+  color: #0054F4; }
 
 /* DataType */
 code.dv, span.dv {
-  color: #CA7124; }
+  color: #BB3B13; }
 
 /* DecVal */
 code.bn, span.bn {
-  color: #CA7124; }
+  color: #BB3B13; }
 
 /* BaseN */
 code.fl, span.fl {
-  color: #CA7124; }
+  color: #BB3B13; }
 
 /* Float */
 code.ch, span.ch {
-  color: #207b1d; }
+  color: #207B1D; }
 
 /* Char */
 code.st, span.st {
-  color: #207b1d; }
+  color: #207B1D; }
 
 /* String */
 code.co, span.co {
@@ -351,7 +351,7 @@ code.co, span.co {
 
 /* Comment */
 code.ot, span.ot {
-  color: #207b1d; }
+  color: #207B1D; }
 
 /* Other */
 code.al, span.al {
@@ -371,7 +371,7 @@ code.wa, span.wa {
 
 /* Warning */
 code.cn, span.cn {
-  color: #CA7124; }
+  color: #BB3B13; }
 
 /* Constant */
 code.sc, span.sc {
@@ -379,11 +379,11 @@ code.sc, span.sc {
 
 /* SpecialChar */
 code.vs, span.vs {
-  color: #0054f4; }
+  color: #0054F4; }
 
 /* VerbatimString */
 code.ss, span.ss {
-  color: #207b1d; }
+  color: #207B1D; }
 
 /* SpecialString */
 code.va, span.va {
@@ -391,19 +391,19 @@ code.va, span.va {
 
 /* Variable */
 code.cf, span.cf {
-  color: #8a1060; }
+  color: #8A1060; }
 
 /* ControlFlow */
 code.op, span.op {
-  color: #207b1d; }
+  color: #207B1D; }
 
 /* Operator */
 code.pp, span.pp {
-  color: #CA7124; }
+  color: #BB3B13; }
 
 /* Preprocessor */
 code.at, span.at {
-  color: #207b1d; }
+  color: #207B1D; }
 
 /* Attribute */
 code.do, span.do {

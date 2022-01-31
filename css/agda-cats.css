@@ -18,7 +18,7 @@ div.diagram-container {
       height: 350px; }
 
 article a[href], div#return > a[href], div#top > a[href], aside#toc > div#toc-container ul a[href] {
-  color: #0054f4;
+  color: #0054F4;
   text-decoration: none; }
   article a[href]:hover, div#return > a[href]:hover, div#top > a[href]:hover, aside#toc > div#toc-container ul a[href]:hover {
     text-decoration: 2px currentColor underline !important; }
@@ -86,15 +86,15 @@ a[href].hover-highlight {
   .Agda .Markup {
     color: #222; }
   .Agda .Keyword {
-    color: #CA7124; }
+    color: #BB3B13; }
   .Agda .String {
     color: #d52753; }
   .Agda .Number {
-    color: #8a1060; }
+    color: #8A1060; }
   .Agda .Symbol {
     color: #222; }
   .Agda .PrimitiveType {
-    color: #0054f4; }
+    color: #0054F4; }
   .Agda .Pragma {
     color: #222; }
   .Agda .Bound {
@@ -102,23 +102,23 @@ a[href].hover-highlight {
   .Agda .Generalizable {
     color: #222 !important; }
   .Agda .InductiveConstructor {
-    color: #207b1d !important; }
+    color: #207B1D !important; }
   .Agda .CoinductiveConstructor {
-    color: #207b1d !important; }
+    color: #207B1D !important; }
   .Agda .Datatype {
-    color: #0054f4 !important; }
+    color: #0054F4 !important; }
   .Agda .Field {
     color: #9C1BD6 !important; }
   .Agda .Function {
-    color: #0054f4 !important; }
+    color: #0054F4 !important; }
   .Agda .Module {
-    color: #8a1060 !important; }
+    color: #8A1060 !important; }
   .Agda .Postulate {
-    color: #0054f4 !important; }
+    color: #0054F4 !important; }
   .Agda .Primitive {
-    color: #0054f4 !important; }
+    color: #0054F4 !important; }
   .Agda .Record {
-    color: #0054f4 !important; }
+    color: #0054F4 !important; }
   .Agda .UnsolvedMeta {
     color: #222;
     background: yellow; }
@@ -141,12 +141,12 @@ a[href].hover-highlight {
     color: #222;
     background: #808080; }
   .Agda .Deadcode {
-    color: #CA7124;
+    color: #BB3B13;
     font-weight: bold; }
   .Agda a {
     text-decoration: none; }
   .Agda a[href]:hover {
-    text-decoration: 2px #0054f4 underline; }
+    text-decoration: 2px #0054F4 underline; }
   .Agda a[href]:target {
     animation: highlight 2.5s; }
 
