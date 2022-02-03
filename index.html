@@ -92,7 +92,7 @@
       <!-- Navbar navigation (lol) -->
       <div id="return" style="white-space: nowrap;">
                     <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/d60d8436a0b48ffbe6c4f2d86a246bfcfb85d7da/src/index.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/0dae08a4e8f33881518dee39c708c4a0de142d75/src/index.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -120,16 +120,16 @@
 <a id="787" class="Keyword">open</a> <a id="792" class="Keyword">import</a> <a id="799" href="1Lab.Univalence.html" class="Module">1Lab.Univalence</a>
 <a id="815" class="Keyword">open</a> <a id="820" class="Keyword">import</a> <a id="827" href="1Lab.HLevel.html" class="Module">1Lab.HLevel</a>
 </pre>-->
-<pre class="Agda"><a id="856" href="index.html#856" class="Function">_</a> <a id="858" class="Symbol">:</a> <a id="860" class="Symbol">∀</a> <a id="862" class="Symbol">{</a><a id="863" href="index.html#863" class="Bound">ℓ</a><a id="864" class="Symbol">}</a> <a id="866" class="Symbol">{</a><a id="867" href="index.html#867" class="Bound">A</a> <a id="869" href="index.html#869" class="Bound">B</a> <a id="871" class="Symbol">:</a> <a id="873" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="878" href="index.html#863" class="Bound">ℓ</a><a id="879" class="Symbol">}</a> <a id="881" class="Symbol">→</a> <a id="883" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a> <a id="891" class="Symbol">(</a><a id="892" href="1Lab.Univalence.html#15495" class="Function">pathToEquiv</a> <a id="904" class="Symbol">{</a><a id="905" class="Argument">A</a> <a id="907" class="Symbol">=</a> <a id="909" href="index.html#867" class="Bound">A</a><a id="910" class="Symbol">}</a> <a id="912" class="Symbol">{</a><a id="913" href="index.html#869" class="Bound">B</a><a id="914" class="Symbol">})</a>
-<a id="917" class="Symbol">_</a> <a id="919" class="Symbol">=</a> <a id="921" href="1Lab.Univalence.html#16784" class="Function">univalence</a>
+<pre class="Agda"><a id="856" href="index.html#856" class="Function">_</a> <a id="858" class="Symbol">:</a> <a id="860" class="Symbol">∀</a> <a id="862" class="Symbol">{</a><a id="863" href="index.html#863" class="Bound">ℓ</a><a id="864" class="Symbol">}</a> <a id="866" class="Symbol">{</a><a id="867" href="index.html#867" class="Bound">A</a> <a id="869" href="index.html#869" class="Bound">B</a> <a id="871" class="Symbol">:</a> <a id="873" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="878" href="index.html#863" class="Bound">ℓ</a><a id="879" class="Symbol">}</a> <a id="881" class="Symbol">→</a> <a data-type="(f : A → B) → Type (A.ℓ₁ ⊔ B.ℓ₁)" id="883" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a> <a id="891" class="Symbol">(</a><a data-type="A ≡ B → A ≃ B" id="892" href="1Lab.Univalence.html#15495" class="Function">pathToEquiv</a> <a id="904" class="Symbol">{</a><a id="905" class="Argument">A</a> <a id="907" class="Symbol">=</a> <a id="909" href="index.html#867" class="Bound">A</a><a id="910" class="Symbol">}</a> <a id="912" class="Symbol">{</a><a id="913" href="index.html#869" class="Bound">B</a><a id="914" class="Symbol">})</a>
+<a id="917" class="Symbol">_</a> <a id="919" class="Symbol">=</a> <a data-type="isEquiv pathToEquiv" id="921" href="1Lab.Univalence.html#16784" class="Function">univalence</a>
 </pre>
-<p>If you don’t know what those concepts refer to, it could be challenging to figure out what the definition above is even saying - or how it’s proven. Fortunately, every single text element there is a link! Try clicking on the word <span class="Agda"><a href="1Lab.Equiv.html#2293" class="Record">isEquiv</a></span> - either here in the text, or there in the code. It’ll take you to the definition, which will be highlighted in orange to draw your attention.</p>
+<p>If you don’t know what those concepts refer to, it could be challenging to figure out what the definition above is even saying - or how it’s proven. Fortunately, every single text element there is a link! Try clicking on the word <span class="Agda"><a data-type="(f : A → B) → Type (A.ℓ₁ ⊔ B.ℓ₁)" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a></span> - either here in the text, or there in the code. It’ll take you to the definition, which will be highlighted in orange to draw your attention.</p>
 <p>Links are colour-coded to indicate what they point to. In body text, links rendered in <a href="index.html">blue (or purple) sans-serif font</a> link to <em>pages</em>; Links rendered in one of the syntax highlighting colours and <code class="sourceCode agda" data-ident="Category">monospace</code> link to a <em>definition</em>. Specifically, the following colours are used:</p>
 <ul>
-<li><p>Blue for records and functions: <span class="Agda"><a href="1Lab.Equiv.html#2293" class="Record">isEquiv</a></span>, <span class="Agda"><a href="1Lab.Path.html#10628" class="Function">sym</a></span></p></li>
+<li><p>Blue for records and functions: <span class="Agda"><a data-type="(f : A → B) → Type (A.ℓ₁ ⊔ B.ℓ₁)" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a></span>, <span class="Agda"><a data-type="x ≡ y → y ≡ x" href="1Lab.Path.html#10628" class="Function">sym</a></span></p></li>
 <li><p>Green for inductive constructors, coinductive constructors, and the endpoints of the interval: <span class="Agda"><a href="Agda.Primitive.Cubical.html#143" class="InductiveConstructor">i0</a></span></p></li>
 <li><p>Maroon for modules: <span class="Agda"><a href="1Lab.Type.html" class="Module">1Lab.Type</a></span></p></li>
-<li><p>Purple for record selectors: <span class="Agda"><a href="1Lab.Equiv.html#2382" class="Field">isEqv</a></span></p></li>
+<li><p>Purple for record selectors: <span class="Agda"><a data-type="isEquiv f → (y : B) → isContr (fibre f y)" href="1Lab.Equiv.html#2382" class="Field">isEqv</a></span></p></li>
 </ul>
 <!--
 <pre class="Agda"><a id="1945" href="index.html#1945" class="Function">_</a> <a id="1947" class="Symbol">=</a> <a id="1949" href="Agda.Primitive.Cubical.html#143" class="InductiveConstructor">i0</a>
@@ -179,7 +179,7 @@
 <div class="warning">
 <p>Most of the modules in the 1Lab assume a baseline knowledge of type theory. For this, <a href="1Lab.intro.html"><strong>read the introduction here</strong></a>.</p>
 </div>
-<p>The first things to be explained are the foundational constructions in (cubical) type theory - things like types themselves, <a href="1Lab.Type.html">universes</a>, <a href="1Lab.Path.html">paths</a>, <a href="1Lab.Equiv.html">equivalences</a>, <a href="1Lab.Univalence.html#3441">glueing</a> and the <a href="1Lab.Univalence.html#16784">univalence</a> “axiom”. These are developed under the <code>1Lab</code> namespace. Start here:</p>
+<p>The first things to be explained are the foundational constructions in (cubical) type theory - things like types themselves, <a href="1Lab.Type.html">universes</a>, <a href="1Lab.Path.html">paths</a>, <a href="1Lab.Equiv.html">equivalences</a>, <a data-type="(A : Type ℓ) → Partial φ (Σ (λ T → T ≃ A)) → Type ℓ&#39;" href="1Lab.Univalence.html#3441">glueing</a> and the <a data-type="isEquiv pathToEquiv" href="1Lab.Univalence.html#16784">univalence</a> “axiom”. These are developed under the <code>1Lab</code> namespace. Start here:</p>
 <pre class="Agda"><a id="8478" class="Comment">-- All of these module names are links you can click!</a>
 
 <a id="8533" class="Keyword">open</a> <a id="8538" class="Keyword">import</a> <a id="8545" href="1Lab.Type.html" class="Module">1Lab.Type</a> <a id="8555" class="Comment">-- Universes</a>
