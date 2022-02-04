@@ -92,7 +92,7 @@
       <!-- Navbar navigation (lol) -->
       <div id="return" style="white-space: nowrap;">
                     <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/c717e63f3d0269bc66ee630eda004a263221f137/src/index.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/4854ed2ab85de1ae47fdbb248298857da6618c28/src/index.lagda.md">link to source</a> <br />
       </div>
     </div>
   </aside>
@@ -120,16 +120,16 @@
 <a id="787" class="Keyword">open</a> <a id="792" class="Keyword">import</a> <a id="799" href="1Lab.Univalence.html" class="Module">1Lab.Univalence</a>
 <a id="815" class="Keyword">open</a> <a id="820" class="Keyword">import</a> <a id="827" href="1Lab.HLevel.html" class="Module">1Lab.HLevel</a>
 </pre>-->
-<pre class="Agda"><a id="856" href="index.html#856" class="Function">_</a> <a id="858" class="Symbol">:</a> <a id="860" class="Symbol">∀</a> <a id="862" class="Symbol">{</a><a id="863" href="index.html#863" class="Bound">ℓ</a><a id="864" class="Symbol">}</a> <a id="866" class="Symbol">{</a><a id="867" href="index.html#867" class="Bound">A</a> <a id="869" href="index.html#869" class="Bound">B</a> <a id="871" class="Symbol">:</a> <a id="873" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="878" href="index.html#863" class="Bound">ℓ</a><a id="879" class="Symbol">}</a> <a id="881" class="Symbol">→</a> <a data-type="(f : A → B) → Type (A.ℓ₁ ⊔ B.ℓ₁)" id="883" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a> <a id="891" class="Symbol">(</a><a data-type="A ≡ B → A ≃ B" id="892" href="1Lab.Univalence.html#15495" class="Function">pathToEquiv</a> <a id="904" class="Symbol">{</a><a id="905" class="Argument">A</a> <a id="907" class="Symbol">=</a> <a id="909" href="index.html#867" class="Bound">A</a><a id="910" class="Symbol">}</a> <a id="912" class="Symbol">{</a><a id="913" href="index.html#869" class="Bound">B</a><a id="914" class="Symbol">})</a>
+<pre class="Agda"><a id="856" href="index.html#856" class="Function">_</a> <a id="858" class="Symbol">:</a> <a id="860" class="Symbol">∀</a> <a id="862" class="Symbol">{</a><a id="863" href="index.html#863" class="Bound">ℓ</a><a id="864" class="Symbol">}</a> <a id="866" class="Symbol">{</a><a id="867" href="index.html#867" class="Bound">A</a> <a id="869" href="index.html#869" class="Bound">B</a> <a id="871" class="Symbol">:</a> <a id="873" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="878" href="index.html#863" class="Bound">ℓ</a><a id="879" class="Symbol">}</a> <a id="881" class="Symbol">→</a> <a data-type="(f : A → B₁) → Type (A.ℓ₁ ⊔ B.ℓ₁)" id="883" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a> <a id="891" class="Symbol">(</a><a data-type="A ≡ B₁ → A ≃ B₁" id="892" href="1Lab.Univalence.html#15495" class="Function">pathToEquiv</a> <a id="904" class="Symbol">{</a><a id="905" class="Argument">A</a> <a id="907" class="Symbol">=</a> <a id="909" href="index.html#867" class="Bound">A</a><a id="910" class="Symbol">}</a> <a id="912" class="Symbol">{</a><a id="913" href="index.html#869" class="Bound">B</a><a id="914" class="Symbol">})</a>
 <a id="917" class="Symbol">_</a> <a id="919" class="Symbol">=</a> <a data-type="isEquiv pathToEquiv" id="921" href="1Lab.Univalence.html#16784" class="Function">univalence</a>
 </pre>
-<p>If you don’t know what those concepts refer to, it could be challenging to figure out what the definition above is even saying - or how it’s proven. Fortunately, every single text element there is a link! Try clicking on the word <span class="Agda"><a data-type="(f : A → B) → Type (A.ℓ₁ ⊔ B.ℓ₁)" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a></span> - either here in the text, or there in the code. It’ll take you to the definition, which will be highlighted in orange to draw your attention.</p>
+<p>If you don’t know what those concepts refer to, it could be challenging to figure out what the definition above is even saying - or how it’s proven. Fortunately, every single text element there is a link! Try clicking on the word <span class="Agda"><a data-type="(f : A → B₁) → Type (A.ℓ₁ ⊔ B.ℓ₁)" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a></span> - either here in the text, or there in the code. It’ll take you to the definition, which will be highlighted in orange to draw your attention.</p>
 <p>Links are colour-coded to indicate what they point to. In body text, links rendered in <a href="index.html">blue (or purple) sans-serif font</a> link to <em>pages</em>; Links rendered in one of the syntax highlighting colours and <code class="sourceCode agda" data-ident="Category">monospace</code> link to a <em>definition</em>. Specifically, the following colours are used:</p>
 <ul>
-<li><p>Blue for records and functions: <span class="Agda"><a data-type="(f : A → B) → Type (A.ℓ₁ ⊔ B.ℓ₁)" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a></span>, <span class="Agda"><a data-type="x ≡ y → y ≡ x" href="1Lab.Path.html#10628" class="Function">sym</a></span></p></li>
+<li><p>Blue for records and functions: <span class="Agda"><a data-type="(f : A → B₁) → Type (A.ℓ₁ ⊔ B.ℓ₁)" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a></span>, <span class="Agda"><a data-type="x ≡ y → y ≡ x" href="1Lab.Path.html#10628" class="Function">sym</a></span></p></li>
 <li><p>Green for inductive constructors, coinductive constructors, and the endpoints of the interval: <span class="Agda"><a href="Agda.Primitive.Cubical.html#143" class="InductiveConstructor">i0</a></span></p></li>
 <li><p>Maroon for modules: <span class="Agda"><a href="1Lab.Type.html" class="Module">1Lab.Type</a></span></p></li>
-<li><p>Purple for record selectors: <span class="Agda"><a data-type="isEquiv f → (y : B) → isContr (fibre f y)" href="1Lab.Equiv.html#2382" class="Field">isEqv</a></span></p></li>
+<li><p>Purple for record selectors: <span class="Agda"><a data-type="isEquiv f → (y : B₁) → isContr (fibre f y)" href="1Lab.Equiv.html#2382" class="Field">isEqv</a></span></p></li>
 </ul>
 <!--
 <pre class="Agda"><a id="1945" href="index.html#1945" class="Function">_</a> <a id="1947" class="Symbol">=</a> <a id="1949" href="Agda.Primitive.Cubical.html#143" class="InductiveConstructor">i0</a>
@@ -226,9 +226,9 @@
 <a id="10878" class="Keyword">open</a> <a id="10883" class="Keyword">import</a> <a id="10890" href="Data.Sum.html" class="Module">Data.Sum</a>  <a id="10900" class="Comment">-- Coproduct types</a>
 <a id="10919" class="Keyword">open</a> <a id="10924" class="Keyword">import</a> <a id="10931" href="Data.Bool.html" class="Module">Data.Bool</a> <a id="10941" class="Comment">-- The booleans</a>
 <a id="10957" class="Keyword">open</a> <a id="10962" class="Keyword">import</a> <a id="10969" href="Data.List.html" class="Module">Data.List</a> <a id="10979" class="Comment">-- Finite lists</a>
-<a id="10995" class="Keyword">open</a> <a id="11000" class="Keyword">import</a> <a id="11007" href="Data.Power.html" class="Module">Data.Power</a>         <a id="11026" class="Comment">-- Power sets</a>
-<a id="11040" class="Keyword">open</a> <a id="11045" class="Keyword">import</a> <a id="11052" href="Data.Power.Lattice.html" class="Module">Data.Power.Lattice</a> <a id="11071" class="Comment">-- Power sets form a lattice</a>
-<a id="11100" class="Keyword">open</a> <a id="11105" class="Keyword">import</a> <a id="11112" href="Data.Set.Quotient.html" class="Module">Data.Set.Quotient</a>  <a id="11131" class="Comment">-- Set quotients</a>
+<a id="10995" class="Keyword">open</a> <a id="11000" class="Keyword">import</a> <a id="11007" href="Data.Power.html" class="Module">Data.Power</a>           <a id="11028" class="Comment">-- Power sets</a>
+<a id="11042" class="Keyword">open</a> <a id="11047" class="Keyword">import</a> <a id="11054" href="Data.Power.Lattice.html" class="Module">Data.Power.Lattice</a>   <a id="11075" class="Comment">-- Power sets form a lattice</a>
+<a id="11104" class="Keyword">open</a> <a id="11109" class="Keyword">import</a> <a id="11116" href="Data.Set.Coequaliser.html" class="Module">Data.Set.Coequaliser</a> <a id="11137" class="Comment">-- Set coequalisers</a>
 </pre>
 <!--
 # Relation
@@ -236,24 +236,26 @@
 Here, we define often-used types of relations like partial orders as well as
 actual relations themselves, for example, lexicographic orderings on lists.
 
-<pre class="Agda"><a id="11332" class="Keyword">open</a> <a id="11337" class="Keyword">import</a> <a id="11344" href="Relation.Order.html" class="Module">Relation.Order</a>               <a id="11373" class="Comment">-- Prop-valued ordering relations</a>
-<a id="11407" class="Keyword">open</a> <a id="11412" class="Keyword">import</a> <a id="11419" href="Relation.Order.Lexicographic.html" class="Module">Relation.Order.Lexicographic</a> <a id="11448" class="Comment">-- Lexicographic orderings</a>
+<pre class="Agda"><a id="11341" class="Keyword">open</a> <a id="11346" class="Keyword">import</a> <a id="11353" href="Relation.Order.html" class="Module">Relation.Order</a>               <a id="11382" class="Comment">-- Prop-valued ordering relations</a>
+<a id="11416" class="Keyword">open</a> <a id="11421" class="Keyword">import</a> <a id="11428" href="Relation.Order.Lexicographic.html" class="Module">Relation.Order.Lexicographic</a> <a id="11457" class="Comment">-- Lexicographic orderings</a>
 </pre>-->
 <h1 id="algebra"><a href="#algebra" class="header-link">Algebra<span class="header-link-emoji">🔗</span></a></h1>
 <p>In the <code>Algebra</code> namespace, the theory of universal algebra is developed from a univalent perspective. Specifically, every definition of an algebraic structure comes with an associated proof that it is univalent — concretely, identification of groups is group isomorphism (for instance).</p>
-<pre class="Agda"><a id="11794" class="Keyword">open</a> <a id="11799" class="Keyword">import</a> <a id="11806" href="Algebra.Magma.html" class="Module">Algebra.Magma</a>                      <a id="11841" class="Comment">-- Binary operations </a>
-<a id="11863" class="Keyword">open</a> <a id="11868" class="Keyword">import</a> <a id="11875" href="Algebra.Magma.Unital.html" class="Module">Algebra.Magma.Unital</a>               <a id="11910" class="Comment">-- Operations with two-sided units</a>
-<a id="11945" class="Keyword">open</a> <a id="11950" class="Keyword">import</a> <a id="11957" href="Algebra.Magma.Unital.EckmannHilton.html" class="Module">Algebra.Magma.Unital.EckmannHilton</a> <a id="11992" class="Comment">-- The Eckmann-Hilton argument</a>
+<pre class="Agda"><a id="11803" class="Keyword">open</a> <a id="11808" class="Keyword">import</a> <a id="11815" href="Algebra.Magma.html" class="Module">Algebra.Magma</a>                      <a id="11850" class="Comment">-- Binary operations </a>
+<a id="11872" class="Keyword">open</a> <a id="11877" class="Keyword">import</a> <a id="11884" href="Algebra.Magma.Unital.html" class="Module">Algebra.Magma.Unital</a>               <a id="11919" class="Comment">-- Operations with two-sided units</a>
+<a id="11954" class="Keyword">open</a> <a id="11959" class="Keyword">import</a> <a id="11966" href="Algebra.Magma.Unital.EckmannHilton.html" class="Module">Algebra.Magma.Unital.EckmannHilton</a> <a id="12001" class="Comment">-- The Eckmann-Hilton argument</a>
 
-<a id="12024" class="Keyword">open</a> <a id="12029" class="Keyword">import</a> <a id="12036" href="Algebra.Semigroup.html" class="Module">Algebra.Semigroup</a>   <a id="12056" class="Comment">-- Semigroups (associative magmas)</a>
-<a id="12091" class="Keyword">open</a> <a id="12096" class="Keyword">import</a> <a id="12103" href="Algebra.Monoid.html" class="Module">Algebra.Monoid</a>      <a id="12123" class="Comment">-- Monoids as unital semigroups</a>
+<a id="12033" class="Keyword">open</a> <a id="12038" class="Keyword">import</a> <a id="12045" href="Algebra.Semigroup.html" class="Module">Algebra.Semigroup</a>   <a id="12065" class="Comment">-- Semigroups (associative magmas)</a>
+<a id="12100" class="Keyword">open</a> <a id="12105" class="Keyword">import</a> <a id="12112" href="Algebra.Monoid.html" class="Module">Algebra.Monoid</a>      <a id="12132" class="Comment">-- Monoids as unital semigroups</a>
 
-<a id="12156" class="Keyword">open</a> <a id="12161" class="Keyword">import</a> <a id="12168" href="Algebra.Group.html" class="Module">Algebra.Group</a>                   <a id="12200" class="Comment">-- Groups as monoids with inverses</a>
-<a id="12235" class="Keyword">open</a> <a id="12240" class="Keyword">import</a> <a id="12247" href="Algebra.Group.Cayley.html" class="Module">Algebra.Group.Cayley</a>            <a id="12279" class="Comment">-- Cayley&#39;s theorem</a>
-<a id="12299" class="Keyword">open</a> <a id="12304" class="Keyword">import</a> <a id="12311" href="Algebra.Group.Homotopy.html" class="Module">Algebra.Group.Homotopy</a>          <a id="12343" class="Comment">-- Homotopy groups</a>
-<a id="12362" class="Keyword">open</a> <a id="12367" class="Keyword">import</a> <a id="12374" href="Algebra.Group.Subgroup.html" class="Module">Algebra.Group.Subgroup</a>          <a id="12406" class="Comment">-- Subgroups; Images and kernels</a>
-<a id="12439" class="Keyword">open</a> <a id="12444" class="Keyword">import</a> <a id="12451" href="Algebra.Group.Quotients.html" class="Module">Algebra.Group.Quotients</a>         <a id="12483" class="Comment">-- Quotients by normal subgroups</a>
-<a id="12516" class="Keyword">open</a> <a id="12521" class="Keyword">import</a> <a id="12528" href="Algebra.Group.Quotients.IsoThms.html" class="Module">Algebra.Group.Quotients.IsoThms</a> <a id="12560" class="Comment">-- Isomorphism theorems</a>
+<a id="12165" class="Keyword">open</a> <a id="12170" class="Keyword">import</a> <a id="12177" href="Algebra.Group.html" class="Module">Algebra.Group</a>                   <a id="12209" class="Comment">-- Groups as monoids with inverses</a>
+<a id="12244" class="Keyword">open</a> <a id="12249" class="Keyword">import</a> <a id="12256" href="Algebra.Group.Free.html" class="Module">Algebra.Group.Free</a>              <a id="12288" class="Comment">-- Free groups</a>
+<a id="12303" class="Keyword">open</a> <a id="12308" class="Keyword">import</a> <a id="12315" href="Algebra.Group.Cayley.html" class="Module">Algebra.Group.Cayley</a>            <a id="12347" class="Comment">-- Cayley&#39;s theorem</a>
+<a id="12367" class="Keyword">open</a> <a id="12372" class="Keyword">import</a> <a id="12379" href="Algebra.Group.Homotopy.html" class="Module">Algebra.Group.Homotopy</a>          <a id="12411" class="Comment">-- Homotopy groups</a>
+<a id="12430" class="Keyword">open</a> <a id="12435" class="Keyword">import</a> <a id="12442" href="Algebra.Group.Subgroup.html" class="Module">Algebra.Group.Subgroup</a>          <a id="12474" class="Comment">-- Subgroups; Images and kernels</a>
+<a id="12507" class="Keyword">open</a> <a id="12512" class="Keyword">import</a> <a id="12519" href="Algebra.Group.Quotients.html" class="Module">Algebra.Group.Quotients</a>         <a id="12551" class="Comment">-- Quotients by normal subgroups</a>
+<a id="12584" class="Keyword">open</a> <a id="12589" class="Keyword">import</a> <a id="12596" href="Algebra.Group.Ab.Free.html" class="Module">Algebra.Group.Ab.Free</a>           <a id="12628" class="Comment">-- Abelianisations</a>
+<a id="12647" class="Keyword">open</a> <a id="12652" class="Keyword">import</a> <a id="12659" href="Algebra.Group.Quotients.IsoThms.html" class="Module">Algebra.Group.Quotients.IsoThms</a> <a id="12691" class="Comment">-- Isomorphism theorems</a>
 </pre>
 <section class="footnotes" role="doc-endnotes">
 <hr></hr>
