@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <meta name="keywords" content="Agda,categories,topos"></meta>
+
+  <title>Cat.Instances.Delooping - 1Lab</title>
+
+  <link rel="stylesheet" href="/css/default.css"></link>
+  <link rel="stylesheet" href="/css/katex.min.css"></link>
+  <link rel="stylesheet" href="/css/agda-cats.css"></link>
+
+  <meta name="twitter:card" content="summary"></meta>
+  <meta name="twitter:title" content="Cat.Instances.Delooping - 1Lab"></meta>
+  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png"></meta>
+
+  <meta name="og:title" content="Cat.Instances.Delooping - 1Lab"></meta>
+  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png"></meta>
+  <meta name="og:site-name" content="1Lab"></meta>
+  <meta name="og:type" content="website"></meta>
+
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+  
+  <script src="/equations.js" type="text/javascript"></script>
+  <script src="/highlight-hover.js" type="text/javascript"></script>
+
+  <noscript>
+    <style>
+      body span.reasoning-step .as-written {
+        display: inline;
+      }
+
+      body span.reasoning-step .alternate {
+        display: none;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+<main>
+<div id="post-toc-container" style="padding-left: 1em; padding-right: 1em;">
+
+  <!-- Table of contents (only if the page has a table of contents) -->
+  
+  <article>
+    <!-- Article navigation (narrow screens only) -->
+    <div class="narrow-only" id="article-nav">
+      <!-- Index return anchor (only if the page is not the index) -->
+            <div id="return">
+        <a href="index.html">️back to index</a>
+      </div>
+      
+      <!-- Font toggle checkbox -->
+      <span class="equations" style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
+        <input name="navbar-eqns" type="checkbox" class="equations" id="navbar-eqns">
+        <label for="navbar-eqns">Equations</label>
+      </span>
+    </div>
+
+<pre class="Agda"><a id="9" class="Keyword">open</a> <a id="14" class="Keyword">import</a> <a id="21" href="1Lab.Prelude.html" class="Module">1Lab.Prelude</a>
+
+<a id="35" class="Keyword">open</a> <a id="40" class="Keyword">import</a> <a id="47" href="Algebra.Monoid.html" class="Module">Algebra.Monoid</a>
+
+<a id="63" class="Keyword">open</a> <a id="68" class="Keyword">import</a> <a id="75" href="Cat.Base.html" class="Module">Cat.Base</a>
+
+<a id="85" class="Keyword">module</a> <a id="92" href="Cat.Instances.Delooping.html" class="Module">Cat.Instances.Delooping</a> <a id="116" class="Keyword">where</a>
+</pre>
+<!--
+<pre class="Agda"><a id="140" class="Keyword">private</a> <a id="148" class="Keyword">variable</a>
+  <a id="159" href="Cat.Instances.Delooping.html#159" class="Generalizable">ℓ</a> <a id="161" class="Symbol">:</a> <a id="163" href="Agda.Primitive.html#597" class="Postulate">Level</a>
+</pre>-->
+<p>Given a monoid <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span>,</span> we build a pointed precategory <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">B(M)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mclose">)</span></span></span></span>,</span> where the endomorphism monoid of the point recovers <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span>.</span></p>
+<pre class="Agda"><a id="B"></a><a data-type="MonoidOn M → Precategory lzero ℓ" id="299" href="Cat.Instances.Delooping.html#299" class="Function">B</a> <a id="301" class="Symbol">:</a> <a id="303" class="Symbol">∀</a> <a id="305" class="Symbol">{</a><a id="306" href="Cat.Instances.Delooping.html#306" class="Bound">ℓ</a><a id="307" class="Symbol">}</a> <a id="309" class="Symbol">{</a><a id="310" href="Cat.Instances.Delooping.html#310" class="Bound">M</a> <a id="312" class="Symbol">:</a> <a id="314" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="319" href="Cat.Instances.Delooping.html#306" class="Bound">ℓ</a><a id="320" class="Symbol">}</a> <a id="322" class="Symbol">→</a> <a data-type="(A : Type ℓ) → Type ℓ" id="324" href="Algebra.Monoid.html#1981" class="Record">MonoidOn</a> <a id="333" href="Cat.Instances.Delooping.html#310" class="Bound">M</a> <a id="335" class="Symbol">→</a> <a data-type="(o h : Level) → Type (lsuc o ⊔ lsuc h)" id="337" href="Cat.Base.html#611" class="Record">Precategory</a> <a data-type="Level" id="349" href="Agda.Primitive.html#764" class="Primitive">lzero</a> <a id="355" href="Cat.Instances.Delooping.html#306" class="Bound">ℓ</a>
+<a data-type="MonoidOn M → Precategory lzero ℓ" id="357" href="Cat.Instances.Delooping.html#299" class="Function">B</a> <a id="359" class="Symbol">{</a><a id="360" class="Argument">M</a> <a id="362" class="Symbol">=</a> <a id="364" href="Cat.Instances.Delooping.html#364" class="Bound">M</a><a id="365" class="Symbol">}</a> <a id="367" href="Cat.Instances.Delooping.html#367" class="Bound">mm</a> <a id="370" class="Symbol">=</a> <a id="372" href="Cat.Instances.Delooping.html#428" class="Function">r</a> <a id="374" class="Keyword">where</a>
+  <a id="382" class="Keyword">module</a> <a id="389" href="Cat.Instances.Delooping.html#389" class="Module">mm</a> <a id="392" class="Symbol">=</a> <a data-type="(A : Type ℓ) → Type ℓ" id="394" href="Algebra.Monoid.html#1981" class="Module">MonoidOn</a> <a id="403" href="Cat.Instances.Delooping.html#367" class="Bound">mm</a>
+  <a id="408" class="Keyword">open</a> <a data-type="(o h : Level) → Type (lsuc o ⊔ lsuc h)" id="413" href="Cat.Base.html#611" class="Module">Precategory</a>
+
+  <a id="428" href="Cat.Instances.Delooping.html#428" class="Function">r</a> <a id="430" class="Symbol">:</a> <a data-type="(o h : Level) → Type (lsuc o ⊔ lsuc h)" id="432" href="Cat.Base.html#611" class="Record">Precategory</a> <a id="444" class="Symbol">_</a> <a id="446" class="Symbol">_</a>
+  <a id="450" href="Cat.Instances.Delooping.html#428" class="Function">r</a> <a id="452" class="Symbol">.</a><a data-type="Precategory o h → Type o" id="453" href="Cat.Base.html#1312" class="Field">Ob</a> <a id="456" class="Symbol">=</a> <a data-type="Type" id="458" href="Agda.Builtin.Unit.html#164" class="Record">⊤</a>
+  <a id="462" href="Cat.Instances.Delooping.html#428" class="Function">r</a> <a id="464" class="Symbol">.</a><a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="465" href="Cat.Base.html#1329" class="Field">Hom</a> <a id="469" class="Symbol">_</a> <a id="471" class="Symbol">_</a> <a id="473" class="Symbol">=</a> <a id="475" href="Cat.Instances.Delooping.html#364" class="Bound">M</a>
+  <a id="479" href="Cat.Instances.Delooping.html#428" class="Function">r</a> <a id="481" class="Symbol">.</a><a data-type="(r : Precategory o h) (x y : r .Ob) → isSet (r .Hom x y)" id="482" href="Cat.Base.html#1677" class="Field">Hom-set</a> <a id="490" class="Symbol">_</a> <a id="492" class="Symbol">_</a> <a id="494" class="Symbol">=</a> <a data-type="(r : UnitalMagmaOn A) → isSet A" id="496" href="Algebra.Magma.html#1615" class="Function">mm.hasIsSet</a>
+  <a id="510" href="Cat.Instances.Delooping.html#428" class="Function">r</a> <a id="512" class="Symbol">.</a><a data-type="(r : Precategory o h) → r .Hom x x" id="513" href="Cat.Base.html#2868" class="Field">Precategory.id</a> <a id="528" class="Symbol">=</a> <a data-type="MonoidOn A → A" id="530" href="Algebra.Monoid.html#2030" class="Field">mm.identity</a>
+  <a id="544" href="Cat.Instances.Delooping.html#428" class="Function">r</a> <a id="546" class="Symbol">.</a><a data-type="(r : Precategory o h) → r .Hom y z → r .Hom x y → r .Hom x z" id="547" href="Cat.Base.html#2898" class="Field Operator">Precategory._∘_</a> <a id="563" class="Symbol">=</a> <a data-type="MonoidOn A → A → A → A" id="565" href="Algebra.Monoid.html#2047" class="Field Operator">mm._⋆_</a>
+  <a id="574" href="Cat.Instances.Delooping.html#428" class="Function">r</a> <a id="576" class="Symbol">.</a><a data-type="(r : Precategory o h) (f : r .Hom x y) → r ._∘_ f (r .id) ≡ f" id="577" href="Cat.Base.html#3331" class="Field">idr</a> <a id="581" class="Symbol">_</a> <a id="583" class="Symbol">=</a> <a data-type="(r : MonoidOn A) → r ._⋆_ x (r .identity) ≡ x" id="585" href="Algebra.Monoid.html#1123" class="Function">mm.idʳ</a>
+  <a id="594" href="Cat.Instances.Delooping.html#428" class="Function">r</a> <a id="596" class="Symbol">.</a><a data-type="(r : Precategory o h) (f : r .Hom x y) → r ._∘_ (r .id) f ≡ f" id="597" href="Cat.Base.html#3376" class="Field">idl</a> <a id="601" class="Symbol">_</a> <a id="603" class="Symbol">=</a> <a data-type="(r : MonoidOn A) → r ._⋆_ (r .identity) x ≡ x" id="605" href="Algebra.Monoid.html#1092" class="Function">mm.idˡ</a>
+  <a id="614" href="Cat.Instances.Delooping.html#428" class="Function">r</a> <a id="616" class="Symbol">.</a><a data-type="(r : Precategory o h) (f : r .Hom y z) (g : r .Hom x y)
+(h : r .Hom w x) →
+r ._∘_ f (r ._∘_ g h) ≡ r ._∘_ (r ._∘_ f g) h" id="617" href="Cat.Base.html#3755" class="Field">assoc</a> <a id="623" class="Symbol">_</a> <a id="625" class="Symbol">_</a> <a id="627" class="Symbol">_</a> <a id="629" class="Symbol">=</a> <a data-type="isSemigroup _⋆_ → (x ⋆ (y ⋆ z)) ≡ ((x ⋆ y) ⋆ z)" id="631" href="Algebra.Semigroup.html#450" class="Function">mm.associative</a>
+</pre>
+<p>In addition to providing a concise description of sets with <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span></span></span></span>-actions</span> (functors <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo><mo>→</mo><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">t</mi></mrow></mrow><annotation encoding="application/x-tex">B(M) \to \set</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10903em;">M</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathrm">Set</span></span></span></span></span>),</span> the delooping category of a monoid lets us reuse the category solver to solve monoid associativity/identity problems:</p>
+<!--
+<pre class="Agda"><a id="883" class="Keyword">open</a> <a id="888" class="Keyword">import</a> <a id="895" href="Cat.Solver.html" class="Module">Cat.Solver</a>
+<a id="906" class="Keyword">open</a> <a id="911" class="Keyword">import</a> <a id="918" href="1Lab.Reflection.html" class="Module">1Lab.Reflection</a>
+
+<a id="findMonoidNames"></a><a id="935" href="Cat.Instances.Delooping.html#935" class="Function">findMonoidNames</a> <a id="951" class="Symbol">:</a> <a id="953" href="Agda.Builtin.Reflection.html#4688" class="Datatype">Term</a> <a id="958" class="Symbol">→</a> <a id="960" href="Agda.Builtin.Reflection.html#8218" class="Postulate">TC</a> <a id="963" href="Cat.Solver.html#4291" class="Record">CategoryNames</a>
+<a id="977" href="Cat.Instances.Delooping.html#935" class="Function">findMonoidNames</a> <a id="993" class="Symbol">=</a> <a id="995" href="Cat.Solver.html#4519" class="Function">findGenericNames</a> <a id="1012" class="Symbol">(</a><a id="1013" class="Keyword">quote</a> <a id="1019" href="Algebra.Monoid.html#2047" class="Field Operator">MonoidOn._⋆_</a><a id="1031" class="Symbol">)</a> <a id="1033" class="Symbol">(</a><a id="1034" class="Keyword">quote</a> <a id="1040" href="Algebra.Monoid.html#2030" class="Field">MonoidOn.identity</a><a id="1057" class="Symbol">)</a>
+
+<a id="1060" class="Keyword">macro</a>
+  <a id="solveMonoidOn"></a><a id="1068" href="Cat.Instances.Delooping.html#1068" class="Function">solveMonoidOn</a> <a id="1082" class="Symbol">:</a> <a id="1084" href="Agda.Builtin.Reflection.html#4688" class="Datatype">Term</a> <a id="1089" class="Symbol">→</a> <a id="1091" href="Agda.Builtin.Reflection.html#4688" class="Datatype">Term</a> <a id="1096" class="Symbol">→</a> <a id="1098" href="Agda.Builtin.Reflection.html#8218" class="Postulate">TC</a> <a id="1101" href="Agda.Builtin.Unit.html#164" class="Record">⊤</a>
+  <a id="1105" href="Cat.Instances.Delooping.html#1068" class="Function">solveMonoidOn</a> <a id="1119" class="Symbol">=</a> <a id="1121" href="Cat.Solver.html#7178" class="Function">solveGeneric</a> <a id="1134" href="Cat.Instances.Delooping.html#935" class="Function">findMonoidNames</a> <a id="1150" class="Symbol">(λ</a> <a id="1153" href="Cat.Instances.Delooping.html#1153" class="Bound">x</a> <a id="1155" class="Symbol">→</a> <a id="1157" href="Agda.Builtin.Reflection.html#4903" class="InductiveConstructor">def</a> <a id="1161" class="Symbol">(</a><a id="1162" class="Keyword">quote</a> <a id="1168" href="Cat.Instances.Delooping.html#299" class="Function">B</a><a id="1169" class="Symbol">)</a> <a id="1171" class="Symbol">(</a><a id="1172" href="Cat.Instances.Delooping.html#1153" class="Bound">x</a> <a id="1174" href="1Lab.Reflection.html#1204" class="InductiveConstructor Operator">v∷</a> <a id="1177" href="Agda.Builtin.List.html#185" class="InductiveConstructor">[]</a><a id="1179" class="Symbol">))</a>
+
+  <a id="solveMonoid"></a><a id="1185" href="Cat.Instances.Delooping.html#1185" class="Function">solveMonoid</a> <a id="1197" class="Symbol">:</a> <a id="1199" class="Symbol">∀</a> <a id="1201" class="Symbol">{</a><a id="1202" href="Cat.Instances.Delooping.html#1202" class="Bound">ℓ</a><a id="1203" class="Symbol">}</a> <a id="1205" class="Symbol">(</a><a id="1206" href="Cat.Instances.Delooping.html#1206" class="Bound">A</a> <a id="1208" class="Symbol">:</a> <a id="1210" href="Algebra.Monoid.html#2141" class="Function">Monoid</a> <a id="1217" href="Cat.Instances.Delooping.html#1202" class="Bound">ℓ</a><a id="1218" class="Symbol">)</a> <a id="1220" class="Symbol">→</a> <a id="1222" href="Agda.Builtin.Reflection.html#4688" class="Datatype">Term</a> <a id="1227" class="Symbol">→</a> <a id="1229" href="Agda.Builtin.Reflection.html#8218" class="Postulate">TC</a> <a id="1232" href="Agda.Builtin.Unit.html#164" class="Record">⊤</a>
+  <a id="1236" href="Cat.Instances.Delooping.html#1185" class="Function">solveMonoid</a> <a id="1248" class="Symbol">(_</a> <a id="1251" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a id="1253" href="Cat.Instances.Delooping.html#1253" class="Bound">mm</a><a id="1255" class="Symbol">)</a> <a id="1257" href="Cat.Instances.Delooping.html#1257" class="Bound">goal</a> <a id="1262" class="Symbol">=</a> <a id="1264" class="Keyword">do</a>
+    <a id="1271" href="Cat.Instances.Delooping.html#1271" class="Bound">tmm</a> <a id="1275" href="Agda.Builtin.Reflection.html#8311" class="Postulate Operator">←</a> <a id="1277" href="Agda.Builtin.Reflection.html#8705" class="Postulate">quoteTC</a> <a id="1285" href="Cat.Instances.Delooping.html#1253" class="Bound">mm</a>
+    <a id="1292" href="Cat.Solver.html#7178" class="Function">solveGeneric</a> <a id="1305" href="Cat.Instances.Delooping.html#935" class="Function">findMonoidNames</a> <a id="1321" class="Symbol">(λ</a> <a id="1324" href="Cat.Instances.Delooping.html#1324" class="Bound">x</a> <a id="1326" class="Symbol">→</a> <a id="1328" href="Agda.Builtin.Reflection.html#4903" class="InductiveConstructor">def</a> <a id="1332" class="Symbol">(</a><a id="1333" class="Keyword">quote</a> <a id="1339" href="Cat.Instances.Delooping.html#299" class="Function">B</a><a id="1340" class="Symbol">)</a> <a id="1342" class="Symbol">(</a><a id="1343" href="Cat.Instances.Delooping.html#1324" class="Bound">x</a> <a id="1345" href="1Lab.Reflection.html#1204" class="InductiveConstructor Operator">v∷</a> <a id="1348" href="Agda.Builtin.List.html#185" class="InductiveConstructor">[]</a><a id="1350" class="Symbol">))</a> <a id="1353" href="Cat.Instances.Delooping.html#1271" class="Bound">tmm</a> <a id="1357" href="Cat.Instances.Delooping.html#1257" class="Bound">goal</a>
+</pre>-->
+<pre class="Agda"><a id="1379" class="Keyword">module</a> <a id="1386" href="Cat.Instances.Delooping.html#1386" class="Module">_</a> <a id="1388" class="Symbol">(</a><a id="1389" href="Cat.Instances.Delooping.html#1389" class="Bound">M</a> <a id="1391" class="Symbol">:</a> <a data-type="(ℓ : Level) → Type (lsuc ℓ)" id="1393" href="Algebra.Monoid.html#2141" class="Function">Monoid</a> <a id="1400" href="Cat.Instances.Delooping.html#159" class="Generalizable">ℓ</a><a id="1401" class="Symbol">)</a> <a id="1403" class="Keyword">where</a> <a id="1409" class="Keyword">private</a>
+  <a id="1419" class="Keyword">module</a> <a id="1426" href="Cat.Instances.Delooping.html#1426" class="Module">M</a> <a id="1428" class="Symbol">=</a> <a data-type="(A : Type ℓ) → Type ℓ" id="1430" href="Algebra.Monoid.html#1981" class="Module">MonoidOn</a> <a id="1439" class="Symbol">(</a><a id="1440" href="Cat.Instances.Delooping.html#1389" class="Bound">M</a> <a id="1442" class="Symbol">.</a><a data-type="(r : ∑ A B₁) → B₁ (r .fst)" id="1443" href="Agda.Builtin.Sigma.html#264" class="Field">snd</a><a id="1446" class="Symbol">)</a>
+  <a id="1450" class="Keyword">variable</a>
+    <a id="1463" href="Cat.Instances.Delooping.html#1463" class="Generalizable">a</a> <a id="1465" href="Cat.Instances.Delooping.html#1465" class="Generalizable">b</a> <a id="1467" href="Cat.Instances.Delooping.html#1467" class="Generalizable">c</a> <a id="1469" href="Cat.Instances.Delooping.html#1469" class="Generalizable">d</a> <a id="1471" class="Symbol">:</a> <a id="1473" href="Cat.Instances.Delooping.html#1389" class="Bound">M</a> <a id="1475" class="Symbol">.</a><a data-type="∑ A B₁ → A" id="1476" href="Agda.Builtin.Sigma.html#252" class="Field">fst</a>
+
+  <a id="1483" href="Cat.Instances.Delooping.html#1483" class="Function">test</a> <a id="1488" class="Symbol">:</a> <a id="1490" class="Symbol">((</a><a id="1492" href="Cat.Instances.Delooping.html#1463" class="Generalizable">a</a> <a data-type="MonoidOn A → A → A → A" id="1494" href="Algebra.Monoid.html#2047" class="Function Operator">M.⋆</a> <a id="1498" href="Cat.Instances.Delooping.html#1465" class="Generalizable">b</a><a id="1499" class="Symbol">)</a> <a data-type="MonoidOn A → A → A → A" id="1501" href="Algebra.Monoid.html#2047" class="Function Operator">M.⋆</a> <a id="1505" class="Symbol">(</a><a id="1506" href="Cat.Instances.Delooping.html#1467" class="Generalizable">c</a> <a data-type="MonoidOn A → A → A → A" id="1508" href="Algebra.Monoid.html#2047" class="Function Operator">M.⋆</a> <a id="1512" href="Cat.Instances.Delooping.html#1469" class="Generalizable">d</a><a id="1513" class="Symbol">))</a>
+       <a data-type="A → A → Type ℓ" id="1523" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="1525" class="Symbol">((</a><a id="1527" href="Cat.Instances.Delooping.html#1463" class="Generalizable">a</a> <a data-type="MonoidOn A → A → A → A" id="1529" href="Algebra.Monoid.html#2047" class="Function Operator">M.⋆</a> <a id="1533" class="Symbol">(</a><a data-type="MonoidOn A → A" id="1534" href="Algebra.Monoid.html#2030" class="Function">M.identity</a> <a data-type="MonoidOn A → A → A → A" id="1545" href="Algebra.Monoid.html#2047" class="Function Operator">M.⋆</a> <a id="1549" class="Symbol">(</a><a id="1550" href="Cat.Instances.Delooping.html#1465" class="Generalizable">b</a> <a data-type="MonoidOn A → A → A → A" id="1552" href="Algebra.Monoid.html#2047" class="Function Operator">M.⋆</a> <a data-type="MonoidOn A → A" id="1556" href="Algebra.Monoid.html#2030" class="Function">M.identity</a><a id="1566" class="Symbol">)))</a> <a data-type="MonoidOn A → A → A → A" id="1570" href="Algebra.Monoid.html#2047" class="Function Operator">M.⋆</a> <a id="1574" class="Symbol">(</a><a id="1575" href="Cat.Instances.Delooping.html#1467" class="Generalizable">c</a> <a data-type="MonoidOn A → A → A → A" id="1577" href="Algebra.Monoid.html#2047" class="Function Operator">M.⋆</a> <a id="1581" href="Cat.Instances.Delooping.html#1469" class="Generalizable">d</a><a id="1582" class="Symbol">))</a>
+  <a id="1587" href="Cat.Instances.Delooping.html#1483" class="Function">test</a> <a id="1592" class="Symbol">=</a> <a data-type="Monoid ℓ → Term → TC ⊤" id="1594" href="Cat.Instances.Delooping.html#1185" class="Macro">solveMonoid</a> <a id="1606" href="Cat.Instances.Delooping.html#1389" class="Bound">M</a>
+</pre>
+  </article>
+</div>
+
+</main>
+</body>
+<style>.equations { display: none !important; }</style></html>
