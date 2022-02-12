@@ -48,7 +48,7 @@
     <aside id="toc">
     <div id="toc-container" style="min-width: 10em;">
       <!-- Title for the page -->
-      <h3 class="Agda" style="margin-top: 0; margin-bottom: 0;">
+      <h3 class="Agda" style="margin-top: 0; margin-bottom: 0; white-space: pre;">
                 <a class="Module">Cat.Functor.Bifunctor</a>
               </h3>
 
@@ -84,7 +84,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/1c91f73d1ec7fccd644f22a7eb788f821157e5cf/src/Cat/Functor/Bifunctor.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/1989d73b00462acd16e38ae2513b0536b9d7be5b/src/Cat/Functor/Bifunctor.lagda.md">link to source</a> <br />
                 <hr></hr> <div class="author-list">Written by Amélia Liao</div> <br />
               </div>
     </div>
@@ -115,7 +115,7 @@
   <a id="181" class="Symbol">{</a><a id="182" href="Cat.Functor.Bifunctor.html#182" class="Bound">E</a> <a id="184" class="Symbol">:</a> <a data-type="(o h : Level) → Type (lsuc o ⊔ lsuc h)" id="186" href="Cat.Base.html#611" class="Record">Precategory</a> <a id="198" href="Cat.Functor.Bifunctor.html#116" class="Bound">o₃</a> <a id="201" href="Cat.Functor.Bifunctor.html#119" class="Bound">h₃</a><a id="203" class="Symbol">}</a>
   <a id="207" class="Symbol">(</a><a id="208" href="Cat.Functor.Bifunctor.html#208" class="Bound">F</a> <a id="210" class="Symbol">:</a> <a data-type="(C : Precategory o₁ h₁) (D : Precategory o₂ h₂) →
 Type (o₁ ⊔ h₁ ⊔ o₂ ⊔ h₂)" id="212" href="Cat.Base.html#6604" class="Record">Functor</a> <a id="220" class="Symbol">(</a><a id="221" href="Cat.Functor.Bifunctor.html#130" class="Bound">C</a> <a data-type="Precategory o₁ h₁ →
-Precategory o₂ h₂ → Precategory (o₁ ⊔ o₂) (h₁ ⊔ h₂)" id="223" href="Cat.Constructions.Product.html#1529" class="Function Operator">×Cat</a> <a id="228" href="Cat.Functor.Bifunctor.html#156" class="Bound">D</a><a id="229" class="Symbol">)</a> <a id="231" href="Cat.Functor.Bifunctor.html#182" class="Bound">E</a><a id="232" class="Symbol">)</a>
+Precategory o₂ h₂ → Precategory (o₁ ⊔ o₂) (h₁ ⊔ h₂)" id="223" href="Cat.Constructions.Product.html#1531" class="Function Operator">×Cat</a> <a id="228" href="Cat.Functor.Bifunctor.html#156" class="Bound">D</a><a id="229" class="Symbol">)</a> <a id="231" href="Cat.Functor.Bifunctor.html#182" class="Bound">E</a><a id="232" class="Symbol">)</a>
   <a id="236" class="Keyword">where</a>
 </pre>
 <h1 id="bifunctors"><a href="#bifunctors" class="header-link">Bifunctors<span class="header-link-emoji">🔗</span></a></h1>
@@ -223,7 +223,7 @@ second F (D ._∘_ f g) ≡ E ._∘_ (second F f) (second F g)" id="2720" href="
 
 <a id="Flip"></a><a data-type="(F : Functor (C ×Cat D) E) → Functor (D ×Cat C) E" id="2735" href="Cat.Functor.Bifunctor.html#2735" class="Function">Flip</a> <a id="2740" class="Symbol">:</a> <a data-type="(C : Precategory o₁ h₁) (D : Precategory o₂ h₂) →
 Type (o₁ ⊔ h₁ ⊔ o₂ ⊔ h₂)" id="2742" href="Cat.Base.html#6604" class="Record">Functor</a> <a id="2750" class="Symbol">(</a><a id="2751" href="Cat.Functor.Bifunctor.html#156" class="Bound">D</a> <a data-type="Precategory o₁ h₁ →
-Precategory o₂ h₂ → Precategory (o₁ ⊔ o₂) (h₁ ⊔ h₂)" id="2753" href="Cat.Constructions.Product.html#1529" class="Function Operator">×Cat</a> <a id="2758" href="Cat.Functor.Bifunctor.html#130" class="Bound">C</a><a id="2759" class="Symbol">)</a> <a id="2761" href="Cat.Functor.Bifunctor.html#182" class="Bound">E</a>
+Precategory o₂ h₂ → Precategory (o₁ ⊔ o₂) (h₁ ⊔ h₂)" id="2753" href="Cat.Constructions.Product.html#1531" class="Function Operator">×Cat</a> <a id="2758" href="Cat.Functor.Bifunctor.html#130" class="Bound">C</a><a id="2759" class="Symbol">)</a> <a id="2761" href="Cat.Functor.Bifunctor.html#182" class="Bound">E</a>
 <a data-type="Functor C D → C .Ob → Ob D" id="2763" href="Cat.Base.html#7372" class="Field">Functor.F₀</a> <a data-type="(F : Functor (C ×Cat D) E) → Functor (D ×Cat C) E" id="2774" href="Cat.Functor.Bifunctor.html#2735" class="Function">Flip</a> <a id="2779" class="Symbol">(</a><a id="2780" href="Cat.Functor.Bifunctor.html#2780" class="Bound">fst</a> <a data-type="(fst₁ : A) (snd₁ : B₁ fst₁) → ∑ A B₁" id="2784" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a id="2786" href="Cat.Functor.Bifunctor.html#2786" class="Bound">snd</a><a id="2789" class="Symbol">)</a> <a id="2791" class="Symbol">=</a> <a data-type="Functor C D → C .Ob → Ob D" id="2793" href="Cat.Base.html#7372" class="Field">F₀</a> <a id="2796" class="Symbol">(</a><a id="2797" href="Cat.Functor.Bifunctor.html#2786" class="Bound">snd</a> <a data-type="(fst₁ : A) (snd₁ : B₁ fst₁) → ∑ A B₁" id="2801" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a id="2803" href="Cat.Functor.Bifunctor.html#2780" class="Bound">fst</a><a id="2806" class="Symbol">)</a>
 <a data-type="(r : Functor C D) → C .Hom x y → Hom D (r .F₀ x) (r .F₀ y)" id="2808" href="Cat.Base.html#7393" class="Field">Functor.F₁</a> <a data-type="(F : Functor (C ×Cat D) E) → Functor (D ×Cat C) E" id="2819" href="Cat.Functor.Bifunctor.html#2735" class="Function">Flip</a> <a id="2824" class="Symbol">(</a><a id="2825" href="Cat.Functor.Bifunctor.html#2825" class="Bound">fst</a> <a data-type="(fst₁ : A) (snd₁ : B₁ fst₁) → ∑ A B₁" id="2829" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a id="2831" href="Cat.Functor.Bifunctor.html#2831" class="Bound">snd</a><a id="2834" class="Symbol">)</a> <a id="2836" class="Symbol">=</a> <a data-type="(r : Functor C D) → C .Hom x y → Hom D (r .F₀ x) (r .F₀ y)" id="2838" href="Cat.Base.html#7393" class="Field">F₁</a> <a id="2841" class="Symbol">(</a><a id="2842" href="Cat.Functor.Bifunctor.html#2831" class="Bound">snd</a> <a data-type="(fst₁ : A) (snd₁ : B₁ fst₁) → ∑ A B₁" id="2846" href="Agda.Builtin.Sigma.html#236" class="InductiveConstructor Operator">,</a> <a id="2848" href="Cat.Functor.Bifunctor.html#2825" class="Bound">fst</a><a id="2851" class="Symbol">)</a>
 <a data-type="(r : Functor C D) → r .F₁ (C .id) ≡ id D" id="2853" href="Cat.Base.html#7727" class="Field">Functor.F-id</a> <a data-type="(F : Functor (C ×Cat D) E) → Functor (D ×Cat C) E" id="2866" href="Cat.Functor.Bifunctor.html#2735" class="Function">Flip</a>    <a id="2874" class="Symbol">=</a> <a data-type="(r : Functor C D) → r .F₁ (C .id) ≡ id D" id="2876" href="Cat.Base.html#7727" class="Field">F-id</a>
