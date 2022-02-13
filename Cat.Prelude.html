@@ -5,13 +5,15 @@
 <a id="137" class="Keyword">module</a> <a id="144" href="Cat.Prelude.html" class="Module">Cat.Prelude</a> <a id="156" class="Keyword">where</a>
 
 <a id="163" class="Keyword">open</a> <a id="168" class="Keyword">import</a> <a id="175" href="1Lab.Prelude.html" class="Module">1Lab.Prelude</a>
-  <a id="190" class="Keyword">hiding</a> <a id="197" class="Symbol">(</a><a data-type="(B₁ → C) → (A → B₁) → A → C" id="198" href="1Lab.Type.html#2217" class="Function Operator">_∘_</a> <a id="202" class="Symbol">;</a> <a data-type="A → A" id="204" href="1Lab.Type.html#2348" class="Function">id</a><a id="206" class="Symbol">)</a>
-  <a id="210" class="Keyword">renaming</a> <a id="219" class="Symbol">(</a><a id="220" href="1Lab.Equiv.Embedding.html#648" class="Function Operator">_↪_</a> <a id="224" class="Symbol">to</a> <a id="227" class="Function Operator">_↣_</a><a id="230" class="Symbol">)</a>
-  <a id="234" class="Keyword">public</a>
+  <a id="190" class="Keyword">renaming</a> <a id="199" class="Symbol">(</a> <a id="201" href="1Lab.Equiv.Embedding.html#648" class="Function Operator">_↪_</a> <a id="205" class="Symbol">to</a> <a id="208" class="Function Operator">_↣_</a>
+           <a id="223" class="Symbol">;</a> <a data-type="((y : B₁ x) → C x y) → (f : (x : A) → B₁ x) (x : A) → C x (f x)" id="225" href="1Lab.Type.html#2217" class="Function Operator">_∘_</a> <a id="229" class="Symbol">to</a> <a id="232" class="Function Operator">_⊙_</a> <a id="236" class="Comment">-- \o.</a>
+           <a id="254" class="Symbol">)</a>
+  <a id="258" class="Keyword">hiding</a> <a id="265" class="Symbol">(</a><a data-type="A → A" id="266" href="1Lab.Type.html#2415" class="Function">id</a><a id="268" class="Symbol">)</a>
+  <a id="272" class="Keyword">public</a>
 
-<a id="242" class="Keyword">open</a> <a id="247" class="Keyword">import</a> <a id="254" href="Data.Set.Truncation.html" class="Module">Data.Set.Truncation</a> <a id="274" class="Keyword">public</a>
-<a id="281" class="Keyword">open</a> <a id="286" class="Keyword">import</a> <a id="293" href="Data.Set.Coequaliser.html" class="Module">Data.Set.Coequaliser</a> <a id="314" class="Keyword">public</a>
+<a id="280" class="Keyword">open</a> <a id="285" class="Keyword">import</a> <a id="292" href="Data.Set.Truncation.html" class="Module">Data.Set.Truncation</a> <a id="312" class="Keyword">public</a>
+<a id="319" class="Keyword">open</a> <a id="324" class="Keyword">import</a> <a id="331" href="Data.Set.Coequaliser.html" class="Module">Data.Set.Coequaliser</a> <a id="352" class="Keyword">public</a>
 
-<a id="322" class="Keyword">open</a> <a id="327" class="Keyword">import</a> <a id="334" href="Cat.Base.html" class="Module">Cat.Base</a> <a id="343" class="Keyword">public</a>
-<a id="350" class="Keyword">open</a> <a id="355" class="Keyword">import</a> <a id="362" href="Cat.Solver.html" class="Module">Cat.Solver</a> <a id="373" class="Keyword">public</a>
+<a id="360" class="Keyword">open</a> <a id="365" class="Keyword">import</a> <a id="372" href="Cat.Base.html" class="Module">Cat.Base</a> <a id="381" class="Keyword">public</a>
+<a id="388" class="Keyword">open</a> <a id="393" class="Keyword">import</a> <a id="400" href="Cat.Solver.html" class="Module">Cat.Solver</a> <a id="411" class="Keyword">public</a>
 </pre></body></html>
