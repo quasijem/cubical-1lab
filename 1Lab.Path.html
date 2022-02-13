@@ -46,7 +46,7 @@
 
   <!-- Table of contents (only if the page has a table of contents) -->
     <aside id="toc">
-    <div id="toc-container" style="min-width: 10em;">
+    <div id="toc-container" style="min-width: 10em; font-size: 15pt;">
       <!-- Title for the page -->
       <h3 class="Agda" style="margin-top: 0; margin-bottom: 0; white-space: pre;">
                 <a class="Module">1Lab.Path</a>
@@ -96,13 +96,13 @@
       <!-- Sidebar controls -->
       <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
         <!-- Sidebar equations control -->
-        <span class="equations" style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
+        <span class="equations" style="display: flex; align-items: center; gap: 0.25em; flex-wrap: nowrap;">
           <input name="sidebar-eqns" type="checkbox" class="equations" id="sidebar-eqns">
           <label for="sidebar-eqns">Equations</label>
         </span>
 
         <!-- Sidebar fonts control -->
-        <span style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
+        <span style="display: flex; align-items: center; gap: 0.25em; flex-wrap: nowrap;">
           <input name="sidebar-font" type="checkbox" id="toggle-fonts">
           <label for="toggle-fonts">Serif Font</label>
         </span>
@@ -114,7 +114,7 @@
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/1989d73b00462acd16e38ae2513b0536b9d7be5b/src/1Lab/Path.lagda.md">link to source</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/6731e1f5d20e637eb6f85687815d2a65470f643d/src/1Lab/Path.lagda.md">link to source</a> <br />
                 <hr></hr> <div class="author-list">Written by Amélia Liao, Astra Kolomatskaia, Jonathan Coates and uni</div> <br />
               </div>
     </div>
@@ -1016,6 +1016,13 @@ TODO: Explain these whiskerings
 <a id="62680" href="1Lab.Path.html#62594" class="Function">≡⟨⟩⟨⟩-syntax</a> <a id="62693" href="1Lab.Path.html#62693" class="Bound">x</a> <a id="62695" href="1Lab.Path.html#62695" class="Bound">y</a> <a id="62697" href="1Lab.Path.html#62697" class="Bound">p</a> <a id="62699" href="1Lab.Path.html#62699" class="Bound">q</a> <a id="62701" href="1Lab.Path.html#62701" class="Bound">r</a> <a id="62703" class="Symbol">=</a> <a id="62705" href="1Lab.Path.html#62697" class="Bound">p</a> <a id="62707" href="1Lab.Path.html#38409" class="Function Operator">··</a> <a id="62710" href="1Lab.Path.html#62699" class="Bound">q</a> <a id="62712" href="1Lab.Path.html#38409" class="Function Operator">··</a> <a id="62715" href="1Lab.Path.html#62701" class="Bound">r</a>
 <a id="62717" class="Keyword">infixr</a> <a id="62724" class="Number">2.5</a> <a id="62728" href="1Lab.Path.html#62594" class="Function">≡⟨⟩⟨⟩-syntax</a>
 <a id="62741" class="Keyword">syntax</a> <a id="62748" href="1Lab.Path.html#62594" class="Function">≡⟨⟩⟨⟩-syntax</a> <a id="62761" class="Bound">x</a> <a id="62763" class="Bound">y</a> <a id="62765" class="Bound">B</a> <a id="62767" class="Bound">C</a> <a id="62769" class="Symbol">=</a> <a id="62771" class="Bound">x</a> <a id="62773" class="Function">≡⟨</a> <a id="62776" class="Bound">B</a> <a id="62778" class="Function">⟩≡</a> <a id="62781" class="Bound">y</a> <a id="62783" class="Function">≡⟨</a> <a id="62786" class="Bound">C</a> <a id="62788" class="Function">⟩≡</a>
+
+<a id="J′"></a><a id="62792" href="1Lab.Path.html#62792" class="Function">J′</a> <a id="62795" class="Symbol">:</a> <a id="62797" class="Symbol">∀</a> <a id="62799" class="Symbol">{</a><a id="62800" href="1Lab.Path.html#62800" class="Bound">ℓ₁</a> <a id="62803" href="1Lab.Path.html#62803" class="Bound">ℓ₂</a><a id="62805" class="Symbol">}</a> <a id="62807" class="Symbol">{</a><a id="62808" href="1Lab.Path.html#62808" class="Bound">A</a> <a id="62810" class="Symbol">:</a> <a id="62812" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="62817" href="1Lab.Path.html#62800" class="Bound">ℓ₁</a><a id="62819" class="Symbol">}</a>
+     <a id="62826" class="Symbol">(</a><a id="62827" href="1Lab.Path.html#62827" class="Bound">P</a> <a id="62829" class="Symbol">:</a> <a id="62831" class="Symbol">(</a><a id="62832" href="1Lab.Path.html#62832" class="Bound">x</a> <a id="62834" href="1Lab.Path.html#62834" class="Bound">y</a> <a id="62836" class="Symbol">:</a> <a id="62838" href="1Lab.Path.html#62808" class="Bound">A</a><a id="62839" class="Symbol">)</a> <a id="62841" class="Symbol">→</a> <a id="62843" href="1Lab.Path.html#62832" class="Bound">x</a> <a id="62845" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="62847" href="1Lab.Path.html#62834" class="Bound">y</a> <a id="62849" class="Symbol">→</a> <a id="62851" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="62856" href="1Lab.Path.html#62803" class="Bound">ℓ₂</a><a id="62858" class="Symbol">)</a>
+   <a id="62863" class="Symbol">→</a> <a id="62865" class="Symbol">(∀</a> <a id="62868" href="1Lab.Path.html#62868" class="Bound">x</a> <a id="62870" class="Symbol">→</a> <a id="62872" href="1Lab.Path.html#62827" class="Bound">P</a> <a id="62874" href="1Lab.Path.html#62868" class="Bound">x</a> <a id="62876" href="1Lab.Path.html#62868" class="Bound">x</a> <a id="62878" href="1Lab.Path.html#3591" class="Function">refl</a><a id="62882" class="Symbol">)</a>
+   <a id="62887" class="Symbol">→</a> <a id="62889" class="Symbol">{</a><a id="62890" href="1Lab.Path.html#62890" class="Bound">x</a> <a id="62892" href="1Lab.Path.html#62892" class="Bound">y</a> <a id="62894" class="Symbol">:</a> <a id="62896" href="1Lab.Path.html#62808" class="Bound">A</a><a id="62897" class="Symbol">}</a> <a id="62899" class="Symbol">(</a><a id="62900" href="1Lab.Path.html#62900" class="Bound">p</a> <a id="62902" class="Symbol">:</a> <a id="62904" href="1Lab.Path.html#62890" class="Bound">x</a> <a id="62906" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="62908" href="1Lab.Path.html#62892" class="Bound">y</a><a id="62909" class="Symbol">)</a>
+   <a id="62914" class="Symbol">→</a> <a id="62916" href="1Lab.Path.html#62827" class="Bound">P</a> <a id="62918" href="1Lab.Path.html#62890" class="Bound">x</a> <a id="62920" href="1Lab.Path.html#62892" class="Bound">y</a> <a id="62922" href="1Lab.Path.html#62900" class="Bound">p</a>
+<a id="62924" href="1Lab.Path.html#62792" class="Function">J′</a> <a id="62927" href="1Lab.Path.html#62927" class="Bound">P</a> <a id="62929" href="1Lab.Path.html#62929" class="Bound">prefl</a> <a id="62935" class="Symbol">{</a><a id="62936" href="1Lab.Path.html#62936" class="Bound">x</a><a id="62937" class="Symbol">}</a> <a id="62939" href="1Lab.Path.html#62939" class="Bound">p</a> <a id="62941" class="Symbol">=</a> <a id="62943" href="1Lab.Path.html#11846" class="Function">transport</a> <a id="62953" class="Symbol">(λ</a> <a id="62956" href="1Lab.Path.html#62956" class="Bound">i</a> <a id="62958" class="Symbol">→</a> <a id="62960" href="1Lab.Path.html#62927" class="Bound">P</a> <a id="62962" href="1Lab.Path.html#62936" class="Bound">x</a> <a id="62964" class="Symbol">(</a><a id="62965" href="1Lab.Path.html#62939" class="Bound">p</a> <a id="62967" href="1Lab.Path.html#62956" class="Bound">i</a><a id="62968" class="Symbol">)</a> <a id="62970" class="Symbol">λ</a> <a id="62972" href="1Lab.Path.html#62972" class="Bound">j</a> <a id="62974" class="Symbol">→</a> <a id="62976" href="1Lab.Path.html#62939" class="Bound">p</a> <a id="62978" class="Symbol">(</a><a id="62979" href="1Lab.Path.html#62956" class="Bound">i</a> <a id="62981" href="1Lab.Path.html#2191" class="Primitive Operator">∧</a> <a id="62983" href="1Lab.Path.html#62972" class="Bound">j</a><a id="62984" class="Symbol">))</a> <a id="62987" class="Symbol">(</a><a id="62988" href="1Lab.Path.html#62929" class="Bound">prefl</a> <a id="62994" href="1Lab.Path.html#62936" class="Bound">x</a><a id="62995" class="Symbol">)</a>
 </pre>-->
 <section class="footnotes" role="doc-endnotes">
 <hr></hr>
