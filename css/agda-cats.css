@@ -8,8 +8,12 @@ div.diagram-container {
     margin: auto;
     display: block;
     overflow-x: auto; }
+    div.diagram-container img.diagram.short-05 {
+      height: 150px; }
     div.diagram-container img.diagram.short-1 {
       height: 105px; }
+    div.diagram-container img.diagram.short-15 {
+      height: 80px; }
     div.diagram-container img.diagram.short-2 {
       height: 55px; }
     div.diagram-container img.diagram.tall-1 {
