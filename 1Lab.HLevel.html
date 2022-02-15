@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta charset="utf-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <meta name="keywords" content="Agda,categories,topos"></meta>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Agda,categories,topos" />
 
   <title>1Lab.HLevel - 1Lab</title>
 
-  <link rel="stylesheet" href="/css/default.css"></link>
-  <link rel="stylesheet" href="/css/katex.min.css"></link>
-  <link rel="stylesheet" href="/css/agda-cats.css"></link>
+  <link rel="stylesheet" href="/css/default.css" />
+  <link rel="stylesheet" href="/css/katex.min.css" />
+  <link rel="stylesheet" href="/css/agda-cats.css" />
 
-  <meta name="twitter:card" content="summary"></meta>
-  <meta name="twitter:title" content="1Lab.HLevel - 1Lab"></meta>
-  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png"></meta>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1Lab.HLevel - 1Lab" />
+  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png" />
 
-  <meta name="og:title" content="1Lab.HLevel - 1Lab"></meta>
-  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png"></meta>
-  <meta name="og:site-name" content="1Lab"></meta>
-  <meta name="og:type" content="website"></meta>
+  <meta name="og:title" content="1Lab.HLevel - 1Lab" />
+  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png" />
+  <meta name="og:site-name" content="1Lab" />
+  <meta name="og:type" content="website" />
 
-    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory." />
   
-  <script src="/equations.js" type="text/javascript"></script>
-  <script src="/highlight-hover.js" type="text/javascript"></script>
+  <script src="/equations.js"></script>
+  <script src="/highlight-hover.js"></script>
 
   <noscript>
     <style>
@@ -53,18 +53,18 @@
               </h3>
 
       <!-- Cube logo -->
-      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px"></img>
+      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px" />
 
       <!-- Actual table of contents (separated from the rest by
       horizontal rules) -->
-      <hr></hr>
+      <hr />
       <ul>
       <li><a href="#h-levels"><a href="#h-levels" class="header-link">h-Levels<span class="header-link-emoji">🔗</span></a></a></li>
       <li><a href="#preservation-of-h-levels"><a href="#preservation-of-h-levels" class="header-link">Preservation of h-levels<span class="header-link-emoji">🔗</span></a></a></li>
       <li><a href="#ishlevel-is-a-proposition"><a href="#ishlevel-is-a-proposition" class="header-link">isHLevel is a proposition<span class="header-link-emoji">🔗</span></a></a></li>
       <li><a href="#dependent-h-levels"><a href="#dependent-h-levels" class="header-link">Dependent h-Levels<span class="header-link-emoji">🔗</span></a></a></li>
       </ul>
-      <hr></hr>
+      <hr />
 
       <!-- Sidebar controls -->
       <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
@@ -81,14 +81,14 @@
         </span>
       </div>
 
-      <hr></hr>
+      <hr />
 
       <!-- Navbar navigation (lol) -->
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/c7251519e90200a1d1ead2575e6596ccd4a8b2de/src/1Lab/HLevel.lagda.md">link to source</a> <br />
-                <hr></hr> <div class="author-list">Written by Amélia Liao</div> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/527d25632b6de321e0bcf363b3704689410468c8/src/1Lab/HLevel.lagda.md">link to source</a> <br />
+                <hr /> <div class="author-list">Written by Amélia Liao</div> <br />
               </div>
     </div>
   </aside>
@@ -170,7 +170,7 @@
 <pre class="Agda"><a id="isGroupoid"></a><a data-type="Type ℓ → Type ℓ" id="3617" href="1Lab.HLevel.html#3617" class="Function">isGroupoid</a> <a id="3628" class="Symbol">:</a> <a id="3630" class="Symbol">∀</a> <a id="3632" class="Symbol">{</a><a id="3633" href="1Lab.HLevel.html#3633" class="Bound">ℓ</a><a id="3634" class="Symbol">}</a> <a id="3636" class="Symbol">→</a> <a id="3638" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="3643" href="1Lab.HLevel.html#3633" class="Bound">ℓ</a> <a id="3645" class="Symbol">→</a> <a id="3647" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="3652" href="1Lab.HLevel.html#3633" class="Bound">ℓ</a>
 <a data-type="Type ℓ → Type ℓ" id="3654" href="1Lab.HLevel.html#3617" class="Function">isGroupoid</a> <a id="3665" href="1Lab.HLevel.html#3665" class="Bound">A</a> <a id="3667" class="Symbol">=</a> <a data-type="Type ℓ → Nat → Type ℓ" id="3669" href="1Lab.HLevel.html#2807" class="Function">isHLevel</a> <a id="3678" href="1Lab.HLevel.html#3665" class="Bound">A</a> <a id="3680" class="Number">3</a>
 </pre>
-<hr></hr>
+<hr />
 <pre class="Agda"><a id="3700" class="Keyword">private</a>
   <a id="3710" class="Keyword">variable</a>
     <a id="3723" href="1Lab.HLevel.html#3723" class="Generalizable">ℓ</a> <a id="3725" class="Symbol">:</a> <a data-type="Type" id="3727" href="Agda.Primitive.html#597" class="Postulate">Level</a>
@@ -203,7 +203,7 @@
 </pre>
 <p>The proof that any contractible type is a proposition is not too complicated. We can get a line connecting any two elements as the lid of the square below:</p>
 <div class="diagram-container">
-<img src="1b14d7db6144684b319b6433af6df217d07cea87.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="1b14d7db6144684b319b6433af6df217d07cea87.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <p>This is equivalently the composition of <code>sym (C .paths x) ∙ C.paths y</code> - a path <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x \to y</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">y</span></span></span></span> which factors through the <span class="Agda"><a data-type="isContr A → A" href="1Lab.HLevel.html#1400" class="Field">centre</a></span>. The direct cubical description is, however, slightly more efficient.</p>
 <pre class="Agda"><a id="isProp→isSet"></a><a data-type="isProp A → isSet A" id="5654" href="1Lab.HLevel.html#5654" class="Function">isProp→isSet</a> <a id="5667" class="Symbol">:</a> <a data-type="Type ℓ → Type ℓ" id="5669" href="1Lab.HLevel.html#2594" class="Function">isProp</a> <a id="5676" href="1Lab.HLevel.html#3737" class="Generalizable">A</a> <a id="5678" class="Symbol">→</a> <a data-type="Type ℓ → Type ℓ" id="5680" href="1Lab.HLevel.html#3342" class="Function">isSet</a> <a id="5686" href="1Lab.HLevel.html#3737" class="Generalizable">A</a>
@@ -217,7 +217,7 @@
 </pre>
 <p>The proof that any proposition is a set is slightly more complicated. Since the desired homotopy <code>p ≡ q</code> is a square, we need to describe a <em>cube</em> where the missing face is the square we need. I have painstakingly illustrated it here:</p>
 <div class="diagram-container">
-<img src="3d2706f7aabb81b12af4515c5bc8e759b537a27a.svg" title="commutative diagram" class="diagram quiver tall-2"></img>
+<img src="3d2706f7aabb81b12af4515c5bc8e759b537a27a.svg" title="commutative diagram" class="diagram quiver tall-2" />
 </div>
 <p>To set your perspective: You are looking at a cube that has a transparent front face. The front face has four <code>x</code> corners, and four <code>λ i → x</code> edges. Each double arrow pointing from the front face to the back face is one of the sides of the composition. They’re labelled with the terms in the <span class="Agda"><a href="1Lab.Path.html#2368" class="Primitive">hcomp</a></span> for <span class="Agda"><a data-type="isProp A → isSet A" href="1Lab.HLevel.html#5654" class="Function">isProp→isSet</a></span>: For example, the square you get when fixing <code>i = i0</code> is on top of the diagram. Since we have an open box, it has a lid — which, in this case, is the back face — which expresses the identification we wanted: <code>p ≡ q</code>.</p>
 <p>With these two base cases, we can prove the general case by recursion:</p>

@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta charset="utf-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <meta name="keywords" content="Agda,categories,topos"></meta>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Agda,categories,topos" />
 
   <title>Cat.Diagram.Limit.Base - 1Lab</title>
 
-  <link rel="stylesheet" href="/css/default.css"></link>
-  <link rel="stylesheet" href="/css/katex.min.css"></link>
-  <link rel="stylesheet" href="/css/agda-cats.css"></link>
+  <link rel="stylesheet" href="/css/default.css" />
+  <link rel="stylesheet" href="/css/katex.min.css" />
+  <link rel="stylesheet" href="/css/agda-cats.css" />
 
-  <meta name="twitter:card" content="summary"></meta>
-  <meta name="twitter:title" content="Cat.Diagram.Limit.Base - 1Lab"></meta>
-  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png"></meta>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cat.Diagram.Limit.Base - 1Lab" />
+  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png" />
 
-  <meta name="og:title" content="Cat.Diagram.Limit.Base - 1Lab"></meta>
-  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png"></meta>
-  <meta name="og:site-name" content="1Lab"></meta>
-  <meta name="og:type" content="website"></meta>
+  <meta name="og:title" content="Cat.Diagram.Limit.Base - 1Lab" />
+  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png" />
+  <meta name="og:site-name" content="1Lab" />
+  <meta name="og:type" content="website" />
 
-    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory." />
   
-  <script src="/equations.js" type="text/javascript"></script>
-  <script src="/highlight-hover.js" type="text/javascript"></script>
+  <script src="/equations.js"></script>
+  <script src="/highlight-hover.js"></script>
 
   <noscript>
     <style>
@@ -53,11 +53,11 @@
               </h3>
 
       <!-- Cube logo -->
-      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px"></img>
+      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px" />
 
       <!-- Actual table of contents (separated from the rest by
       horizontal rules) -->
-      <hr></hr>
+      <hr />
       <ul>
       <li><a href="#idea"><a href="#idea" class="header-link">Idea<span class="header-link-emoji">🔗</span></a></a>
       <ul>
@@ -75,7 +75,7 @@
       </ul></li>
       <li><a href="#uniqueness"><a href="#uniqueness" class="header-link">Uniqueness<span class="header-link-emoji">🔗</span></a></a></li>
       </ul>
-      <hr></hr>
+      <hr />
 
       <!-- Sidebar controls -->
       <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
@@ -92,14 +92,14 @@
         </span>
       </div>
 
-      <hr></hr>
+      <hr />
 
       <!-- Navbar navigation (lol) -->
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/c7251519e90200a1d1ead2575e6596ccd4a8b2de/src/Cat/Diagram/Limit/Base.lagda.md">link to source</a> <br />
-                <hr></hr> <div class="author-list">Written by Amélia Liao</div> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/527d25632b6de321e0bcf363b3704689410468c8/src/Cat/Diagram/Limit/Base.lagda.md">link to source</a> <br />
+                <hr /> <div class="author-list">Written by Amélia Liao</div> <br />
               </div>
     </div>
   </aside>
@@ -132,19 +132,19 @@
 <p><strong>Note</strong>: Products are described explicitly in <a href="Cat.Diagram.Product.html"><code>Cat.Diagram.Product</code></a>. The description there might be easier to parse.</p>
 <p>Consider a <em>discrete</em> diagram - one that has no interesting morphisms, only identities, such as the collection of objects below.</p>
 <div class="diagram-container">
-<img src="456f1760f1961d4382237acb757e2adbcf467813.svg" title="commutative diagram" class="diagram quiver short-2"></img>
+<img src="456f1760f1961d4382237acb757e2adbcf467813.svg" title="commutative diagram" class="diagram quiver short-2" />
 </div>
 <p>To consider a limit for this diagram, we first have to go through an intermediate step - a <span class="Agda"><a data-type="(F : Functor J₁ C) → Type (o₁ ⊔ h₁ ⊔ o₂ ⊔ h₂)" href="Cat.Diagram.Limit.Base.html#5904" class="Record">Cone</a></span>. Draw a new object, the <span class="Agda"><a data-type="Cone F → C .Ob" href="Cat.Diagram.Limit.Base.html#6207" class="Field">apex</a></span> - let’s call it <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> - and a family of maps from <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> “down onto” all of the objects of the diagram. The new maps have to make everything in sight commute, but in the case of a discrete diagram, we can pick any maps. There are no obligations.</p>
 <div class="diagram-container">
-<img src="0dd97b99f1ac390ddcce776f9c6ae996451f9397.svg" title="commutative diagram" class="diagram quiver short-1"></img>
+<img src="0dd97b99f1ac390ddcce776f9c6ae996451f9397.svg" title="commutative diagram" class="diagram quiver short-1" />
 </div>
 <p>It’ll be helpful to think of the maps as projections - which is why they’re labelled with the greek letter <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi></mrow><annotation encoding="application/x-tex">\pi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span></span>,</span> for <strong>p</strong>rojection. However, for an arbitrary cone, the maps are.. well, arbitrary. To consider a concrete example, we can pretend our diagram was in <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">S</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">t</mi></mrow><annotation encoding="application/x-tex">\mathrm{Set}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord"><span class="mord mathrm">Set</span></span></span></span></span> all along, and that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> was the set <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">Q</mi></mrow><annotation encoding="application/x-tex">\mathbb{Q}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8556em;vertical-align:-0.1667em;"></span><span class="mord mathbb">Q</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span> was the set <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="double-struck">R</mi></mrow><annotation encoding="application/x-tex">\mathbb{R}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6889em;"></span><span class="mord mathbb">R</span></span></span></span>.</span> Then the following is a cone over it:</p>
 <div class="diagram-container">
-<img src="0ac7ba790a6ac269615029f1156cc8e02154e97e.svg" title="commutative diagram" class="diagram quiver short-1"></img>
+<img src="0ac7ba790a6ac269615029f1156cc8e02154e97e.svg" title="commutative diagram" class="diagram quiver short-1" />
 </div>
 <p>Abstracting again, there is a canonical definition of <em>cone homomorphism</em> - A map between the apices that makes everything in sight commute. If <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>P</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">P&#39;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> were both apices for our original discrete diagram, we would draw a cone homomorphism <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>:</mo><msup><mi>P</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>→</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">f : P&#39; \to P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> as the dashed arrow in following commutative Starfleet comms badge.</p>
 <div class="diagram-container">
-<img src="5d6bd8d506848682ae2de32b8c8e25f2f5db8b50.svg" title="commutative diagram" class="diagram quiver tall-2"></img>
+<img src="5d6bd8d506848682ae2de32b8c8e25f2f5db8b50.svg" title="commutative diagram" class="diagram quiver tall-2" />
 </div>
 <p>These assemble into a category, <span class="Agda"><a data-type="(F : Functor J₁ C) → Precategory (o₁ ⊔ h₁ ⊔ o₂ ⊔ h₂) (o₁ ⊔ h₂)" href="Cat.Diagram.Limit.Base.html#8974" class="Function">Cones</a></span>, with composition and identity given by the composition and identity of ambient category. A <span class="Agda"><a data-type="(F : Functor J₁ C) → Type (o₁ ⊔ h₁ ⊔ o₂ ⊔ h₂)" href="Cat.Diagram.Limit.Base.html#10587" class="Function">Limit</a></span> is, then, a <a href="Cat.Diagram.Terminal.html">terminal object</a> in this category. For <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi></mrow><annotation encoding="application/x-tex">P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> to be a limit in our diagram above, we require that, for any other cone <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>P</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup></mrow><annotation encoding="application/x-tex">P&#39;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span></span></span></span> there exists a <em>unique</em> arrow <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>P</mi><mo mathvariant="normal" lspace="0em" rspace="0em">′</mo></msup><mo>→</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">P&#39; \to P</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7519em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.13889em;">P</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7519em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">P</span></span></span></span> that makes everything commute.</p>
 <p>The limit over a discrete diagram is called a <strong>product</strong>, and it’s important to note that the diagram need not be finite. Here are concrete examples of products in categories:</p>
@@ -186,7 +186,7 @@ Type (o₁ ⊔ h₁ ⊔ o₂ ⊔ h₂)" id="5884" href="Cat.Base.html#6604" clas
 </pre>
 <p>These non-trivial composites consist of following the left leg of the diagram below, followed by the bottom leg. For it to commute, that path has to be the same as following the right leg.</p>
 <div class="diagram-container">
-<img src="f90475e8ef9a0e8454d89ea833879cea57f44f61.svg" title="commutative diagram" class="diagram quiver short-05"></img>
+<img src="f90475e8ef9a0e8454d89ea833879cea57f44f61.svg" title="commutative diagram" class="diagram quiver short-05" />
 </div>
 <p>Since paths in Hom-spaces <span class="Agda"><a data-type="(r : Precategory o h) (x y : r .Ob) → isSet (r .Hom x y)" href="Cat.Base.html#1677" class="Field">are propositions</a></span>, to test equality of cones, it suffices for the apices to be equal, and for their <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\psi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">ψ</span></span></span></span>s</span> to assign equal morphisms for every object in the shape category.</p>
 <pre class="Agda">  <a data-type="(F : Functor J₁ C) (p : apex x ≡ apex y) →

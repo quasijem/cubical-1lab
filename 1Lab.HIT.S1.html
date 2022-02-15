@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta charset="utf-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <meta name="keywords" content="Agda,categories,topos"></meta>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Agda,categories,topos" />
 
   <title>1Lab.HIT.S1 - 1Lab</title>
 
-  <link rel="stylesheet" href="/css/default.css"></link>
-  <link rel="stylesheet" href="/css/katex.min.css"></link>
-  <link rel="stylesheet" href="/css/agda-cats.css"></link>
+  <link rel="stylesheet" href="/css/default.css" />
+  <link rel="stylesheet" href="/css/katex.min.css" />
+  <link rel="stylesheet" href="/css/agda-cats.css" />
 
-  <meta name="twitter:card" content="summary"></meta>
-  <meta name="twitter:title" content="1Lab.HIT.S1 - 1Lab"></meta>
-  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png"></meta>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1Lab.HIT.S1 - 1Lab" />
+  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png" />
 
-  <meta name="og:title" content="1Lab.HIT.S1 - 1Lab"></meta>
-  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png"></meta>
-  <meta name="og:site-name" content="1Lab"></meta>
-  <meta name="og:type" content="website"></meta>
+  <meta name="og:title" content="1Lab.HIT.S1 - 1Lab" />
+  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png" />
+  <meta name="og:site-name" content="1Lab" />
+  <meta name="og:type" content="website" />
 
-    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory." />
   
-  <script src="/equations.js" type="text/javascript"></script>
-  <script src="/highlight-hover.js" type="text/javascript"></script>
+  <script src="/equations.js"></script>
+  <script src="/highlight-hover.js"></script>
 
   <noscript>
     <style>
@@ -53,18 +53,18 @@
               </h3>
 
       <!-- Cube logo -->
-      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px"></img>
+      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px" />
 
       <!-- Actual table of contents (separated from the rest by
       horizontal rules) -->
-      <hr></hr>
+      <hr />
       <ul>
       <li><a href="#the-circle"><a href="#the-circle" class="header-link">The Circle<span class="header-link-emoji">🔗</span></a></a>
       <ul>
       <li><a href="#path-space"><a href="#path-space" class="header-link">Path Space<span class="header-link-emoji">🔗</span></a></a></li>
       </ul></li>
       </ul>
-      <hr></hr>
+      <hr />
 
       <!-- Sidebar controls -->
       <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
@@ -81,14 +81,14 @@
         </span>
       </div>
 
-      <hr></hr>
+      <hr />
 
       <!-- Navbar navigation (lol) -->
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/c7251519e90200a1d1ead2575e6596ccd4a8b2de/src/1Lab/HIT/S1.lagda.md">link to source</a> <br />
-                <hr></hr> <div class="author-list">Written by Amélia Liao, Jim Fowler and uni</div> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/527d25632b6de321e0bcf363b3704689410468c8/src/1Lab/HIT/S1.lagda.md">link to source</a> <br />
+                <hr /> <div class="author-list">Written by Amélia Liao, Jim Fowler and uni</div> <br />
               </div>
     </div>
   </aside>
@@ -129,7 +129,7 @@
 </pre>
 <p>Diagramatically, we can picture the circle as being the <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∞</mi></mrow><annotation encoding="application/x-tex">\infty</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord">∞</span></span></span></span>-groupoid</span> generated by the following diagram:</p>
 <div class="diagram-container">
-<img src="7bb10c36d6cd0287aff140f315cf02ca2d3a9ef4.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="7bb10c36d6cd0287aff140f315cf02ca2d3a9ef4.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <p>In type theory with K, the circle is exactly the same type as <span class="Agda"><a data-type="Type" href="Agda.Builtin.Unit.html#164" class="Record">⊤</a></span>. However, with <span class="Agda"><a data-type="A ≃ B₁ → A ≡ B₁" href="1Lab.Univalence.html#8828" class="Function">univalence</a></span>, it can be shown that the circle has two different paths:</p>
 <!--
@@ -222,11 +222,11 @@ PathP (λ i → B₁ (p i)) (f x) (f y)" id="4240" href="1Lab.Path.html#20807" c
 </pre>
 <p>For the <span class="Agda"><a data-type="base ≡ base" href="1Lab.HIT.S1.html#546" class="InductiveConstructor">loop</a></span> case, recall <span class="Agda"><a data-type="(pb : P base) → PathP (λ i → P (loop i)) pb pb → (x : S¹) → P x" href="1Lab.HIT.S1.html#2043" class="Function">the induction principle</a></span> of the circle. We must provide a path <code>loop^ ≡ loop^</code> “laying over” loop, i.e. a <code>Square refl (loop^ n) (loop^ n) loop</code>. Visually, we can picture the boundary of the path we must provide as the square below:</p>
 <div class="diagram-container">
-<img src="2fcbdd80d30139f309587c2986d1af8403099471.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="2fcbdd80d30139f309587c2986d1af8403099471.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <p>We will construct this square in parts. First, we’ll construct a square <span class="Agda"><a href="1Lab.HIT.S1.html#6071" class="Function">loop^-square</a></span> with the boundary below, for any <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>,</span> by recursion on the integer <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi></mrow><annotation encoding="application/x-tex">n</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span></span></span></span>;</span> We’ll then modify this square so it becomes the one above.</p>
 <div class="diagram-container">
-<img src="c0b22b6422a06786adf57097655cc9edc9812dc9.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="c0b22b6422a06786adf57097655cc9edc9812dc9.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <pre class="Agda">    <a id="6071" href="1Lab.HIT.S1.html#6071" class="Function">loop^-square</a> <a id="6084" class="Symbol">:</a> <a id="6086" class="Symbol">(</a><a id="6087" href="1Lab.HIT.S1.html#6087" class="Bound">n</a> <a id="6089" class="Symbol">:</a> <a data-type="Type" id="6091" href="Agda.Builtin.Int.html#246" class="Datatype">Int</a><a id="6094" class="Symbol">)</a>
                  <a id="6113" class="Symbol">→</a> <a data-type="a00 ≡ a01 → a00 ≡ a10 → a01 ≡ a11 → a10 ≡ a11 → Type ℓ" id="6115" href="1Lab.Path.html#9479" class="Function">Square</a> <a data-type="x ≡ x" id="6122" href="1Lab.Path.html#3591" class="Function">refl</a> <a id="6127" class="Symbol">(</a><a data-type="Int → base ≡ base" id="6128" href="1Lab.HIT.S1.html#3559" class="Function">loop^</a> <a id="6134" class="Symbol">(</a><a data-type="Int → Int" id="6135" href="Data.Int.Inductive.html#2084" class="Function">predInt</a> <a id="6143" href="1Lab.HIT.S1.html#6087" class="Bound">n</a><a id="6144" class="Symbol">))</a> <a id="6147" class="Symbol">(</a><a data-type="Int → base ≡ base" id="6148" href="1Lab.HIT.S1.html#3559" class="Function">loop^</a> <a id="6154" href="1Lab.HIT.S1.html#6087" class="Bound">n</a><a id="6155" class="Symbol">)</a> <a data-type="base ≡ base" id="6157" href="1Lab.HIT.S1.html#546" class="InductiveConstructor">loop</a>
@@ -234,7 +234,7 @@ PathP (λ i → B₁ (p i)) (f x) (f y)" id="4240" href="1Lab.Path.html#20807" c
 </pre>
 <p>The case above is for <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">0</span></span></span></span>.</span> We can picture it as follows. Note that this is a square where two faces are the path <span class="Agda"><a data-type="base ≡ base" href="1Lab.HIT.S1.html#546" class="InductiveConstructor">loop</a></span> and two faces are degenerate: a <a href="1Lab.Path.html#raising-dimension">connection</a>.</p>
 <div class="diagram-container">
-<img src="f9d7c8a21e801fe38e4a80ada287c5435c6f4953.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="f9d7c8a21e801fe38e4a80ada287c5435c6f4953.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <pre class="Agda">    <a id="6961" href="1Lab.HIT.S1.html#6071" class="Function">loop^-square</a> <a id="6974" class="Symbol">(</a><a data-type="Nat → Int" id="6975" href="Agda.Builtin.Int.html#264" class="InductiveConstructor">pos</a> <a id="6979" class="Symbol">(</a><a data-type="Nat → Nat" id="6980" href="Agda.Builtin.Nat.html#223" class="InductiveConstructor">suc</a> <a id="6984" href="1Lab.HIT.S1.html#6984" class="Bound">x</a><a id="6985" class="Symbol">))</a> <a id="6988" href="1Lab.HIT.S1.html#6988" class="Bound">i</a> <a id="6990" href="1Lab.HIT.S1.html#6990" class="Bound">j</a> <a id="6992" class="Symbol">=</a>
       <a data-type="(u : I → Partial φ A) (u0 : A [ φ ↦ u i0 ]) →
@@ -246,10 +246,10 @@ outS u0 ≡ hcomp u (outS u0)" id="7000" href="1Lab.Path.html#35584" class="Func
 outS u0 ≡ hcomp u (outS u0)" href="1Lab.Path.html#35584" class="Function">filler</a></span> of that square suffices. A similar thing happens for the case where <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mo>−</mo><mo stretchy="false">(</mo><mi>x</mi><mo>+</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">n = -(x + 1)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">−</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span></span></span></span>,</span> which is the square on the right.</p>
 <div class="mathpar">
 <div class="diagram-container">
-<img src="136772704bbf8eb72653a6543c2ed6347af8033e.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="136772704bbf8eb72653a6543c2ed6347af8033e.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <div class="diagram-container">
-<img src="8e5902139c0ddec72cf353271e371bd9143fd4b8.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="8e5902139c0ddec72cf353271e371bd9143fd4b8.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 </div>
 <pre class="Agda">    <a id="8500" href="1Lab.HIT.S1.html#6071" class="Function">loop^-square</a> <a id="8513" class="Symbol">(</a><a data-type="Nat → Int" id="8514" href="Agda.Builtin.Int.html#291" class="InductiveConstructor">negsuc</a> <a id="8521" href="1Lab.HIT.S1.html#8521" class="Bound">x</a><a id="8522" class="Symbol">)</a> <a id="8524" href="1Lab.HIT.S1.html#8524" class="Bound">i</a> <a id="8526" href="1Lab.HIT.S1.html#8526" class="Bound">j</a> <a id="8528" class="Symbol">=</a>

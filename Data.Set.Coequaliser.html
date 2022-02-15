@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta charset="utf-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <meta name="keywords" content="Agda,categories,topos"></meta>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Agda,categories,topos" />
 
   <title>Data.Set.Coequaliser - 1Lab</title>
 
-  <link rel="stylesheet" href="/css/default.css"></link>
-  <link rel="stylesheet" href="/css/katex.min.css"></link>
-  <link rel="stylesheet" href="/css/agda-cats.css"></link>
+  <link rel="stylesheet" href="/css/default.css" />
+  <link rel="stylesheet" href="/css/katex.min.css" />
+  <link rel="stylesheet" href="/css/agda-cats.css" />
 
-  <meta name="twitter:card" content="summary"></meta>
-  <meta name="twitter:title" content="Data.Set.Coequaliser - 1Lab"></meta>
-  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png"></meta>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Data.Set.Coequaliser - 1Lab" />
+  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png" />
 
-  <meta name="og:title" content="Data.Set.Coequaliser - 1Lab"></meta>
-  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png"></meta>
-  <meta name="og:site-name" content="1Lab"></meta>
-  <meta name="og:type" content="website"></meta>
+  <meta name="og:title" content="Data.Set.Coequaliser - 1Lab" />
+  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png" />
+  <meta name="og:site-name" content="1Lab" />
+  <meta name="og:type" content="website" />
 
-    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory." />
   
-  <script src="/equations.js" type="text/javascript"></script>
-  <script src="/highlight-hover.js" type="text/javascript"></script>
+  <script src="/equations.js"></script>
+  <script src="/highlight-hover.js"></script>
 
   <noscript>
     <style>
@@ -53,11 +53,11 @@
               </h3>
 
       <!-- Cube logo -->
-      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px"></img>
+      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px" />
 
       <!-- Actual table of contents (separated from the rest by
       horizontal rules) -->
-      <hr></hr>
+      <hr />
       <ul>
       <li><a href="#set-coequalisers"><a href="#set-coequalisers" class="header-link">Set Coequalisers<span class="header-link-emoji">🔗</span></a></a></li>
       <li><a href="#elimination"><a href="#elimination" class="header-link">Elimination<span class="header-link-emoji">🔗</span></a></a></li>
@@ -66,7 +66,7 @@
       <li><a href="#effectivity"><a href="#effectivity" class="header-link">Effectivity<span class="header-link-emoji">🔗</span></a></a></li>
       </ul></li>
       </ul>
-      <hr></hr>
+      <hr />
 
       <!-- Sidebar controls -->
       <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
@@ -83,14 +83,14 @@
         </span>
       </div>
 
-      <hr></hr>
+      <hr />
 
       <!-- Navbar navigation (lol) -->
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/c7251519e90200a1d1ead2575e6596ccd4a8b2de/src/Data/Set/Coequaliser.lagda.md">link to source</a> <br />
-                <hr></hr> <div class="author-list">Written by Amélia Liao</div> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/527d25632b6de321e0bcf363b3704689410468c8/src/Data/Set/Coequaliser.lagda.md">link to source</a> <br />
+                <hr /> <div class="author-list">Written by Amélia Liao</div> <br />
               </div>
     </div>
   </aside>
@@ -128,7 +128,7 @@
 </pre>
 <p>The universal property of coequalisers, being a type of colimit, is a <em>mapping-out</em> property: Maps <em>from</em> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">c</mi><mi mathvariant="normal">o</mi><mi mathvariant="normal">e</mi><mi mathvariant="normal">q</mi></mrow><mo stretchy="false">(</mo><mi>f</mi><mo separator="true">,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\mathrm{coeq}(f,g)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathrm">coeq</span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mclose">)</span></span></span></span> are maps out of <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi></mrow><annotation encoding="application/x-tex">B</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span></span></span></span>,</span> satisfying a certain property. Specifically, for a map <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>:</mo><mi>B</mi><mo>→</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">h : B \to C</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07153em;">C</span></span></span></span>,</span> if we have <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mo>∘</mo><mi>f</mi><mo>=</mo><mi>h</mi><mo>∘</mo><mi>g</mi></mrow><annotation encoding="application/x-tex">h \circ f = h \circ g</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∘</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∘</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span></span></span></span>,</span> then the map <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi></mrow><annotation encoding="application/x-tex">f</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span></span></span></span> factors (uniquely) through <span class="Agda"><a data-type="B₁ → Coeq f g" href="Data.Set.Coequaliser.html#607" class="InductiveConstructor">inc</a></span>. The situation can be summarised with the diagram below.</p>
 <div class="diagram-container">
-<img src="acd4f1a91fa5a532a11474d18554942ddf93e436.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="acd4f1a91fa5a532a11474d18554942ddf93e436.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <p>We refer to this unique factoring as <span class="Agda"><a data-type="isSet C →
 (h : B₁ → C) → ((x : A) → h (f x) ≡ h (g x)) → Coeq f g → C" href="Data.Set.Coequaliser.html#1443" class="Function">Coeq-rec</a></span>.</p>

@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta charset="utf-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <meta name="keywords" content="Agda,categories,topos"></meta>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Agda,categories,topos" />
 
   <title>Cat.Base - 1Lab</title>
 
-  <link rel="stylesheet" href="/css/default.css"></link>
-  <link rel="stylesheet" href="/css/katex.min.css"></link>
-  <link rel="stylesheet" href="/css/agda-cats.css"></link>
+  <link rel="stylesheet" href="/css/default.css" />
+  <link rel="stylesheet" href="/css/katex.min.css" />
+  <link rel="stylesheet" href="/css/agda-cats.css" />
 
-  <meta name="twitter:card" content="summary"></meta>
-  <meta name="twitter:title" content="Cat.Base - 1Lab"></meta>
-  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png"></meta>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cat.Base - 1Lab" />
+  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png" />
 
-  <meta name="og:title" content="Cat.Base - 1Lab"></meta>
-  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png"></meta>
-  <meta name="og:site-name" content="1Lab"></meta>
-  <meta name="og:type" content="website"></meta>
+  <meta name="og:title" content="Cat.Base - 1Lab" />
+  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png" />
+  <meta name="og:site-name" content="1Lab" />
+  <meta name="og:type" content="website" />
 
-    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory." />
   
-  <script src="/equations.js" type="text/javascript"></script>
-  <script src="/highlight-hover.js" type="text/javascript"></script>
+  <script src="/equations.js"></script>
+  <script src="/highlight-hover.js"></script>
 
   <noscript>
     <style>
@@ -53,11 +53,11 @@
               </h3>
 
       <!-- Cube logo -->
-      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px"></img>
+      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px" />
 
       <!-- Actual table of contents (separated from the rest by
       horizontal rules) -->
-      <hr></hr>
+      <hr />
       <ul>
       <li><a href="#precategories"><a href="#precategories" class="header-link">Precategories<span class="header-link-emoji">🔗</span></a></a>
       <ul>
@@ -70,7 +70,7 @@
       </ul></li>
       <li><a href="#natural-transformations"><a href="#natural-transformations" class="header-link">Natural Transformations<span class="header-link-emoji">🔗</span></a></a></li>
       </ul>
-      <hr></hr>
+      <hr />
 
       <!-- Sidebar controls -->
       <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
@@ -87,14 +87,14 @@
         </span>
       </div>
 
-      <hr></hr>
+      <hr />
 
       <!-- Navbar navigation (lol) -->
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/c7251519e90200a1d1ead2575e6596ccd4a8b2de/src/Cat/Base.lagda.md">link to source</a> <br />
-                <hr></hr> <div class="author-list">Written by Amélia Liao</div> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/527d25632b6de321e0bcf363b3704689410468c8/src/Cat/Base.lagda.md">link to source</a> <br />
+                <hr /> <div class="author-list">Written by Amélia Liao</div> <br />
               </div>
     </div>
   </aside>
@@ -351,7 +351,7 @@ Type (o₁ ⊔ h₁ ⊔ o₂ ⊔ h₂)" id="11199" href="Cat.Base.html#6604" cla
 <p>The transformation itself is given by <span class="Agda"><a data-type="F =&gt; G → (x : C .Ob) → D .Hom (₀ F x) (₀ G x)" href="Cat.Base.html#11280" class="Field">η</a></span>, the family of <em>components</em>, where the component at <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span> is a map <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo><mo>→</mo><mi>G</mi><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">F(x) \to G(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">G</span><span class="mopen">(</span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span>.</span> The “without arbitrary choices” part is encoded in the field <span class="Agda"><a data-type="(r : F =&gt; G) (x y : C .Ob) (f : C .Hom x y) →
 D ._∘_ (r .η y) (₁ F f) ≡ D ._∘_ (₁ G f) (r .η x)" href="Cat.Base.html#11858" class="Field">is-natural</a></span>, which encodes commutativity of the square below:</p>
 <div class="diagram-container">
-<img src="b7a5f3eceba564155b1ccad918d86cb1b2dbeab6.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="b7a5f3eceba564155b1ccad918d86cb1b2dbeab6.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <pre class="Agda">    <a id="_=&gt;_.is-natural"></a><a data-type="(r : F =&gt; G) (x y : C .Ob) (f : C .Hom x y) →
 D ._∘_ (r .η y) (₁ F f) ≡ D ._∘_ (₁ G f) (r .η x)" id="11858" href="Cat.Base.html#11858" class="Field">is-natural</a> <a id="11869" class="Symbol">:</a> <a id="11871" class="Symbol">(</a><a id="11872" href="Cat.Base.html#11872" class="Bound">x</a> <a id="11874" href="Cat.Base.html#11874" class="Bound">y</a> <a id="11876" class="Symbol">:</a> <a id="11878" class="Symbol">_)</a> <a id="11881" class="Symbol">(</a><a id="11882" href="Cat.Base.html#11882" class="Bound">f</a> <a id="11884" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="11886" href="Cat.Base.html#1329" class="Function">C.Hom</a> <a id="11892" href="Cat.Base.html#11872" class="Bound">x</a> <a id="11894" href="Cat.Base.html#11874" class="Bound">y</a><a id="11895" class="Symbol">)</a>

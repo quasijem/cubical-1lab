@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta charset="utf-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <meta name="keywords" content="Agda,categories,topos"></meta>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Agda,categories,topos" />
 
   <title>1Lab.Equiv.FromPath - 1Lab</title>
 
-  <link rel="stylesheet" href="/css/default.css"></link>
-  <link rel="stylesheet" href="/css/katex.min.css"></link>
-  <link rel="stylesheet" href="/css/agda-cats.css"></link>
+  <link rel="stylesheet" href="/css/default.css" />
+  <link rel="stylesheet" href="/css/katex.min.css" />
+  <link rel="stylesheet" href="/css/agda-cats.css" />
 
-  <meta name="twitter:card" content="summary"></meta>
-  <meta name="twitter:title" content="1Lab.Equiv.FromPath - 1Lab"></meta>
-  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png"></meta>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1Lab.Equiv.FromPath - 1Lab" />
+  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png" />
 
-  <meta name="og:title" content="1Lab.Equiv.FromPath - 1Lab"></meta>
-  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png"></meta>
-  <meta name="og:site-name" content="1Lab"></meta>
-  <meta name="og:type" content="website"></meta>
+  <meta name="og:title" content="1Lab.Equiv.FromPath - 1Lab" />
+  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png" />
+  <meta name="og:site-name" content="1Lab" />
+  <meta name="og:type" content="website" />
 
-    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory." />
   
-  <script src="/equations.js" type="text/javascript"></script>
-  <script src="/highlight-hover.js" type="text/javascript"></script>
+  <script src="/equations.js"></script>
+  <script src="/highlight-hover.js"></script>
 
   <noscript>
     <style>
@@ -53,15 +53,15 @@
               </h3>
 
       <!-- Cube logo -->
-      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px"></img>
+      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px" />
 
       <!-- Actual table of contents (separated from the rest by
       horizontal rules) -->
-      <hr></hr>
+      <hr />
       <ul>
       <li><a href="#equivs-from-paths"><a href="#equivs-from-paths" class="header-link">Equivs from Paths<span class="header-link-emoji">🔗</span></a></a></li>
       </ul>
-      <hr></hr>
+      <hr />
 
       <!-- Sidebar controls -->
       <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
@@ -78,14 +78,14 @@
         </span>
       </div>
 
-      <hr></hr>
+      <hr />
 
       <!-- Navbar navigation (lol) -->
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/c7251519e90200a1d1ead2575e6596ccd4a8b2de/src/1Lab/Equiv/FromPath.lagda.md">link to source</a> <br />
-                <hr></hr> <div class="author-list">Written by Amélia Liao</div> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/527d25632b6de321e0bcf363b3704689410468c8/src/1Lab/Equiv/FromPath.lagda.md">link to source</a> <br />
+                <hr /> <div class="author-list">Written by Amélia Liao</div> <br />
               </div>
     </div>
   </aside>
@@ -144,7 +144,7 @@
 <p>To prove that <span class="Agda"><a href="1Lab.Equiv.FromPath.html#1193" class="Function">f</a></span> is an equivalence, by definition, it must have <em>contractible <span class="Agda"><a data-type="(A → B₁) → B₁ → Type (A.ℓ₁ ⊔ B.ℓ₁)" href="1Lab.Equiv.html#1881" class="Function">fibres</a></span></em>. It suffices to show that the <span class="Agda"><a data-type="(A → B₁) → B₁ → Type (A.ℓ₁ ⊔ B.ℓ₁)" href="1Lab.Equiv.html#1881" class="Function">fibre</a></span> over y is inhabited, and that the fibre over y <span class="Agda"><a data-type="Type ℓ → Type ℓ" href="1Lab.HLevel.html#2594" class="Function">is a proposition</a></span>.</p>
 <p>To prove that the <span class="Agda"><a data-type="(A → B₁) → B₁ → Type (A.ℓ₁ ⊔ B.ℓ₁)" href="1Lab.Equiv.html#1881" class="Function">fibre</a></span> over <code>y</code> is inhabited, we take <code>g y</code> to be the preimage, and prove that there is a path <code>f (g y) ≡ y</code>, as we are required to do. For this, we use the “lid” (the dotted face) of the square below (this is the <span class="Agda"><a href="1Lab.Path.html#2332" class="Primitive">comp</a></span> term):</p>
 <div class="diagram-container">
-<img src="3595ba9101ea3537446d5f9bc79f31b2dedfe0f9.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="3595ba9101ea3537446d5f9bc79f31b2dedfe0f9.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <pre class="Agda">  <a id="hasFib"></a><a id="2401" href="1Lab.Equiv.FromPath.html#2401" class="Function">hasFib</a> <a id="2408" class="Symbol">:</a> <a id="2410" class="Symbol">(</a><a id="2411" href="1Lab.Equiv.FromPath.html#2411" class="Bound">y</a> <a id="2413" class="Symbol">:</a> <a id="2415" href="1Lab.Equiv.FromPath.html#968" class="Function">B</a><a id="2416" class="Symbol">)</a> <a id="2418" class="Symbol">→</a> <a data-type="(A → B₁) → B₁ → Type (A.ℓ₁ ⊔ B.ℓ₁)" id="2420" href="1Lab.Equiv.html#1881" class="Function">fibre</a> <a id="2426" href="1Lab.Equiv.FromPath.html#1193" class="Function">f</a> <a id="2428" href="1Lab.Equiv.FromPath.html#2411" class="Bound">y</a>
   <a id="2432" href="1Lab.Equiv.FromPath.html#2401" class="Function">hasFib</a> <a id="2439" href="1Lab.Equiv.FromPath.html#2439" class="Bound">y</a> <a id="2441" class="Symbol">.</a><a data-type="∑ A B₁ → A" id="2442" href="Agda.Builtin.Sigma.html#252" class="Field">fst</a> <a id="2446" class="Symbol">=</a> <a id="2448" href="1Lab.Equiv.FromPath.html#1225" class="Function">g</a> <a id="2450" href="1Lab.Equiv.FromPath.html#2439" class="Bound">y</a>
@@ -161,12 +161,12 @@ PathP (λ i → B₁ (p i)) (f x) (f y)" id="3061" href="1Lab.Path.html#20807" c
 </pre>
 <p>While <span class="Agda"><a href="1Lab.Equiv.FromPath.html#3010" class="Function">ω</a></span> is a line, <span class="Agda"><a href="1Lab.Equiv.FromPath.html#3026" class="Function">δ</a></span> is a <em>square</em>. Namely, by looking at its type, we see that its boundary is the square below. Observe that it is essentially a path <code>β₀ ≡ β₁</code>, lying over <code>ω</code>, which is exactly what we need to equate the fibres:</p>
 <div class="diagram-container">
-<img src="f265fdf746f46d9fa9405399c19a4c8a235477c9.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="f265fdf746f46d9fa9405399c19a4c8a235477c9.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <p>As an intermediate step in the construction of <span class="Agda"><a href="1Lab.Equiv.FromPath.html#3026" class="Function">δ</a></span>, we construct <span class="Agda"><a href="1Lab.Equiv.FromPath.html#5959" class="Function">θ</a></span>. However, that is also hard to do directly, so we have four (really, two) more intermediate steps: <span class="Agda"><a href="1Lab.Equiv.FromPath.html#4523" class="Function">ω₀</a></span>/<span class="Agda"><a href="1Lab.Equiv.FromPath.html#4586" class="Function">θ₀</a></span> and <span class="Agda"><a href="1Lab.Equiv.FromPath.html#5152" class="Function">ω₁</a></span>/<span class="Agda"><a href="1Lab.Equiv.FromPath.html#5215" class="Function">θ₁</a></span>.</p>
 <p>The line <span class="Agda"><a href="1Lab.Equiv.FromPath.html#4523" class="Function">ω₀</a></span> is the dashed line in the composition below, and <span class="Agda"><a href="1Lab.Equiv.FromPath.html#4586" class="Function">θ₀</a></span> is the square itself. The type of <span class="Agda"><a href="1Lab.Equiv.FromPath.html#4586" class="Function">θ₀</a></span> is hard to look at, so focus on the diagram: It connects <span class="Agda"><a href="1Lab.Equiv.FromPath.html#2960" class="Bound">β₀</a></span> and <span class="Agda"><a href="1Lab.Equiv.FromPath.html#4523" class="Function">ω₀</a></span>, in the vertical direction.</p>
 <div class="diagram-container">
-<img src="aee5354f6b4a4d5ad9ff30409a9e9e528c87399b.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="aee5354f6b4a4d5ad9ff30409a9e9e528c87399b.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <pre class="Agda">    <a id="4386" href="1Lab.Equiv.FromPath.html#4386" class="Function">square</a> <a id="4393" class="Symbol">:</a> <a id="4395" href="1Lab.Equiv.FromPath.html#966" class="Function">A</a> <a id="4397" class="Symbol">→</a> <a id="4399" class="Symbol">∀</a> <a id="4401" href="1Lab.Equiv.FromPath.html#4401" class="Bound">j</a> <a id="4403" href="1Lab.Equiv.FromPath.html#4403" class="Bound">i</a> <a id="4405" class="Symbol">→</a> <a id="4407" href="Agda.Primitive.Cubical.html#1099" class="Primitive">PartialP</a> <a id="4416" class="Symbol">(</a><a id="4417" href="1Lab.Path.html#2261" class="Primitive Operator">~</a> <a id="4419" href="1Lab.Equiv.FromPath.html#4401" class="Bound">j</a> <a id="4421" href="1Lab.Path.html#2226" class="Primitive Operator">∨</a> <a id="4423" href="1Lab.Equiv.FromPath.html#4401" class="Bound">j</a><a id="4424" class="Symbol">)</a> <a id="4426" class="Symbol">(λ</a> <a id="4429" href="1Lab.Equiv.FromPath.html#4429" class="Bound">_</a> <a id="4431" class="Symbol">→</a> <a id="4433" href="1Lab.Equiv.FromPath.html#129" class="Bound">P</a> <a id="4435" class="Symbol">(</a><a id="4436" href="1Lab.Path.html#2261" class="Primitive Operator">~</a> <a id="4438" href="1Lab.Equiv.FromPath.html#4403" class="Bound">i</a><a id="4439" class="Symbol">))</a>
     <a id="4446" href="1Lab.Equiv.FromPath.html#4386" class="Function">square</a> <a id="4453" href="1Lab.Equiv.FromPath.html#4453" class="Bound">x</a> <a id="4455" href="1Lab.Equiv.FromPath.html#4455" class="Bound">j</a> <a id="4457" href="1Lab.Equiv.FromPath.html#4457" class="Bound">i</a> <a id="4459" class="Symbol">(</a><a id="4460" href="1Lab.Equiv.FromPath.html#4455" class="Bound">j</a> <a id="4462" class="Symbol">=</a> <a id="4464" href="Agda.Primitive.Cubical.html#143" class="InductiveConstructor">i0</a><a id="4466" class="Symbol">)</a> <a id="4468" class="Symbol">=</a> <a id="4470" href="1Lab.Equiv.FromPath.html#1579" class="Function">v</a> <a id="4472" class="Symbol">(</a><a id="4473" href="1Lab.Path.html#2261" class="Primitive Operator">~</a> <a id="4475" href="1Lab.Equiv.FromPath.html#4457" class="Bound">i</a><a id="4476" class="Symbol">)</a> <a id="4478" href="1Lab.Equiv.FromPath.html#2952" class="Bound">y</a>
@@ -185,7 +185,7 @@ PathP A (outS u0) (comp A u (outS u0))" id="4679" href="1Lab.Path.html#37643" cl
 </pre>
 <p>Analogously, we have <span class="Agda"><a href="1Lab.Equiv.FromPath.html#5152" class="Function">ω₁</a></span> and <span class="Agda"><a href="1Lab.Equiv.FromPath.html#5215" class="Function">θ₁</a></span> connecting <span class="Agda"><a href="1Lab.Equiv.FromPath.html#2970" class="Bound">β₁</a></span> and that, as the dashed line and filler of the square below:</p>
 <div class="diagram-container">
-<img src="61b7f21e5839a56628fc286cf260d03fe19517e3.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="61b7f21e5839a56628fc286cf260d03fe19517e3.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <pre class="Agda">    <a id="5152" href="1Lab.Equiv.FromPath.html#5152" class="Function">ω₁</a> <a id="5155" class="Symbol">:</a> <a id="5157" href="1Lab.Equiv.FromPath.html#1225" class="Function">g</a> <a id="5159" href="1Lab.Equiv.FromPath.html#2952" class="Bound">y</a> <a data-type="A → A → Type ℓ" id="5161" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="5163" href="1Lab.Equiv.FromPath.html#2965" class="Bound">x₁</a>
     <a id="5170" href="1Lab.Equiv.FromPath.html#5152" class="Function">ω₁</a> <a id="5173" href="1Lab.Equiv.FromPath.html#5173" class="Bound">j</a> <a id="5175" class="Symbol">=</a> <a id="5177" href="1Lab.Path.html#2332" class="Primitive">comp</a> <a id="5182" href="1Lab.Equiv.FromPath.html#920" class="Function">~P</a> <a id="5185" class="Symbol">(</a><a id="5186" href="1Lab.Equiv.FromPath.html#4386" class="Function">square</a> <a id="5193" href="1Lab.Equiv.FromPath.html#2965" class="Bound">x₁</a> <a id="5196" href="1Lab.Equiv.FromPath.html#5173" class="Bound">j</a><a id="5197" class="Symbol">)</a> <a id="5199" class="Symbol">(</a><a id="5200" href="1Lab.Equiv.FromPath.html#2970" class="Bound">β₁</a> <a id="5203" class="Symbol">(</a><a id="5204" href="1Lab.Path.html#2261" class="Primitive Operator">~</a> <a id="5206" href="1Lab.Equiv.FromPath.html#5173" class="Bound">j</a><a id="5207" class="Symbol">))</a>
@@ -200,7 +200,7 @@ PathP A (outS u0) (comp A u (outS u0))" id="5308" href="1Lab.Path.html#37643" cl
 </pre>
 <p>Now, we are almost done. Like a magic trick, the paths <code>ω₀</code> and <span class="Agda"><a href="1Lab.Equiv.FromPath.html#5152" class="Function">ω₁</a></span> we constructed above to aid in proving <span class="Agda"><a href="1Lab.Equiv.FromPath.html#3026" class="Function">δ</a></span> assemble to give a complete proof of <span class="Agda"><a href="1Lab.Equiv.FromPath.html#3010" class="Function">ω</a></span>, as the dashed line in the square below:</p>
 <div class="diagram-container">
-<img src="ca2fd76550936b340ce4eead47e07cd6ffa522af.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="ca2fd76550936b340ce4eead47e07cd6ffa522af.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <pre class="Agda">    <a id="5848" href="1Lab.Equiv.FromPath.html#5848" class="Function">sys</a> <a id="5852" class="Symbol">:</a> <a id="5854" class="Symbol">(</a><a id="5855" href="1Lab.Equiv.FromPath.html#5855" class="Bound">k</a> <a id="5857" href="1Lab.Equiv.FromPath.html#5857" class="Bound">j</a> <a id="5859" class="Symbol">:</a> <a id="5861" href="Agda.Primitive.Cubical.html#101" class="Datatype">I</a><a id="5862" class="Symbol">)</a> <a id="5864" class="Symbol">→</a> <a id="5866" class="Symbol">_</a>
     <a id="5872" href="1Lab.Equiv.FromPath.html#5848" class="Function">sys</a> <a id="5876" href="1Lab.Equiv.FromPath.html#5876" class="Bound">k</a> <a id="5878" href="1Lab.Equiv.FromPath.html#5878" class="Bound">j</a> <a id="5880" class="Symbol">(</a><a id="5881" href="1Lab.Equiv.FromPath.html#5876" class="Bound">k</a> <a id="5883" class="Symbol">=</a> <a id="5885" href="Agda.Primitive.Cubical.html#143" class="InductiveConstructor">i0</a><a id="5887" class="Symbol">)</a> <a id="5889" class="Symbol">=</a> <a id="5891" href="1Lab.Equiv.FromPath.html#4523" class="Function">ω₀</a> <a id="5894" href="1Lab.Equiv.FromPath.html#5878" class="Bound">j</a>
@@ -221,7 +221,7 @@ outS u0 ≡ hcomp u (outS u0)" id="5993" href="1Lab.Path.html#35584" class="Func
         <a id="6627" class="Symbol">(</a><a id="6628" href="1Lab.Equiv.FromPath.html#5959" class="Function">θ</a> <a id="6630" href="1Lab.Equiv.FromPath.html#6439" class="Bound">k</a> <a id="6632" href="1Lab.Equiv.FromPath.html#6441" class="Bound">j</a><a id="6633" class="Symbol">)</a>
 </pre>
 <div class="diagram-container">
-<img src="92e0417faef013c393af1c0fcf9d34d46561fd81.svg" title="commutative diagram" class="diagram quiver tall-2"></img>
+<img src="92e0417faef013c393af1c0fcf9d34d46561fd81.svg" title="commutative diagram" class="diagram quiver tall-2" />
 </div>
 <p>The idea behind the diagram is to piece together the three squares we have constructed, <span class="Agda"><a href="1Lab.Equiv.FromPath.html#5959" class="Function">θ</a></span>, <span class="Agda"><a href="1Lab.Equiv.FromPath.html#4586" class="Function">θ₀</a></span> and <span class="Agda"><a href="1Lab.Equiv.FromPath.html#5215" class="Function">θ₁</a></span>, with the intent of getting a composite <code>β₀ ≡ β₁</code>. The purpleish square behind is <span class="Agda"><a href="1Lab.Equiv.FromPath.html#5959" class="Function">θ</a></span>; The brownish square in front is <span class="Agda"><a href="1Lab.Equiv.FromPath.html#3026" class="Function">δ</a></span>. Finally, putting together the <span class="Agda"><a href="1Lab.Equiv.FromPath.html#2401" class="Function">proof of inhabitation</a></span> and the <span class="Agda"><a href="1Lab.Equiv.FromPath.html#2903" class="Function">proof of propositionality</a></span>, we get the desired: <span class="Agda"><a href="1Lab.Equiv.FromPath.html#1193" class="Function">f</a></span> is an equivalence.</p>
 <pre class="Agda"><a id="lineToisEquiv"></a><a data-type="(P : I → Type ℓ) → isEquiv (f P)" id="9109" href="1Lab.Equiv.FromPath.html#9109" class="Function">lineToisEquiv</a> <a id="9123" class="Symbol">:</a> <a data-type="(f : A → B₁) → Type (A.ℓ₁ ⊔ B.ℓ₁)" id="9125" href="1Lab.Equiv.html#2293" class="Record">isEquiv</a> <a id="9133" href="1Lab.Equiv.FromPath.html#1193" class="Function">f</a>

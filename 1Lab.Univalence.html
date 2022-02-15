@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta charset="utf-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <meta name="keywords" content="Agda,categories,topos"></meta>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Agda,categories,topos" />
 
   <title>1Lab.Univalence - 1Lab</title>
 
-  <link rel="stylesheet" href="/css/default.css"></link>
-  <link rel="stylesheet" href="/css/katex.min.css"></link>
-  <link rel="stylesheet" href="/css/agda-cats.css"></link>
+  <link rel="stylesheet" href="/css/default.css" />
+  <link rel="stylesheet" href="/css/katex.min.css" />
+  <link rel="stylesheet" href="/css/agda-cats.css" />
 
-  <meta name="twitter:card" content="summary"></meta>
-  <meta name="twitter:title" content="1Lab.Univalence - 1Lab"></meta>
-  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png"></meta>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="1Lab.Univalence - 1Lab" />
+  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png" />
 
-  <meta name="og:title" content="1Lab.Univalence - 1Lab"></meta>
-  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png"></meta>
-  <meta name="og:site-name" content="1Lab"></meta>
-  <meta name="og:type" content="website"></meta>
+  <meta name="og:title" content="1Lab.Univalence - 1Lab" />
+  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png" />
+  <meta name="og:site-name" content="1Lab" />
+  <meta name="og:type" content="website" />
 
-    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory." />
   
-  <script src="/equations.js" type="text/javascript"></script>
-  <script src="/highlight-hover.js" type="text/javascript"></script>
+  <script src="/equations.js"></script>
+  <script src="/highlight-hover.js"></script>
 
   <noscript>
     <style>
@@ -53,11 +53,11 @@
               </h3>
 
       <!-- Cube logo -->
-      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px"></img>
+      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px" />
 
       <!-- Actual table of contents (separated from the rest by
       horizontal rules) -->
-      <hr></hr>
+      <hr />
       <ul>
       <li><a href="#univalence"><a href="#univalence" class="header-link">Univalence<span class="header-link-emoji">🔗</span></a></a>
       <ul>
@@ -71,7 +71,7 @@
       <li><a href="#object-classifiers"><a href="#object-classifiers" class="header-link">Object Classifiers<span class="header-link-emoji">🔗</span></a></a></li>
       </ul></li>
       </ul>
-      <hr></hr>
+      <hr />
 
       <!-- Sidebar controls -->
       <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
@@ -88,14 +88,14 @@
         </span>
       </div>
 
-      <hr></hr>
+      <hr />
 
       <!-- Navbar navigation (lol) -->
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/c7251519e90200a1d1ead2575e6596ccd4a8b2de/src/1Lab/Univalence.lagda.md">link to source</a> <br />
-                <hr></hr> <div class="author-list">Written by Amélia Liao and Jonathan Coates</div> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/527d25632b6de321e0bcf363b3704689410468c8/src/1Lab/Univalence.lagda.md">link to source</a> <br />
+                <hr /> <div class="author-list">Written by Amélia Liao and Jonathan Coates</div> <br />
               </div>
     </div>
   </aside>
@@ -167,7 +167,7 @@
 <p>The public interface of <span class="Agda"><a data-type="(A : Type ℓ) → Partial φ (Σ (λ T → T ≃ A)) → Type ℓ&#39;" href="1Lab.Univalence.html#3441" class="Function">Glue</a></span> demands a type <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>,</span> called the <em>base type</em>, a formula <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>φ</mi></mrow><annotation encoding="application/x-tex">\varphi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">φ</span></span></span></span>,</span> and a <a href="1Lab.Path.html#partial-elements">partial type</a> <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span> which is equivalent to <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi></mrow><annotation encoding="application/x-tex">A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>.</span> Since the equivalence is defined <em>inside</em> the partial element, it can also (potentially) vary over the interval, so in reality we have a <em>family</em> of partial types <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span> and a <em>family</em> of partial equivalences <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>≃</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">T \simeq A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≃</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span>.</span></p>
 <p>In the specific case where we set <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>φ</mi><mo>=</mo><mi mathvariant="normal">¬</mi><mi>i</mi><mo>∨</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">\varphi = \neg i \lor i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">φ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord">¬</span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span></span></span></span>,</span> we can illustrate <code>Glue A (T, f)</code> as the dashed line in the square diagram below. The conceptual idea is that by “gluing” <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span> onto a totally defined type, we get a type which <a href="1Lab.Path.html#extensibility">extends</a> <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span>.</span></p>
 <div class="diagram-container">
-<img src="8def3b27b2fca15a529978d85ac85b15089f39f2.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="8def3b27b2fca15a529978d85ac85b15089f39f2.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <!--
 <pre class="Agda"><a id="4499" href="1Lab.Univalence.html#3441" class="Function">Glue</a> <a id="4504" href="1Lab.Univalence.html#4504" class="Bound">A</a> <a id="4506" href="1Lab.Univalence.html#4506" class="Bound">Te</a> <a id="4509" class="Symbol">=</a> <a id="4511" href="1Lab.Univalence.html#2899" class="Primitive">primGlue</a> <a id="4520" href="1Lab.Univalence.html#4504" class="Bound">A</a> <a id="4522" class="Symbol">(λ</a> <a id="4525" href="1Lab.Univalence.html#4525" class="Bound">x</a> <a id="4527" class="Symbol">→</a> <a id="4529" href="1Lab.Univalence.html#4506" class="Bound">Te</a> <a id="4532" href="1Lab.Univalence.html#4525" class="Bound">x</a> <a id="4534" class="Symbol">.</a><a id="4535" href="Agda.Builtin.Sigma.html#252" class="Field">fst</a><a id="4538" class="Symbol">)</a> <a id="4540" class="Symbol">(λ</a> <a id="4543" href="1Lab.Univalence.html#4543" class="Bound">x</a> <a id="4545" class="Symbol">→</a> <a id="4547" href="1Lab.Univalence.html#4506" class="Bound">Te</a> <a id="4550" href="1Lab.Univalence.html#4543" class="Bound">x</a> <a id="4552" class="Symbol">.</a><a id="4553" href="Agda.Builtin.Sigma.html#264" class="Field">snd</a><a id="4556" class="Symbol">)</a>
@@ -273,7 +273,7 @@ Type ℓ [ ~ i ∨ φ ↦ (λ { (i = i0) → outS u0 ; (φ = i1) → u i _ }) ]"
 <p>The action of <a href="1Lab.Path.html">transporting</a> along <code>ua(f)</code> can be described by chasing an element around the diagram that illustrates Glue in the <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>φ</mi><mo>=</mo><mi>i</mi><mo>∨</mo><mi mathvariant="normal">¬</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">\varphi = i \lor \neg i</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">φ</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∨</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord">¬</span><span class="mord mathnormal">i</span></span></span></span> case, specialising to <span class="Agda"><a data-type="A ≃ B₁ → A ≡ B₁" href="1Lab.Univalence.html#8828" class="Function">ua</a></span>. Keep in mind that, since the right face of the diagram “points in the wrong direction”, it must be inverted. However, the inverse of the identity equivalence is the identity equivalence, so nothing changes (for this example).</p>
 <figure>
 <div class="diagram-container">
-<img src="5fc6d631ebb60301bb2bc4b5a876afd7ae5bac34.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="5fc6d631ebb60301bb2bc4b5a876afd7ae5bac34.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 </figure>
 <ol type="1">
@@ -576,7 +576,7 @@ Type ℓ&#39; → Type (lsuc ℓ&#39; ⊔ ℓ&#39;&#39; ⊔ lsuc ℓ)" id="27117
   <a id="28674" href="1Lab.Path.html#11846" class="Function">transport</a> <a id="28684" class="Symbol">(</a><a id="28685" href="1Lab.Path.html#20807" class="Function">ap</a> <a id="28688" href="1Lab.Univalence.html#28659" class="Bound">B</a> <a id="28690" class="Symbol">(</a><a id="28691" href="1Lab.Path.html#40427" class="Function">∙-filler&#39;</a> <a id="28701" href="1Lab.Univalence.html#28661" class="Bound">p</a> <a id="28703" href="1Lab.Univalence.html#28663" class="Bound">q</a> <a id="28705" class="Symbol">(</a><a id="28706" href="1Lab.Path.html#2261" class="Primitive Operator">~</a> <a id="28708" href="1Lab.Univalence.html#28668" class="Bound">i</a><a id="28709" class="Symbol">)))</a> <a id="28713" class="Symbol">(</a><a id="28714" href="1Lab.Path.html#14438" class="Function">transport-fillerExt</a> <a id="28734" class="Symbol">(</a><a id="28735" href="1Lab.Path.html#20807" class="Function">ap</a> <a id="28738" href="1Lab.Univalence.html#28659" class="Bound">B</a> <a id="28740" href="1Lab.Univalence.html#28661" class="Bound">p</a><a id="28741" class="Symbol">)</a> <a id="28743" href="1Lab.Univalence.html#28668" class="Bound">i</a> <a id="28745" href="1Lab.Univalence.html#28665" class="Bound">Bx</a><a id="28747" class="Symbol">)</a>
 </pre>-->
 <section class="footnotes" role="doc-endnotes">
-<hr></hr>
+<hr />
 <ol>
 <li id="fn1" role="doc-endnote"><p>Not the fundamental theorem of engineering!<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>

@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-  <meta charset="utf-8"></meta>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <meta name="keywords" content="Agda,categories,topos"></meta>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Agda,categories,topos" />
 
   <title>Algebra.Group.Homotopy - 1Lab</title>
 
-  <link rel="stylesheet" href="/css/default.css"></link>
-  <link rel="stylesheet" href="/css/katex.min.css"></link>
-  <link rel="stylesheet" href="/css/agda-cats.css"></link>
+  <link rel="stylesheet" href="/css/default.css" />
+  <link rel="stylesheet" href="/css/katex.min.css" />
+  <link rel="stylesheet" href="/css/agda-cats.css" />
 
-  <meta name="twitter:card" content="summary"></meta>
-  <meta name="twitter:title" content="Algebra.Group.Homotopy - 1Lab"></meta>
-  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png"></meta>
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Algebra.Group.Homotopy - 1Lab" />
+  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png" />
 
-  <meta name="og:title" content="Algebra.Group.Homotopy - 1Lab"></meta>
-  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png"></meta>
-  <meta name="og:site-name" content="1Lab"></meta>
-  <meta name="og:type" content="website"></meta>
+  <meta name="og:title" content="Algebra.Group.Homotopy - 1Lab" />
+  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png" />
+  <meta name="og:site-name" content="1Lab" />
+  <meta name="og:type" content="website" />
 
-    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
-  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory."></meta>
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory." />
   
-  <script src="/equations.js" type="text/javascript"></script>
-  <script src="/highlight-hover.js" type="text/javascript"></script>
+  <script src="/equations.js"></script>
+  <script src="/highlight-hover.js"></script>
 
   <noscript>
     <style>
@@ -53,18 +53,18 @@
               </h3>
 
       <!-- Cube logo -->
-      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px"></img>
+      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px" />
 
       <!-- Actual table of contents (separated from the rest by
       horizontal rules) -->
-      <hr></hr>
+      <hr />
       <ul>
       <li><a href="#homotopy-groups"><a href="#homotopy-groups" class="header-link">Homotopy Groups<span class="header-link-emoji">🔗</span></a></a>
       <ul>
       <li><a href="#deloopings"><a href="#deloopings" class="header-link">Deloopings<span class="header-link-emoji">🔗</span></a></a></li>
       </ul></li>
       </ul>
-      <hr></hr>
+      <hr />
 
       <!-- Sidebar controls -->
       <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
@@ -81,14 +81,14 @@
         </span>
       </div>
 
-      <hr></hr>
+      <hr />
 
       <!-- Navbar navigation (lol) -->
       <div id="return" style="white-space: nowrap;">
               <a href="index.html">️back to index</a> <br />
               <a href="all-pages.html">view all pages</a> <br />
-        <a href="https://github.com/plt-amy/cubical-1lab/blob/c7251519e90200a1d1ead2575e6596ccd4a8b2de/src/Algebra/Group/Homotopy.lagda.md">link to source</a> <br />
-                <hr></hr> <div class="author-list">Written by Amélia Liao and Jonathan Coates</div> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/527d25632b6de321e0bcf363b3704689410468c8/src/Algebra/Group/Homotopy.lagda.md">link to source</a> <br />
+                <hr /> <div class="author-list">Written by Amélia Liao and Jonathan Coates</div> <br />
               </div>
     </div>
   </aside>
@@ -198,7 +198,7 @@ PathP (λ i → B₁ (p i)) (f x) (f y)" id="2312" href="1Lab.Path.html#20807" c
 </pre>
 <p>The delooping is constructed as a higher inductive type. We have a generic <span class="Agda"><a data-type="Deloop G" href="Algebra.Group.Homotopy.html#3278" class="InductiveConstructor">base</a></span> point, and a constructor expressing that <span class="Agda"><a data-type="(G : Group ℓ) → Type ℓ" href="Algebra.Group.Homotopy.html#3252" class="Datatype">Deloop</a></span> is a groupoid; Since it is a groupoid, it has a set of loops <code>point ≡ point</code>: this is necessary, since otherwise we would not be able to prove that <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>π</mi><mn>1</mn></msub><mo stretchy="false">(</mo><mi>B</mi><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>≡</mo><mi>G</mi></mrow><annotation encoding="application/x-tex">\pi_1(B(G)) \equiv G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mopen">(</span><span class="mord mathnormal">G</span><span class="mclose">))</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">≡</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span>.</span> We then have the “interesting” higher constructors: <span class="Agda"><a data-type="G .fst → base ≡ base" href="Algebra.Group.Homotopy.html#3331" class="InductiveConstructor">path</a></span> lets us turn any element of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi></mrow><annotation encoding="application/x-tex">G</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">G</span></span></span></span> to a path <code>point ≡ point</code>, and <span class="Agda"><a data-type="(x y : G .fst) → Square refl (path x) (path ((G ⋆ x) y)) (path y)" href="Algebra.Group.Homotopy.html#3366" class="InductiveConstructor">path-sq</a></span> expresses that <span class="Agda"><a data-type="G .fst → base ≡ base" href="Algebra.Group.Homotopy.html#3331" class="InductiveConstructor">path</a></span> is a group homomorphism. More specifically, <span class="Agda"><a data-type="(x y : G .fst) → Square refl (path x) (path ((G ⋆ x) y)) (path y)" href="Algebra.Group.Homotopy.html#3366" class="InductiveConstructor">path-sq</a></span> fills the square below:</p>
 <div class="diagram-container">
-<img src="9851acea2bab071733b6a5321a26ec36c25fc071.svg" title="commutative diagram" class="diagram quiver"></img>
+<img src="9851acea2bab071733b6a5321a26ec36c25fc071.svg" title="commutative diagram" class="diagram quiver" />
 </div>
 <p>Using the <span class="Agda"><a data-type="(p : w ≡ x) (q : x ≡ y) (r : y ≡ z)
 (α β : Σ (λ s → Square (sym p) q s r)) →
