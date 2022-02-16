@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Agda,categories,topos" />
+
+  <title>Cat.Diagram.Idempotent - 1Lab</title>
+
+  <link rel="stylesheet" href="/css/default.css" />
+  <link rel="stylesheet" href="/css/katex.min.css" />
+  <link rel="stylesheet" href="/css/agda-cats.css" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cat.Diagram.Idempotent - 1Lab" />
+  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png" />
+
+  <meta name="og:title" content="Cat.Diagram.Idempotent - 1Lab" />
+  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png" />
+  <meta name="og:site-name" content="1Lab" />
+  <meta name="og:type" content="website" />
+
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  
+  <script src="/equations.js"></script>
+  <script src="/highlight-hover.js"></script>
+
+  <noscript>
+    <style>
+      body span.reasoning-step .as-written {
+        display: inline;
+      }
+
+      body span.reasoning-step .alternate {
+        display: none;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+<main>
+<div id="post-toc-container" style="padding-left: 1em; padding-right: 1em;">
+
+  <!-- Table of contents (only if the page has a table of contents) -->
+    <aside id="toc">
+    <div id="toc-container" style="min-width: 10em; font-size: 15pt;">
+      <!-- Title for the page -->
+      <h3 class="Agda" style="margin-top: 0; margin-bottom: 0; white-space: pre;">
+                <a class="Module">Cat.Diagram.Idempotent</a>
+              </h3>
+
+      <!-- Cube logo -->
+      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px" />
+
+      <!-- Actual table of contents (separated from the rest by
+      horizontal rules) -->
+      <hr />
+      <ul>
+      <li><a href="#idempotents"><a href="#idempotents" class="header-link">Idempotents<span class="header-link-emoji">🔗</span></a></a></li>
+      </ul>
+      <hr />
+
+      <!-- Sidebar controls -->
+      <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
+        <!-- Sidebar equations control -->
+        <span class="equations" style="display: flex; align-items: center; gap: 0.25em; flex-wrap: nowrap;">
+          <input name="sidebar-eqns" type="checkbox" class="equations" id="sidebar-eqns">
+          <label for="sidebar-eqns">Equations</label>
+        </span>
+
+        <!-- Sidebar fonts control -->
+        <span style="display: flex; align-items: center; gap: 0.25em; flex-wrap: nowrap;">
+          <input name="sidebar-font" type="checkbox" id="toggle-fonts">
+          <label for="toggle-fonts">Serif Font</label>
+        </span>
+      </div>
+
+      <hr />
+
+      <!-- Navbar navigation (lol) -->
+      <div id="return" style="white-space: nowrap;">
+              <a href="index.html">️back to index</a> <br />
+              <a href="all-pages.html">view all pages</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/489b4029e2125bee6322362e6fbe3f6a11d420fe/src/Cat/Diagram/Idempotent.lagda.md">link to source</a> <br />
+                <hr /> <div class="author-list">Written by Amélia Liao</div> <br />
+              </div>
+    </div>
+  </aside>
+  
+  <article>
+    <!-- Article navigation (narrow screens only) -->
+    <div class="narrow-only" id="article-nav">
+      <!-- Index return anchor (only if the page is not the index) -->
+            <div id="return">
+        <a href="index.html">️back to index</a>
+      </div>
+      
+      <!-- Font toggle checkbox -->
+      <span class="equations" style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
+        <input name="navbar-eqns" type="checkbox" class="equations" id="navbar-eqns">
+        <label for="navbar-eqns">Equations</label>
+      </span>
+    </div>
+
+<pre class="Agda"><a id="9" class="Keyword">open</a> <a id="14" class="Keyword">import</a> <a id="21" href="Cat.Prelude.html" class="Module">Cat.Prelude</a>
+
+<a id="34" class="Keyword">module</a> <a id="41" href="Cat.Diagram.Idempotent.html" class="Module">Cat.Diagram.Idempotent</a> <a id="64" class="Symbol">{</a><a id="65" href="Cat.Diagram.Idempotent.html#65" class="Bound">o</a> <a id="67" href="Cat.Diagram.Idempotent.html#67" class="Bound">h</a><a id="68" class="Symbol">}</a> <a id="70" class="Symbol">(</a><a id="71" href="Cat.Diagram.Idempotent.html#71" class="Bound">C</a> <a id="73" class="Symbol">:</a> <a data-type="(o h : Level) → Type (lsuc o ⊔ lsuc h)" id="75" href="Cat.Base.html#611" class="Record">Precategory</a> <a id="87" href="Cat.Diagram.Idempotent.html#65" class="Bound">o</a> <a id="89" href="Cat.Diagram.Idempotent.html#67" class="Bound">h</a><a id="90" class="Symbol">)</a> <a id="92" class="Keyword">where</a>
+</pre>
+<!--
+<pre class="Agda"><a id="116" class="Keyword">open</a> <a id="121" class="Keyword">import</a> <a id="128" href="Cat.Reasoning.html" class="Module">Cat.Reasoning</a> <a id="142" href="Cat.Diagram.Idempotent.html#71" class="Bound">C</a>
+<a id="144" class="Keyword">private</a> <a id="152" class="Keyword">variable</a>
+  <a id="163" href="Cat.Diagram.Idempotent.html#163" class="Generalizable">A</a> <a id="165" href="Cat.Diagram.Idempotent.html#165" class="Generalizable">B</a> <a id="167" class="Symbol">:</a> <a id="169" href="Cat.Base.html#1312" class="Field">Ob</a>
+  <a id="174" href="Cat.Diagram.Idempotent.html#174" class="Generalizable">f</a> <a id="176" class="Symbol">:</a> <a id="178" href="Cat.Base.html#1329" class="Field">Hom</a> <a id="182" href="Cat.Diagram.Idempotent.html#163" class="Generalizable">A</a> <a id="184" href="Cat.Diagram.Idempotent.html#165" class="Generalizable">B</a>
+</pre>-->
+<h1 id="idempotents"><a href="#idempotents" class="header-link">Idempotents<span class="header-link-emoji">🔗</span></a></h1>
+<p>An <strong>idempotent</strong> is the categorical generation of projections, in the sense of linear algebra. Formally, an idempotent <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>:</mo><mi>A</mi><mo>→</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">e : A \to A</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal">A</span></span></span></span> is a map with <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>∘</mo><mi>e</mi><mo>=</mo><mi>e</mi></mrow><annotation encoding="application/x-tex">e \circ e = e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4445em;"></span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∘</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span>.</span> Keeping in line with the view that an idempotent is like a projection, we can ask <em>what</em> it projects onto: We would then have some subobject <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi></mrow><annotation encoding="application/x-tex">F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span> of fixed elements, and a decomposition of <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span> as</p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mi>X</mi><mo>→</mo><mi>F</mi><mo>↪</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">
+X \to F \mono X
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6943em;vertical-align:-0.011em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">↪</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span></span></p>
+<p>When this is the case, we say that <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi></mrow><annotation encoding="application/x-tex">e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span> is a <strong>split idempotent</strong>: We have some pair of maps <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>:</mo><mi>X</mi><mo>→</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">p : X \to F</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span></span></span></span> (the “projector”) and <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>:</mo><mi>F</mi><mo>→</mo><mi>X</mi></mrow><annotation encoding="application/x-tex">i : F \to X</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">F</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">→</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.07847em;">X</span></span></span></span>,</span> with <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>∘</mo><mi>i</mi><mo>=</mo><mrow><mi mathvariant="normal">i</mi><mi mathvariant="normal">d</mi></mrow></mrow><annotation encoding="application/x-tex">r \circ i = \mathrm{id}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4445em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∘</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord"><span class="mord mathrm">id</span></span></span></span></span> and <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>∘</mo><mi>r</mi><mo>=</mo><mi>e</mi></mrow><annotation encoding="application/x-tex">i \circ r = e</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6595em;"></span><span class="mord mathnormal">i</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∘</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">e</span></span></span></span>.</span></p>
+<pre class="Agda"><a id="isIdempotent"></a><a data-type="(C : Precategory o h) → Hom C A A → Type h" id="797" href="Cat.Diagram.Idempotent.html#797" class="Function">isIdempotent</a> <a id="810" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="812" href="Cat.Base.html#1329" class="Field">Hom</a> <a id="816" href="Cat.Diagram.Idempotent.html#163" class="Generalizable">A</a> <a id="818" href="Cat.Diagram.Idempotent.html#163" class="Generalizable">A</a> <a id="820" class="Symbol">→</a> <a id="822" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="827" class="Symbol">_</a>
+<a data-type="(C : Precategory o h) → Hom C A A → Type h" id="829" href="Cat.Diagram.Idempotent.html#797" class="Function">isIdempotent</a> <a id="842" href="Cat.Diagram.Idempotent.html#842" class="Bound">e</a> <a id="844" class="Symbol">=</a> <a id="846" href="Cat.Diagram.Idempotent.html#842" class="Bound">e</a> <a data-type="(r : Precategory o h) → r .Hom y z → r .Hom x y → r .Hom x z" id="848" href="Cat.Base.html#2898" class="Field Operator">∘</a> <a id="850" href="Cat.Diagram.Idempotent.html#842" class="Bound">e</a> <a data-type="A → A → Type ℓ" id="852" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="854" href="Cat.Diagram.Idempotent.html#842" class="Bound">e</a>
+
+<a id="857" class="Keyword">record</a> <a id="IsSplit"></a><a data-type="(C : Precategory o h) (e : Hom C A A) → Type (o ⊔ h)" id="864" href="Cat.Diagram.Idempotent.html#864" class="Record">IsSplit</a> <a id="872" class="Symbol">(</a><a id="873" href="Cat.Diagram.Idempotent.html#873" class="Bound">e</a> <a id="875" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="877" href="Cat.Base.html#1329" class="Field">Hom</a> <a id="881" href="Cat.Diagram.Idempotent.html#163" class="Generalizable">A</a> <a id="883" href="Cat.Diagram.Idempotent.html#163" class="Generalizable">A</a><a id="884" class="Symbol">)</a> <a id="886" class="Symbol">:</a> <a id="888" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="893" class="Symbol">(</a><a id="894" href="Cat.Diagram.Idempotent.html#65" class="Bound">o</a> <a data-type="Level → Level → Level" id="896" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="898" href="Cat.Diagram.Idempotent.html#67" class="Bound">h</a><a id="899" class="Symbol">)</a> <a id="901" class="Keyword">where</a>
+  <a id="909" class="Keyword">field</a>
+    <a id="919" class="Symbol">{</a><a id="IsSplit.F"></a><a data-type="IsSplit C e → Ob C" id="920" href="Cat.Diagram.Idempotent.html#920" class="Field">F</a><a id="921" class="Symbol">}</a>     <a id="927" class="Symbol">:</a> <a data-type="Precategory o h → Type o" id="929" href="Cat.Base.html#1312" class="Field">Ob</a>
+    <a id="IsSplit.project"></a><a data-type="(r : IsSplit C e) → Hom C A (r .F)" id="936" href="Cat.Diagram.Idempotent.html#936" class="Field">project</a> <a id="944" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="946" href="Cat.Base.html#1329" class="Field">Hom</a> <a id="950" href="Cat.Diagram.Idempotent.html#881" class="Bound">A</a> <a data-type="IsSplit C e → Ob C" id="952" href="Cat.Diagram.Idempotent.html#920" class="Field">F</a>
+    <a id="IsSplit.inject"></a><a data-type="(r : IsSplit C e) → Hom C (r .F) A" id="958" href="Cat.Diagram.Idempotent.html#958" class="Field">inject</a>  <a id="966" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="968" href="Cat.Base.html#1329" class="Field">Hom</a> <a data-type="IsSplit C e → Ob C" id="972" href="Cat.Diagram.Idempotent.html#920" class="Field">F</a> <a id="974" href="Cat.Diagram.Idempotent.html#881" class="Bound">A</a>
+
+    <a id="IsSplit.p∘i"></a><a data-type="(r : IsSplit C e) → (C ∘ r .project) (r .inject) ≡ id C" id="981" href="Cat.Diagram.Idempotent.html#981" class="Field">p∘i</a> <a id="985" class="Symbol">:</a> <a data-type="(r : IsSplit C e) → Hom C A (r .F)" id="987" href="Cat.Diagram.Idempotent.html#936" class="Field">project</a> <a data-type="(r : Precategory o h) → r .Hom y z → r .Hom x y → r .Hom x z" id="995" href="Cat.Base.html#2898" class="Field Operator">∘</a> <a data-type="(r : IsSplit C e) → Hom C (r .F) A" id="997" href="Cat.Diagram.Idempotent.html#958" class="Field">inject</a> <a data-type="A → A → Type ℓ" id="1004" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a data-type="(r : Precategory o h) → r .Hom x x" id="1006" href="Cat.Base.html#2868" class="Field">id</a>
+    <a id="IsSplit.i∘p"></a><a data-type="(r : IsSplit C e) → (C ∘ r .inject) (r .project) ≡ e" id="1013" href="Cat.Diagram.Idempotent.html#1013" class="Field">i∘p</a> <a id="1017" class="Symbol">:</a> <a data-type="(r : IsSplit C e) → Hom C (r .F) A" id="1019" href="Cat.Diagram.Idempotent.html#958" class="Field">inject</a> <a data-type="(r : Precategory o h) → r .Hom y z → r .Hom x y → r .Hom x z" id="1026" href="Cat.Base.html#2898" class="Field Operator">∘</a> <a data-type="(r : IsSplit C e) → Hom C A (r .F)" id="1028" href="Cat.Diagram.Idempotent.html#936" class="Field">project</a> <a data-type="A → A → Type ℓ" id="1036" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="1038" href="Cat.Diagram.Idempotent.html#873" class="Bound">e</a>
+
+<a id="isSplit→isIdempotent"></a><a data-type="(C : Precategory o h) → IsSplit C f → isIdempotent C f" id="1041" href="Cat.Diagram.Idempotent.html#1041" class="Function">isSplit→isIdempotent</a> <a id="1062" class="Symbol">:</a> <a data-type="(C : Precategory o h) (e : Hom C A A) → Type (o ⊔ h)" id="1064" href="Cat.Diagram.Idempotent.html#864" class="Record">IsSplit</a> <a id="1072" href="Cat.Diagram.Idempotent.html#174" class="Generalizable">f</a> <a id="1074" class="Symbol">→</a> <a data-type="(C : Precategory o h) → Hom C A A → Type h" id="1076" href="Cat.Diagram.Idempotent.html#797" class="Function">isIdempotent</a> <a id="1089" href="Cat.Diagram.Idempotent.html#174" class="Generalizable">f</a>
+<a data-type="(C : Precategory o h) → IsSplit C f → isIdempotent C f" id="1091" href="Cat.Diagram.Idempotent.html#1041" class="Function">isSplit→isIdempotent</a> <a id="1112" class="Symbol">{</a><a id="1113" class="Argument">f</a> <a id="1115" class="Symbol">=</a> <a id="1117" href="Cat.Diagram.Idempotent.html#1117" class="Bound">f</a><a id="1118" class="Symbol">}</a> <a id="1120" href="Cat.Diagram.Idempotent.html#1120" class="Bound">spl</a> <a id="1124" class="Symbol">=</a>
+  <a id="1128" href="Cat.Diagram.Idempotent.html#1117" class="Bound">f</a> <a data-type="(r : Precategory o h) → r .Hom y z → r .Hom x y → r .Hom x z" id="1130" href="Cat.Base.html#2898" class="Field Operator">∘</a> <a id="1132" href="Cat.Diagram.Idempotent.html#1117" class="Bound">f</a>             <span class="reasoning-step"><span class="as-written Function Operator"><a data-type="(x : A) → y ≡ x → y ≡ z → x ≡ z" id="1146" href="1Lab.Path.html#46911" class="Function Operator">≡˘⟨</a> <a data-type="(f : (x : A) (y : B₁ x) → C x y) (p : x ≡ y)
+(q : PathP (λ i → B₁ (p i)) α β) →
+PathP (λ i → C (p i) (q i)) (f x α) (f y β)" id="1150" href="1Lab.Path.html#21240" class="Function">ap₂</a> <a data-type="(r : Precategory o h) → r .Hom y z → r .Hom x y → r .Hom x z" id="1154" href="Cat.Base.html#2898" class="Field Operator">_∘_</a> <a data-type="(r : IsSplit C e) → (C ∘ r .inject) (r .project) ≡ e" id="1158" href="Cat.Diagram.Idempotent.html#1013" class="Field">i∘p</a> <a data-type="(r : IsSplit C e) → (C ∘ r .inject) (r .project) ≡ e" id="1162" href="Cat.Diagram.Idempotent.html#1013" class="Field">i∘p</a> <a data-type="(x : A) → y ≡ x → y ≡ z → x ≡ z" id="1166" href="1Lab.Path.html#46911" class="Function Operator">⟩</a></span><span class="alternate Function Operator">≡˘</span></span>
+  <a id="1170" class="Symbol">(</a><a id="1171" href="Cat.Diagram.Idempotent.html#1305" class="Field">s</a> <a data-type="(r : Precategory o h) → r .Hom y z → r .Hom x y → r .Hom x z" id="1173" href="Cat.Base.html#2898" class="Field Operator">∘</a> <a id="1175" href="Cat.Diagram.Idempotent.html#1320" class="Field">r</a><a id="1176" class="Symbol">)</a> <a data-type="(r : Precategory o h) → r .Hom y z → r .Hom x y → r .Hom x z" id="1178" href="Cat.Base.html#2898" class="Field Operator">∘</a> <a id="1180" class="Symbol">(</a><a id="1181" href="Cat.Diagram.Idempotent.html#1305" class="Field">s</a> <a data-type="(r : Precategory o h) → r .Hom y z → r .Hom x y → r .Hom x z" id="1183" href="Cat.Base.html#2898" class="Field Operator">∘</a> <a id="1185" href="Cat.Diagram.Idempotent.html#1320" class="Field">r</a><a id="1186" class="Symbol">)</a> <span class="reasoning-step"><span class="as-written Function"><a data-type="(x : A) → y ≡ z → x ≡ y → x ≡ z" id="1188" href="1Lab.Path.html#46757" class="Function">≡⟨</a> <a data-type="(C : Precategory o ℓ) (inv₁ : (C ∘ h) i ≡ id C) →
+(C ∘ (C ∘ f) h) ((C ∘ i) g) ≡ (C ∘ f) g" id="1191" href="Cat.Reasoning.html#2699" class="Function">cancelInner</a> <a data-type="(r : IsSplit C e) → (C ∘ r .project) (r .inject) ≡ id C" id="1203" href="Cat.Diagram.Idempotent.html#981" class="Field">p∘i</a> <a data-type="(x : A) → y ≡ z → x ≡ y → x ≡ z" id="1207" href="1Lab.Path.html#46757" class="Function">⟩</a></span><span class="alternate Function">≡</span></span>
+  <a id="1211" href="Cat.Diagram.Idempotent.html#1305" class="Field">s</a> <a data-type="(r : Precategory o h) → r .Hom y z → r .Hom x y → r .Hom x z" id="1213" href="Cat.Base.html#2898" class="Field Operator">∘</a> <a id="1215" href="Cat.Diagram.Idempotent.html#1320" class="Field">r</a>             <span class="reasoning-step"><span class="as-written Function"><a data-type="(x : A) → y ≡ z → x ≡ y → x ≡ z" id="1229" href="1Lab.Path.html#46757" class="Function">≡⟨</a> <a data-type="(r : IsSplit C e) → (C ∘ r .inject) (r .project) ≡ e" id="1232" href="Cat.Diagram.Idempotent.html#1013" class="Field">i∘p</a> <a data-type="(x : A) → y ≡ z → x ≡ y → x ≡ z" id="1236" href="1Lab.Path.html#46757" class="Function">⟩</a></span><span class="alternate Function">≡</span></span>
+  <a id="1240" href="Cat.Diagram.Idempotent.html#1117" class="Bound">f</a>                 <a data-type="(x : A) → x ≡ x" id="1258" href="1Lab.Path.html#47085" class="Function Operator">∎</a>
+  <a id="1262" class="Keyword">where</a> <a id="1268" class="Keyword">open</a> <a data-type="(C : Precategory o h) (e : Hom C A A) → Type (o ⊔ h)" id="1273" href="Cat.Diagram.Idempotent.html#864" class="Module">IsSplit</a> <a id="1281" href="Cat.Diagram.Idempotent.html#1120" class="Bound">spl</a> <a id="1285" class="Keyword">renaming</a> <a id="1294" class="Symbol">(</a><a data-type="(r : IsSplit C e) → Hom C (r .F) A" id="1295" href="Cat.Diagram.Idempotent.html#958" class="Field">inject</a> <a id="1302" class="Symbol">to</a> <a id="1305" class="Field">s</a> <a id="1307" class="Symbol">;</a> <a data-type="(r : IsSplit C e) → Hom C A (r .F)" id="1309" href="Cat.Diagram.Idempotent.html#936" class="Field">project</a> <a id="1317" class="Symbol">to</a> <a id="1320" class="Field">r</a><a id="1321" class="Symbol">)</a>
+</pre>
+<p>It’s not the case that idempotents are split in every category. Those where this is the case are called <strong>idempotent-complete</strong>. Every category can be embedded, by a <a href="Cat.Functor.Base.html#ff-functors">full and faithful</a> functor, into an idempotent-complete category; This construction is called the <a href="Cat.Instances.Karoubi.html">Karoubi envelope</a> of <span style="white-space: nowrap;"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">C</mi></mrow><annotation encoding="application/x-tex">\ca{C}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathcal" style="margin-right:0.05834em;">C</span></span></span></span>.</span></p>
+<pre class="Agda"><a id="isIdempotentComplete"></a><a data-type="(C : Precategory o h) → Type (o ⊔ h)" id="1737" href="Cat.Diagram.Idempotent.html#1737" class="Function">isIdempotentComplete</a> <a id="1758" class="Symbol">:</a> <a id="1760" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="1765" class="Symbol">_</a>
+<a data-type="(C : Precategory o h) → Type (o ⊔ h)" id="1767" href="Cat.Diagram.Idempotent.html#1737" class="Function">isIdempotentComplete</a> <a id="1788" class="Symbol">=</a> <a id="1790" class="Symbol">∀</a> <a id="1792" class="Symbol">{</a><a id="1793" href="Cat.Diagram.Idempotent.html#1793" class="Bound">A</a><a id="1794" class="Symbol">}</a> <a id="1796" class="Symbol">(</a><a id="1797" href="Cat.Diagram.Idempotent.html#1797" class="Bound">f</a> <a id="1799" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="1801" href="Cat.Base.html#1329" class="Field">Hom</a> <a id="1805" href="Cat.Diagram.Idempotent.html#1793" class="Bound">A</a> <a id="1807" href="Cat.Diagram.Idempotent.html#1793" class="Bound">A</a><a id="1808" class="Symbol">)</a> <a id="1810" class="Symbol">→</a> <a data-type="(C : Precategory o h) → Hom C A A → Type h" id="1812" href="Cat.Diagram.Idempotent.html#797" class="Function">isIdempotent</a> <a id="1825" href="Cat.Diagram.Idempotent.html#1797" class="Bound">f</a> <a id="1827" class="Symbol">→</a> <a data-type="(C : Precategory o h) (e : Hom C A A) → Type (o ⊔ h)" id="1829" href="Cat.Diagram.Idempotent.html#864" class="Record">IsSplit</a> <a id="1837" href="Cat.Diagram.Idempotent.html#1797" class="Bound">f</a>
+</pre>
+  </article>
+</div>
+
+</main>
+</body>
+</html>
