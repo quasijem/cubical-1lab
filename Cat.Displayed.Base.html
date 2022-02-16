@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="keywords" content="Agda,categories,topos" />
+
+  <title>Cat.Displayed.Base - 1Lab</title>
+
+  <link rel="stylesheet" href="/css/default.css" />
+  <link rel="stylesheet" href="/css/katex.min.css" />
+  <link rel="stylesheet" href="/css/agda-cats.css" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Cat.Displayed.Base - 1Lab" />
+  <meta name="twitter:image" content="https://1lab.dev/static/cube-128x.png" />
+
+  <meta name="og:title" content="Cat.Displayed.Base - 1Lab" />
+  <meta name="og:image" content="https://1lab.dev/static/cube-128x.png" />
+  <meta name="og:site-name" content="1Lab" />
+  <meta name="og:type" content="website" />
+
+    <meta name="og:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="twitter:description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  <meta name="description" content="A formalised, explorable online resource for Homotopy Type Theory." />
+  
+  <script src="/equations.js"></script>
+  <script src="/highlight-hover.js"></script>
+
+  <noscript>
+    <style>
+      body span.reasoning-step .as-written {
+        display: inline;
+      }
+
+      body span.reasoning-step .alternate {
+        display: none;
+      }
+    </style>
+  </noscript>
+</head>
+
+<body>
+<main>
+<div id="post-toc-container" style="padding-left: 1em; padding-right: 1em;">
+
+  <!-- Table of contents (only if the page has a table of contents) -->
+    <aside id="toc">
+    <div id="toc-container" style="min-width: 10em; font-size: 15pt;">
+      <!-- Title for the page -->
+      <h3 class="Agda" style="margin-top: 0; margin-bottom: 0; white-space: pre;">
+                <a class="Module">Cat.Displayed.Base</a>
+              </h3>
+
+      <!-- Cube logo -->
+      <img alt="1Lab" src="/static/cube-72x.png" style="display: block; margin-bottom: 1em; margin: auto;" width="32px" height="32px" />
+
+      <!-- Actual table of contents (separated from the rest by
+      horizontal rules) -->
+      <hr />
+      <ul>
+      <li><a href="#displayed-categories"><a href="#displayed-categories" class="header-link">Displayed Categories<span class="header-link-emoji">🔗</span></a></a></li>
+      </ul>
+      <hr />
+
+      <!-- Sidebar controls -->
+      <div style="display: flex; gap: 0.25em; flex-flow: row wrap;">
+        <!-- Sidebar equations control -->
+        <span class="equations" style="display: flex; align-items: center; gap: 0.25em; flex-wrap: nowrap;">
+          <input name="sidebar-eqns" type="checkbox" class="equations" id="sidebar-eqns">
+          <label for="sidebar-eqns">Equations</label>
+        </span>
+
+        <!-- Sidebar fonts control -->
+        <span style="display: flex; align-items: center; gap: 0.25em; flex-wrap: nowrap;">
+          <input name="sidebar-font" type="checkbox" id="toggle-fonts">
+          <label for="toggle-fonts">Serif Font</label>
+        </span>
+      </div>
+
+      <hr />
+
+      <!-- Navbar navigation (lol) -->
+      <div id="return" style="white-space: nowrap;">
+              <a href="index.html">️back to index</a> <br />
+              <a href="all-pages.html">view all pages</a> <br />
+        <a href="https://github.com/plt-amy/cubical-1lab/blob/d675eebf2caf605e8e6c46ee09fc12e0bda7dbf5/src/Cat/Displayed/Base.lagda.md">link to source</a> <br />
+                <hr /> <div class="author-list">Written by Amélia Liao</div> <br />
+              </div>
+    </div>
+  </aside>
+  
+  <article>
+    <!-- Article navigation (narrow screens only) -->
+    <div class="narrow-only" id="article-nav">
+      <!-- Index return anchor (only if the page is not the index) -->
+            <div id="return">
+        <a href="index.html">️back to index</a>
+      </div>
+      
+      <!-- Font toggle checkbox -->
+      <span class="equations" style="display: flex; gap: 0.25em; flex-wrap: nowrap;">
+        <input name="navbar-eqns" type="checkbox" class="equations" id="navbar-eqns">
+        <label for="navbar-eqns">Equations</label>
+      </span>
+    </div>
+
+<pre class="Agda"><a id="9" class="Keyword">open</a> <a id="14" class="Keyword">import</a> <a id="21" href="1Lab.HLevel.html" class="Module">1Lab.HLevel</a>
+<a id="33" class="Keyword">open</a> <a id="38" class="Keyword">import</a> <a id="45" href="1Lab.Path.html" class="Module">1Lab.Path</a>
+<a id="55" class="Keyword">open</a> <a id="60" class="Keyword">import</a> <a id="67" href="1Lab.Type.html" class="Module">1Lab.Type</a> <a id="77" class="Keyword">hiding</a> <a id="84" class="Symbol">(</a><a data-type="A → A" id="85" href="1Lab.Type.html#2415" class="Function">id</a> <a id="88" class="Symbol">;</a> <a data-type="((y : B₁ x) → C x y) → (f : (x : A) → B₁ x) (x : A) → C x (f x)" id="90" href="1Lab.Type.html#2217" class="Function Operator">_∘_</a><a id="93" class="Symbol">)</a>
+
+<a id="96" class="Keyword">open</a> <a id="101" class="Keyword">import</a> <a id="108" href="Cat.Base.html" class="Module">Cat.Base</a>
+
+<a id="118" class="Keyword">module</a> <a id="125" href="Cat.Displayed.Base.html" class="Module">Cat.Displayed.Base</a> <a id="144" class="Keyword">where</a>
+</pre>
+<h1 id="displayed-categories"><a href="#displayed-categories" class="header-link">Displayed Categories<span class="header-link-emoji">🔗</span></a></h1>
+<p>The core idea behind displayed categories is that we want to capture the idea of being able to place extra structure over some sort of “base” category. For instance, we can think of categories of algebraic objects (monoids, groups, rings, etc) as being extra structure placed atop the objects of Set, and extra conditions placed atop the morphisms of Set.</p>
+<p>We start by defining a displayed category over some sort of “base”, which will act as the category we add the extra structure to.</p>
+<pre class="Agda"><a id="675" class="Keyword">record</a> <a id="Displayed"></a><a data-type="(B₁ : Precategory o ℓ) (o′ ℓ′ : Level) →
+Type (o ⊔ ℓ ⊔ lsuc o′ ⊔ lsuc ℓ′)" id="682" href="Cat.Displayed.Base.html#682" class="Record">Displayed</a> <a id="692" class="Symbol">{</a><a id="693" href="Cat.Displayed.Base.html#693" class="Bound">o</a> <a id="695" href="Cat.Displayed.Base.html#695" class="Bound">ℓ</a><a id="696" class="Symbol">}</a> <a id="698" class="Symbol">(</a><a id="699" href="Cat.Displayed.Base.html#699" class="Bound">B</a> <a id="701" class="Symbol">:</a> <a data-type="(o h : Level) → Type (lsuc o ⊔ lsuc h)" id="703" href="Cat.Base.html#611" class="Record">Precategory</a> <a id="715" href="Cat.Displayed.Base.html#693" class="Bound">o</a> <a id="717" href="Cat.Displayed.Base.html#695" class="Bound">ℓ</a><a id="718" class="Symbol">)</a>
+                 <a id="737" class="Symbol">(</a><a id="738" href="Cat.Displayed.Base.html#738" class="Bound">o′</a> <a id="741" href="Cat.Displayed.Base.html#741" class="Bound">ℓ′</a> <a id="744" class="Symbol">:</a> <a data-type="Type" id="746" href="Agda.Primitive.html#597" class="Postulate">Level</a><a id="751" class="Symbol">)</a> <a id="753" class="Symbol">:</a> <a id="755" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="760" class="Symbol">(</a><a id="761" href="Cat.Displayed.Base.html#693" class="Bound">o</a> <a data-type="Level → Level → Level" id="763" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a id="765" href="Cat.Displayed.Base.html#695" class="Bound">ℓ</a> <a data-type="Level → Level → Level" id="767" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a data-type="Level → Level" id="769" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="774" href="Cat.Displayed.Base.html#738" class="Bound">o′</a> <a data-type="Level → Level → Level" id="777" href="Agda.Primitive.html#810" class="Primitive Operator">⊔</a> <a data-type="Level → Level" id="779" href="Agda.Primitive.html#780" class="Primitive">lsuc</a> <a id="784" href="Cat.Displayed.Base.html#741" class="Bound">ℓ′</a><a id="786" class="Symbol">)</a> <a id="788" class="Keyword">where</a>
+
+  <a id="797" class="Keyword">open</a> <a data-type="(o h : Level) → Type (lsuc o ⊔ lsuc h)" id="802" href="Cat.Base.html#611" class="Module">Precategory</a> <a id="814" href="Cat.Displayed.Base.html#699" class="Bound">B</a>
+</pre>
+<p>For each object of the base category, we associate a type of objects. Going back to our original example of algebraic structures + Set, this would be something like <code>MonoidOn : Set → Type</code>. This highlights an important point for intuition: we should think of the objects of the displayed category as <em>structures</em> over the objects of the base.</p>
+<pre class="Agda">  <a id="1175" class="Keyword">field</a>
+    <a id="Displayed.Ob[_]"></a><a data-type="Displayed B₁ o′ ℓ′ → B₁ .Ob → Type o′" id="1185" href="Cat.Displayed.Base.html#1185" class="Field Operator">Ob[_]</a> <a id="1191" class="Symbol">:</a> <a data-type="Precategory o h → Type o" id="1193" href="Cat.Base.html#1312" class="Function">Ob</a> <a id="1196" class="Symbol">→</a> <a id="1198" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="1203" href="Cat.Displayed.Base.html#738" class="Bound">o′</a>
+</pre>
+<p>We do a similar thing for morphisms: For each morphism <code>f : Hom x y</code> in the base category, there is a <strong>set</strong> of morphisms between objects in the displayed category. Keeping with our running example, given a function <code>f : X → Y</code> and monoid structures <code>M : MonoidOn X</code>, <code>N : MonoidOn Y</code>, then <code>Hom[ f ] M N</code> is the proposition that “f is a monoid homomorphism”. Again, we should best think of these as <em>structures</em> over morphisms.</p>
+<pre class="Agda">    <a id="Displayed.Hom[_]"></a><a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="1654" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[_]</a> <a id="1661" class="Symbol">:</a> <a id="1663" class="Symbol">∀</a> <a id="1665" class="Symbol">{</a><a id="1666" href="Cat.Displayed.Base.html#1666" class="Bound">x</a> <a id="1668" href="Cat.Displayed.Base.html#1668" class="Bound">y</a><a id="1669" class="Symbol">}</a> <a id="1671" class="Symbol">→</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="1673" href="Cat.Base.html#1329" class="Function">Hom</a> <a id="1677" href="Cat.Displayed.Base.html#1666" class="Bound">x</a> <a id="1679" href="Cat.Displayed.Base.html#1668" class="Bound">y</a> <a id="1681" class="Symbol">→</a> <a data-type="Displayed B₁ o′ ℓ′ → B₁ .Ob → Type o′" id="1683" href="Cat.Displayed.Base.html#1185" class="Field Operator">Ob[</a> <a id="1687" href="Cat.Displayed.Base.html#1666" class="Bound">x</a> <a data-type="Displayed B₁ o′ ℓ′ → B₁ .Ob → Type o′" id="1689" href="Cat.Displayed.Base.html#1185" class="Field Operator">]</a> <a id="1691" class="Symbol">→</a> <a data-type="Displayed B₁ o′ ℓ′ → B₁ .Ob → Type o′" id="1693" href="Cat.Displayed.Base.html#1185" class="Field Operator">Ob[</a> <a id="1697" href="Cat.Displayed.Base.html#1668" class="Bound">y</a> <a data-type="Displayed B₁ o′ ℓ′ → B₁ .Ob → Type o′" id="1699" href="Cat.Displayed.Base.html#1185" class="Field Operator">]</a> <a id="1701" class="Symbol">→</a> <a id="1703" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="1708" href="Cat.Displayed.Base.html#741" class="Bound">ℓ′</a>
+    <a id="Displayed.Hom[_]-set"></a><a data-type="(r : Displayed B₁ o′ ℓ′) (f : B₁ .Hom a b) (x : r .Ob[_] a)
+(y : r .Ob[_] b) →
+isSet (r .Hom[_] f x y)" id="1715" href="Cat.Displayed.Base.html#1715" class="Field Operator">Hom[_]-set</a> <a id="1726" class="Symbol">:</a> <a id="1728" class="Symbol">∀</a> <a id="1730" class="Symbol">{</a><a id="1731" href="Cat.Displayed.Base.html#1731" class="Bound">a</a> <a id="1733" href="Cat.Displayed.Base.html#1733" class="Bound">b</a><a id="1734" class="Symbol">}</a> <a id="1736" class="Symbol">(</a><a id="1737" href="Cat.Displayed.Base.html#1737" class="Bound">f</a> <a id="1739" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="1741" href="Cat.Base.html#1329" class="Function">Hom</a> <a id="1745" href="Cat.Displayed.Base.html#1731" class="Bound">a</a> <a id="1747" href="Cat.Displayed.Base.html#1733" class="Bound">b</a><a id="1748" class="Symbol">)</a>
+                 <a id="1767" class="Symbol">→</a> <a id="1769" class="Symbol">(</a><a id="1770" href="Cat.Displayed.Base.html#1770" class="Bound">x</a> <a id="1772" class="Symbol">:</a> <a data-type="Displayed B₁ o′ ℓ′ → B₁ .Ob → Type o′" id="1774" href="Cat.Displayed.Base.html#1185" class="Field Operator">Ob[</a> <a id="1778" href="Cat.Displayed.Base.html#1731" class="Bound">a</a> <a data-type="Displayed B₁ o′ ℓ′ → B₁ .Ob → Type o′" id="1780" href="Cat.Displayed.Base.html#1185" class="Field Operator">]</a><a id="1781" class="Symbol">)</a> <a id="1783" class="Symbol">→</a> <a id="1785" class="Symbol">(</a><a id="1786" href="Cat.Displayed.Base.html#1786" class="Bound">y</a> <a id="1788" class="Symbol">:</a> <a data-type="Displayed B₁ o′ ℓ′ → B₁ .Ob → Type o′" id="1790" href="Cat.Displayed.Base.html#1185" class="Field Operator">Ob[</a> <a id="1794" href="Cat.Displayed.Base.html#1733" class="Bound">b</a> <a data-type="Displayed B₁ o′ ℓ′ → B₁ .Ob → Type o′" id="1796" href="Cat.Displayed.Base.html#1185" class="Field Operator">]</a><a id="1797" class="Symbol">)</a> <a id="1799" class="Symbol">→</a> <a data-type="Type ℓ → Type ℓ" id="1801" href="1Lab.HLevel.html#3342" class="Function">isSet</a> <a id="1807" class="Symbol">(</a><a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="1808" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[</a> <a id="1813" href="Cat.Displayed.Base.html#1737" class="Bound">f</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="1815" href="Cat.Displayed.Base.html#1654" class="Field Operator">]</a> <a id="1817" href="Cat.Displayed.Base.html#1770" class="Bound">x</a> <a id="1819" href="Cat.Displayed.Base.html#1786" class="Bound">y</a><a id="1820" class="Symbol">)</a>
+</pre>
+<p>We also have identity and composition of displayed morphisms, but this is best thought of as witnessing that the identity morphism in the base <em>has</em> some structure, and that composition <em>preserves</em> that structure. For monoids, this would be a proof that the identity function is a monoid homomorphism, and that the composition of homomorphisms is indeed a homomorphism.</p>
+<pre class="Agda">    <a id="Displayed.id′"></a><a data-type="(r : Displayed B₁ o′ ℓ′) → r .Hom[_] (B₁ .id) x x" id="2210" href="Cat.Displayed.Base.html#2210" class="Field">id′</a> <a id="2214" class="Symbol">:</a> <a id="2216" class="Symbol">∀</a> <a id="2218" class="Symbol">{</a><a id="2219" href="Cat.Displayed.Base.html#2219" class="Bound">a</a><a id="2220" class="Symbol">}</a> <a id="2222" class="Symbol">{</a><a id="2223" href="Cat.Displayed.Base.html#2223" class="Bound">x</a> <a id="2225" class="Symbol">:</a> <a data-type="Displayed B₁ o′ ℓ′ → B₁ .Ob → Type o′" id="2227" href="Cat.Displayed.Base.html#1185" class="Field Operator">Ob[</a> <a id="2231" href="Cat.Displayed.Base.html#2219" class="Bound">a</a> <a data-type="Displayed B₁ o′ ℓ′ → B₁ .Ob → Type o′" id="2233" href="Cat.Displayed.Base.html#1185" class="Field Operator">]</a><a id="2234" class="Symbol">}</a> <a id="2236" class="Symbol">→</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2238" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[</a> <a data-type="(r : Precategory o h) → r .Hom x x" id="2243" href="Cat.Base.html#2868" class="Function">id</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2246" href="Cat.Displayed.Base.html#1654" class="Field Operator">]</a> <a id="2248" href="Cat.Displayed.Base.html#2223" class="Bound">x</a> <a id="2250" href="Cat.Displayed.Base.html#2223" class="Bound">x</a>
+    <a id="Displayed._∘′_"></a><a data-type="(r : Displayed B₁ o′ ℓ′) →
+r .Hom[_] f y z → r .Hom[_] g x y → r .Hom[_] (B₁ ._∘_ f g) x z" id="2256" href="Cat.Displayed.Base.html#2256" class="Field Operator">_∘′_</a> <a id="2261" class="Symbol">:</a> <a id="2263" class="Symbol">∀</a> <a id="2265" class="Symbol">{</a><a id="2266" href="Cat.Displayed.Base.html#2266" class="Bound">a</a> <a id="2268" href="Cat.Displayed.Base.html#2268" class="Bound">b</a> <a id="2270" href="Cat.Displayed.Base.html#2270" class="Bound">c</a> <a id="2272" href="Cat.Displayed.Base.html#2272" class="Bound">x</a> <a id="2274" href="Cat.Displayed.Base.html#2274" class="Bound">y</a> <a id="2276" href="Cat.Displayed.Base.html#2276" class="Bound">z</a><a id="2277" class="Symbol">}</a> <a id="2279" class="Symbol">{</a><a id="2280" href="Cat.Displayed.Base.html#2280" class="Bound">f</a> <a id="2282" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="2284" href="Cat.Base.html#1329" class="Function">Hom</a> <a id="2288" href="Cat.Displayed.Base.html#2268" class="Bound">b</a> <a id="2290" href="Cat.Displayed.Base.html#2270" class="Bound">c</a><a id="2291" class="Symbol">}</a> <a id="2293" class="Symbol">{</a><a id="2294" href="Cat.Displayed.Base.html#2294" class="Bound">g</a> <a id="2296" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="2298" href="Cat.Base.html#1329" class="Function">Hom</a> <a id="2302" href="Cat.Displayed.Base.html#2266" class="Bound">a</a> <a id="2304" href="Cat.Displayed.Base.html#2268" class="Bound">b</a><a id="2305" class="Symbol">}</a>
+           <a id="2318" class="Symbol">→</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2320" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[</a> <a id="2325" href="Cat.Displayed.Base.html#2280" class="Bound">f</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2327" href="Cat.Displayed.Base.html#1654" class="Field Operator">]</a> <a id="2329" href="Cat.Displayed.Base.html#2274" class="Bound">y</a> <a id="2331" href="Cat.Displayed.Base.html#2276" class="Bound">z</a> <a id="2333" class="Symbol">→</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2335" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[</a> <a id="2340" href="Cat.Displayed.Base.html#2294" class="Bound">g</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2342" href="Cat.Displayed.Base.html#1654" class="Field Operator">]</a> <a id="2344" href="Cat.Displayed.Base.html#2272" class="Bound">x</a> <a id="2346" href="Cat.Displayed.Base.html#2274" class="Bound">y</a> <a id="2348" class="Symbol">→</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2350" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[</a> <a id="2355" href="Cat.Displayed.Base.html#2280" class="Bound">f</a> <a data-type="(r : Precategory o h) → r .Hom y z → r .Hom x y → r .Hom x z" id="2357" href="Cat.Base.html#2898" class="Function Operator">∘</a> <a id="2359" href="Cat.Displayed.Base.html#2294" class="Bound">g</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2361" href="Cat.Displayed.Base.html#1654" class="Field Operator">]</a> <a id="2363" href="Cat.Displayed.Base.html#2272" class="Bound">x</a> <a id="2365" href="Cat.Displayed.Base.html#2276" class="Bound">z</a>
+</pre>
+<p>Now, for the difficult part of displayed category theory: equalities. If we were to naively try to write out the right-identity law, we would immediately run into trouble. The problem is that <code>f′ ∘′ id′ : Hom[ f ∘ id ] x y</code>, but <code>f′ : Hom [ f ] x y</code>! IE: the laws only hold relative to equalities in the base category. Therefore, instead of using <code>_≡_</code>, we <em>must</em> use <code>PathP</code>. Let’s provide some helpful notation for doing so.</p>
+<pre class="Agda">  <a id="2810" class="Keyword">infixr</a> <a id="2817" class="Number">40</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+r .Hom[_] f y z → r .Hom[_] g x y → r .Hom[_] (B₁ ._∘_ f g) x z" id="2820" href="Cat.Displayed.Base.html#2256" class="Field Operator">_∘′_</a>
+
+  <a id="Displayed._≡[_]_"></a><a data-type="(r : Displayed B₁ o′ ℓ′) →
+Hom[ r ] f x y → f ≡ g → Hom[ r ] g x y → Type ℓ′" id="2828" href="Cat.Displayed.Base.html#2828" class="Function Operator">_≡[_]_</a> <a id="2835" class="Symbol">:</a> <a id="2837" class="Symbol">∀</a> <a id="2839" class="Symbol">{</a><a id="2840" href="Cat.Displayed.Base.html#2840" class="Bound">a</a> <a id="2842" href="Cat.Displayed.Base.html#2842" class="Bound">b</a> <a id="2844" href="Cat.Displayed.Base.html#2844" class="Bound">x</a> <a id="2846" href="Cat.Displayed.Base.html#2846" class="Bound">y</a><a id="2847" class="Symbol">}</a> <a id="2849" class="Symbol">{</a><a id="2850" href="Cat.Displayed.Base.html#2850" class="Bound">f</a> <a id="2852" href="Cat.Displayed.Base.html#2852" class="Bound">g</a> <a id="2854" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="2856" href="Cat.Base.html#1329" class="Function">Hom</a> <a id="2860" href="Cat.Displayed.Base.html#2840" class="Bound">a</a> <a id="2862" href="Cat.Displayed.Base.html#2842" class="Bound">b</a><a id="2863" class="Symbol">}</a> <a id="2865" class="Symbol">→</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2867" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[</a> <a id="2872" href="Cat.Displayed.Base.html#2850" class="Bound">f</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2874" href="Cat.Displayed.Base.html#1654" class="Field Operator">]</a> <a id="2876" href="Cat.Displayed.Base.html#2844" class="Bound">x</a> <a id="2878" href="Cat.Displayed.Base.html#2846" class="Bound">y</a> <a id="2880" class="Symbol">→</a> <a id="2882" href="Cat.Displayed.Base.html#2850" class="Bound">f</a> <a data-type="A → A → Type ℓ" id="2884" href="Agda.Builtin.Cubical.Path.html#381" class="Function Operator">≡</a> <a id="2886" href="Cat.Displayed.Base.html#2852" class="Bound">g</a> <a id="2888" class="Symbol">→</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2890" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[</a> <a id="2895" href="Cat.Displayed.Base.html#2852" class="Bound">g</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2897" href="Cat.Displayed.Base.html#1654" class="Field Operator">]</a> <a id="2899" href="Cat.Displayed.Base.html#2844" class="Bound">x</a> <a id="2901" href="Cat.Displayed.Base.html#2846" class="Bound">y</a> <a id="2903" class="Symbol">→</a> <a id="2905" href="1Lab.Type.html#394" class="Primitive">Type</a> <a id="2910" href="Cat.Displayed.Base.html#741" class="Bound">ℓ′</a>
+  <a data-type="(r : Displayed B₁ o′ ℓ′) →
+Hom[ r ] f x y → f ≡ g → Hom[ r ] g x y → Type ℓ′" id="2915" href="Cat.Displayed.Base.html#2828" class="Function Operator">_≡[_]_</a> <a id="2922" class="Symbol">{</a><a id="2923" href="Cat.Displayed.Base.html#2923" class="Bound">a</a><a id="2924" class="Symbol">}</a> <a id="2926" class="Symbol">{</a><a id="2927" href="Cat.Displayed.Base.html#2927" class="Bound">b</a><a id="2928" class="Symbol">}</a> <a id="2930" class="Symbol">{</a><a id="2931" href="Cat.Displayed.Base.html#2931" class="Bound">x</a><a id="2932" class="Symbol">}</a> <a id="2934" class="Symbol">{</a><a id="2935" href="Cat.Displayed.Base.html#2935" class="Bound">y</a><a id="2936" class="Symbol">}</a> <a id="2938" href="Cat.Displayed.Base.html#2938" class="Bound">f′</a> <a id="2941" href="Cat.Displayed.Base.html#2941" class="Bound">p</a> <a id="2943" href="Cat.Displayed.Base.html#2943" class="Bound">g′</a> <a id="2946" class="Symbol">=</a> <a data-type="(A : I → Type ℓ) → A i0 → A i1 → Type ℓ" id="2948" href="Agda.Builtin.Cubical.Path.html#190" class="Postulate">PathP</a> <a id="2954" class="Symbol">(λ</a> <a id="2957" href="Cat.Displayed.Base.html#2957" class="Bound">i</a> <a id="2959" class="Symbol">→</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2961" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[</a> <a id="2966" href="Cat.Displayed.Base.html#2941" class="Bound">p</a> <a id="2968" href="Cat.Displayed.Base.html#2957" class="Bound">i</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="2970" href="Cat.Displayed.Base.html#1654" class="Field Operator">]</a> <a id="2972" href="Cat.Displayed.Base.html#2931" class="Bound">x</a> <a id="2974" href="Cat.Displayed.Base.html#2935" class="Bound">y</a><a id="2975" class="Symbol">)</a> <a id="2977" href="Cat.Displayed.Base.html#2938" class="Bound">f′</a> <a id="2980" href="Cat.Displayed.Base.html#2943" class="Bound">g′</a>
+
+  <a id="2986" class="Keyword">infix</a> <a id="2992" class="Number">30</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+Hom[ r ] f x y → f ≡ g → Hom[ r ] g x y → Type ℓ′" id="2995" href="Cat.Displayed.Base.html#2828" class="Function Operator">_≡[_]_</a>
+</pre>
+<p>Finally, the laws. These are mostly what one would expect, just done over the equalities in the base.</p>
+<pre class="Agda">  <a id="3120" class="Keyword">field</a>
+    <a id="Displayed.idr′"></a><a data-type="(r : Displayed B₁ o′ ℓ′) (f′ : r .Hom[_] f x y) →
+PathP (λ i → r .Hom[_] (B₁ .idr f i) x y) (r ._∘′_ f′ (r .id′)) f′" id="3130" href="Cat.Displayed.Base.html#3130" class="Field">idr′</a> <a id="3135" class="Symbol">:</a> <a id="3137" class="Symbol">∀</a> <a id="3139" class="Symbol">{</a><a id="3140" href="Cat.Displayed.Base.html#3140" class="Bound">a</a> <a id="3142" href="Cat.Displayed.Base.html#3142" class="Bound">b</a> <a id="3144" href="Cat.Displayed.Base.html#3144" class="Bound">x</a> <a id="3146" href="Cat.Displayed.Base.html#3146" class="Bound">y</a><a id="3147" class="Symbol">}</a> <a id="3149" class="Symbol">{</a><a id="3150" href="Cat.Displayed.Base.html#3150" class="Bound">f</a> <a id="3152" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="3154" href="Cat.Base.html#1329" class="Function">Hom</a> <a id="3158" href="Cat.Displayed.Base.html#3140" class="Bound">a</a> <a id="3160" href="Cat.Displayed.Base.html#3142" class="Bound">b</a><a id="3161" class="Symbol">}</a> <a id="3163" class="Symbol">→</a> <a id="3165" class="Symbol">(</a><a id="3166" href="Cat.Displayed.Base.html#3166" class="Bound">f′</a> <a id="3169" class="Symbol">:</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="3171" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[</a> <a id="3176" href="Cat.Displayed.Base.html#3150" class="Bound">f</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="3178" href="Cat.Displayed.Base.html#1654" class="Field Operator">]</a> <a id="3180" href="Cat.Displayed.Base.html#3144" class="Bound">x</a> <a id="3182" href="Cat.Displayed.Base.html#3146" class="Bound">y</a><a id="3183" class="Symbol">)</a> <a id="3185" class="Symbol">→</a> <a id="3187" class="Symbol">(</a><a id="3188" href="Cat.Displayed.Base.html#3166" class="Bound">f′</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+r .Hom[_] f y z → r .Hom[_] g x y → r .Hom[_] (B₁ ._∘_ f g) x z" id="3191" href="Cat.Displayed.Base.html#2256" class="Field Operator">∘′</a> <a data-type="(r : Displayed B₁ o′ ℓ′) → r .Hom[_] (B₁ .id) x x" id="3194" href="Cat.Displayed.Base.html#2210" class="Field">id′</a><a id="3197" class="Symbol">)</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+Hom[ r ] f x y → f ≡ g → Hom[ r ] g x y → Type ℓ′" id="3199" href="Cat.Displayed.Base.html#2828" class="Function Operator">≡[</a> <a data-type="(r : Precategory o h) (f : r .Hom x y) → r ._∘_ f (r .id) ≡ f" id="3202" href="Cat.Base.html#3331" class="Function">idr</a> <a id="3206" href="Cat.Displayed.Base.html#3150" class="Bound">f</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+Hom[ r ] f x y → f ≡ g → Hom[ r ] g x y → Type ℓ′" id="3208" href="Cat.Displayed.Base.html#2828" class="Function Operator">]</a> <a id="3210" href="Cat.Displayed.Base.html#3166" class="Bound">f′</a>
+    <a id="Displayed.idl′"></a><a data-type="(r : Displayed B₁ o′ ℓ′) (f′ : r .Hom[_] f x y) →
+PathP (λ i → r .Hom[_] (B₁ .idl f i) x y) (r ._∘′_ (r .id′) f′) f′" id="3217" href="Cat.Displayed.Base.html#3217" class="Field">idl′</a> <a id="3222" class="Symbol">:</a> <a id="3224" class="Symbol">∀</a> <a id="3226" class="Symbol">{</a><a id="3227" href="Cat.Displayed.Base.html#3227" class="Bound">a</a> <a id="3229" href="Cat.Displayed.Base.html#3229" class="Bound">b</a> <a id="3231" href="Cat.Displayed.Base.html#3231" class="Bound">x</a> <a id="3233" href="Cat.Displayed.Base.html#3233" class="Bound">y</a><a id="3234" class="Symbol">}</a> <a id="3236" class="Symbol">{</a><a id="3237" href="Cat.Displayed.Base.html#3237" class="Bound">f</a> <a id="3239" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="3241" href="Cat.Base.html#1329" class="Function">Hom</a> <a id="3245" href="Cat.Displayed.Base.html#3227" class="Bound">a</a> <a id="3247" href="Cat.Displayed.Base.html#3229" class="Bound">b</a><a id="3248" class="Symbol">}</a> <a id="3250" class="Symbol">→</a> <a id="3252" class="Symbol">(</a><a id="3253" href="Cat.Displayed.Base.html#3253" class="Bound">f′</a> <a id="3256" class="Symbol">:</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="3258" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[</a> <a id="3263" href="Cat.Displayed.Base.html#3237" class="Bound">f</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="3265" href="Cat.Displayed.Base.html#1654" class="Field Operator">]</a> <a id="3267" href="Cat.Displayed.Base.html#3231" class="Bound">x</a> <a id="3269" href="Cat.Displayed.Base.html#3233" class="Bound">y</a><a id="3270" class="Symbol">)</a> <a id="3272" class="Symbol">→</a> <a id="3274" class="Symbol">(</a><a data-type="(r : Displayed B₁ o′ ℓ′) → r .Hom[_] (B₁ .id) x x" id="3275" href="Cat.Displayed.Base.html#2210" class="Field">id′</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+r .Hom[_] f y z → r .Hom[_] g x y → r .Hom[_] (B₁ ._∘_ f g) x z" id="3279" href="Cat.Displayed.Base.html#2256" class="Field Operator">∘′</a> <a id="3282" href="Cat.Displayed.Base.html#3253" class="Bound">f′</a><a id="3284" class="Symbol">)</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+Hom[ r ] f x y → f ≡ g → Hom[ r ] g x y → Type ℓ′" id="3286" href="Cat.Displayed.Base.html#2828" class="Function Operator">≡[</a> <a data-type="(r : Precategory o h) (f : r .Hom x y) → r ._∘_ (r .id) f ≡ f" id="3289" href="Cat.Base.html#3376" class="Function">idl</a> <a id="3293" href="Cat.Displayed.Base.html#3237" class="Bound">f</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+Hom[ r ] f x y → f ≡ g → Hom[ r ] g x y → Type ℓ′" id="3295" href="Cat.Displayed.Base.html#2828" class="Function Operator">]</a> <a id="3297" href="Cat.Displayed.Base.html#3253" class="Bound">f′</a>
+    <a id="Displayed.assoc′"></a><a data-type="(r : Displayed B₁ o′ ℓ′) (f′ : r .Hom[_] f y z)
+(g′ : r .Hom[_] g x y) (h′ : r .Hom[_] h w x) →
+PathP (λ i → r .Hom[_] (B₁ .assoc f g h i) w z)
+(r ._∘′_ f′ (r ._∘′_ g′ h′)) (r ._∘′_ (r ._∘′_ f′ g′) h′)" id="3304" href="Cat.Displayed.Base.html#3304" class="Field">assoc′</a> <a id="3311" class="Symbol">:</a> <a id="3313" class="Symbol">∀</a> <a id="3315" class="Symbol">{</a><a id="3316" href="Cat.Displayed.Base.html#3316" class="Bound">a</a> <a id="3318" href="Cat.Displayed.Base.html#3318" class="Bound">b</a> <a id="3320" href="Cat.Displayed.Base.html#3320" class="Bound">c</a> <a id="3322" href="Cat.Displayed.Base.html#3322" class="Bound">d</a> <a id="3324" href="Cat.Displayed.Base.html#3324" class="Bound">w</a> <a id="3326" href="Cat.Displayed.Base.html#3326" class="Bound">x</a> <a id="3328" href="Cat.Displayed.Base.html#3328" class="Bound">y</a> <a id="3330" href="Cat.Displayed.Base.html#3330" class="Bound">z</a><a id="3331" class="Symbol">}</a> <a id="3333" class="Symbol">{</a><a id="3334" href="Cat.Displayed.Base.html#3334" class="Bound">f</a> <a id="3336" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="3338" href="Cat.Base.html#1329" class="Function">Hom</a> <a id="3342" href="Cat.Displayed.Base.html#3320" class="Bound">c</a> <a id="3344" href="Cat.Displayed.Base.html#3322" class="Bound">d</a><a id="3345" class="Symbol">}</a> <a id="3347" class="Symbol">{</a><a id="3348" href="Cat.Displayed.Base.html#3348" class="Bound">g</a> <a id="3350" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="3352" href="Cat.Base.html#1329" class="Function">Hom</a> <a id="3356" href="Cat.Displayed.Base.html#3318" class="Bound">b</a> <a id="3358" href="Cat.Displayed.Base.html#3320" class="Bound">c</a><a id="3359" class="Symbol">}</a> <a id="3361" class="Symbol">{</a><a id="3362" href="Cat.Displayed.Base.html#3362" class="Bound">h</a> <a id="3364" class="Symbol">:</a> <a data-type="(r : Precategory o h) → r .Ob → r .Ob → Type h" id="3366" href="Cat.Base.html#1329" class="Function">Hom</a> <a id="3370" href="Cat.Displayed.Base.html#3316" class="Bound">a</a> <a id="3372" href="Cat.Displayed.Base.html#3318" class="Bound">b</a><a id="3373" class="Symbol">}</a>
+             <a id="3388" class="Symbol">→</a> <a id="3390" class="Symbol">(</a><a id="3391" href="Cat.Displayed.Base.html#3391" class="Bound">f′</a> <a id="3394" class="Symbol">:</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="3396" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[</a> <a id="3401" href="Cat.Displayed.Base.html#3334" class="Bound">f</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="3403" href="Cat.Displayed.Base.html#1654" class="Field Operator">]</a> <a id="3405" href="Cat.Displayed.Base.html#3328" class="Bound">y</a> <a id="3407" href="Cat.Displayed.Base.html#3330" class="Bound">z</a><a id="3408" class="Symbol">)</a> <a id="3410" class="Symbol">→</a> <a id="3412" class="Symbol">(</a><a id="3413" href="Cat.Displayed.Base.html#3413" class="Bound">g′</a> <a id="3416" class="Symbol">:</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="3418" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[</a> <a id="3423" href="Cat.Displayed.Base.html#3348" class="Bound">g</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="3425" href="Cat.Displayed.Base.html#1654" class="Field Operator">]</a> <a id="3427" href="Cat.Displayed.Base.html#3326" class="Bound">x</a> <a id="3429" href="Cat.Displayed.Base.html#3328" class="Bound">y</a><a id="3430" class="Symbol">)</a> <a id="3432" class="Symbol">→</a> <a id="3434" class="Symbol">(</a><a id="3435" href="Cat.Displayed.Base.html#3435" class="Bound">h′</a> <a id="3438" class="Symbol">:</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="3440" href="Cat.Displayed.Base.html#1654" class="Field Operator">Hom[</a> <a id="3445" href="Cat.Displayed.Base.html#3362" class="Bound">h</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+B₁ .Hom x y → r .Ob[_] x → r .Ob[_] y → Type ℓ′" id="3447" href="Cat.Displayed.Base.html#1654" class="Field Operator">]</a> <a id="3449" href="Cat.Displayed.Base.html#3324" class="Bound">w</a> <a id="3451" href="Cat.Displayed.Base.html#3326" class="Bound">x</a><a id="3452" class="Symbol">)</a>
+             <a id="3467" class="Symbol">→</a> <a id="3469" href="Cat.Displayed.Base.html#3391" class="Bound">f′</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+r .Hom[_] f y z → r .Hom[_] g x y → r .Hom[_] (B₁ ._∘_ f g) x z" id="3472" href="Cat.Displayed.Base.html#2256" class="Field Operator">∘′</a> <a id="3475" class="Symbol">(</a><a id="3476" href="Cat.Displayed.Base.html#3413" class="Bound">g′</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+r .Hom[_] f y z → r .Hom[_] g x y → r .Hom[_] (B₁ ._∘_ f g) x z" id="3479" href="Cat.Displayed.Base.html#2256" class="Field Operator">∘′</a> <a id="3482" href="Cat.Displayed.Base.html#3435" class="Bound">h′</a><a id="3484" class="Symbol">)</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+Hom[ r ] f x y → f ≡ g → Hom[ r ] g x y → Type ℓ′" id="3486" href="Cat.Displayed.Base.html#2828" class="Function Operator">≡[</a> <a data-type="(r : Precategory o h) (f : r .Hom y z) (g : r .Hom x y)
+(h : r .Hom w x) →
+r ._∘_ f (r ._∘_ g h) ≡ r ._∘_ (r ._∘_ f g) h" id="3489" href="Cat.Base.html#3755" class="Function">assoc</a> <a id="3495" href="Cat.Displayed.Base.html#3334" class="Bound">f</a> <a id="3497" href="Cat.Displayed.Base.html#3348" class="Bound">g</a> <a id="3499" href="Cat.Displayed.Base.html#3362" class="Bound">h</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+Hom[ r ] f x y → f ≡ g → Hom[ r ] g x y → Type ℓ′" id="3501" href="Cat.Displayed.Base.html#2828" class="Function Operator">]</a> <a id="3503" class="Symbol">((</a><a id="3505" href="Cat.Displayed.Base.html#3391" class="Bound">f′</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+r .Hom[_] f y z → r .Hom[_] g x y → r .Hom[_] (B₁ ._∘_ f g) x z" id="3508" href="Cat.Displayed.Base.html#2256" class="Field Operator">∘′</a> <a id="3511" href="Cat.Displayed.Base.html#3413" class="Bound">g′</a><a id="3513" class="Symbol">)</a> <a data-type="(r : Displayed B₁ o′ ℓ′) →
+r .Hom[_] f y z → r .Hom[_] g x y → r .Hom[_] (B₁ ._∘_ f g) x z" id="3515" href="Cat.Displayed.Base.html#2256" class="Field Operator">∘′</a> <a id="3518" href="Cat.Displayed.Base.html#3435" class="Bound">h′</a><a id="3520" class="Symbol">)</a>
+</pre>
+  </article>
+</div>
+
+</main>
+</body>
+<style>.equations { display: none !important; }</style></html>
