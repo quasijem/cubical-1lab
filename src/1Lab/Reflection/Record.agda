@@ -155,6 +155,12 @@ define-record-iso nm rec = do
   make-record-iso-sigma false (returnTC nm) rec
   returnTC tt
 
+postulate
+    declareData      : Name → Nat → Term → TC ⊤
+    defineData       : Name → List (Σ Name (λ _ → Term)) → TC ⊤
+{-# BUILTIN AGDATCMDECLAREDATA                declareData                #-}
+{-# BUILTIN AGDATCMDEFINEDATA                 defineData                 #-}
+
 private
   module _ {ℓ} (A : Type ℓ) where
     record T : Type ℓ where
