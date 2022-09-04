@@ -315,6 +315,9 @@ postulate
   -- Get a list of all possible instance candidates for the given meta
   -- variable (it does not have to be an instance meta).
   getInstances : Meta → TC (List Term)
+
+  declareData      : Name → Nat → Term → TC ⊤
+  defineData       : Name → List (Σ Name (λ _ → Term)) → TC ⊤
 ```
 
 <details>
@@ -403,6 +406,8 @@ postulate
 {-# BUILTIN AGDATCMNOCONSTRAINTS              noConstraints              #-}
 {-# BUILTIN AGDATCMRUNSPECULATIVE             runSpeculative             #-}
 {-# BUILTIN AGDATCMGETINSTANCES               getInstances               #-}
+{-# BUILTIN AGDATCMDECLAREDATA                declareData                #-}
+{-# BUILTIN AGDATCMDEFINEDATA                 defineData                 #-}
 
 instance
   Do-TC : Do-syntax TC
@@ -542,7 +547,6 @@ _ term=? _ = false
 
 debug! : ∀ {ℓ} {A : Type ℓ} → Term → TC A
 debug! tm = typeError (strErr "[DEBUG]: " ∷ termErr tm ∷ [])
-
 
 get-boundary : Term → TC (Maybe (Term × Term))
 get-boundary tm@(def (quote _≡_) (_ h∷ T h∷ x v∷ y v∷ [])) = do

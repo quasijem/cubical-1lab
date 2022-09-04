@@ -4,13 +4,15 @@ open import Algebra.Group
 open import Algebra.Ring
 
 open import Cat.Functor.FullSubcategory
-open import Cat.Functor.Adjoint.Hom
 open import Cat.Displayed.Cartesian
+open import Cat.Functor.Adjoint.Hom
 open import Cat.Displayed.Fibre
 open import Cat.Displayed.Total
 open import Cat.Functor.Adjoint
 open import Cat.Displayed.Base
 open import Cat.Prelude
+
+import Cat.Reasoning
 
 module Algebra.Ring.Module where
 ```
@@ -45,7 +47,7 @@ record Module {ℓ} (R : Ring ℓ) : Type (lsuc ℓ) where
 
   field
     _⋆_     : R .fst → G.₀ → G.₀
-    ⋆-id    : ∀ x → R.1R ⋆ x ≡ x
+    ⋆-id    : ∀ x → R.1r ⋆ x ≡ x
     ⋆-add-r : ∀ r x y → r ⋆ (x G.+ y) ≡ (r ⋆ x) G.+ (r ⋆ y)
     ⋆-add-l : ∀ r s x → (r R.+ s) ⋆ x ≡ (r ⋆ x) G.+ (s ⋆ x)
     ⋆-assoc : ∀ r s x → r ⋆ (s ⋆ x) ≡ (r R.* s) ⋆ x
@@ -156,6 +158,8 @@ $R$-modules_.
 ```agda
 R-Mod : ∀ {ℓ} (R : Ring ℓ) → Precategory (lsuc ℓ) ℓ
 R-Mod R = Fibre (Mods _) R
+
+module R-Mod {ℓ} {R : Ring ℓ} = Cat.Reasoning (R-Mod R)
 ```
 
 ## As a fibration
@@ -188,9 +192,9 @@ simply take $X = f^*(N)$.
   \\
   R && S
   \arrow["f"', from=3-1, to=3-3]
-  \arrow[Bar-{Triangle[open]}, from=1-3, to=3-3]
+  \arrow[lies over, from=1-3, to=3-3]
   \arrow[from=1-1, to=1-3]
-  \arrow[Bar-{Triangle[open]}, from=1-1, to=3-1]
+  \arrow[lies over, from=1-1, to=3-1]
   \arrow[dr, phantom, "\lrcorner", very near start, from=1-1, to=3-3]
 \end{tikzcd}\]
 ~~~
@@ -226,7 +230,7 @@ representable-module R = mod where
   open Module hiding (module R ; module G)
   module R = Ring-on (R .snd)
   mod : Module R
-  mod .G = R.additive-group
+  mod .G = restrict R.additive-group λ _ _ → R.+-commutes
   mod ._⋆_ = R._*_
   mod .⋆-id x = R.*-idl
   mod .⋆-add-r r x y = R.*-distribl

@@ -57,6 +57,14 @@ Ab-is-category = Restrict-is-category is-abelian-group
 Ab→Grp : ∀ {ℓ} → Functor (Ab ℓ) (Groups ℓ)
 Ab→Grp = Forget-full-subcat
 
+to-abelian-group
+  : ∀ {ℓ} {G : Type ℓ}
+  → (g : make-group G)
+  → (∀ x y → g .make-group.mul x y ≡ g .make-group.mul y x)
+  → AbGroup ℓ
+to-abelian-group g x .object = _ , to-group-on g
+to-abelian-group g x .witness = x
+
 module AbGrp {ℓ} (G : AbGroup ℓ) where
   ₀ : Type ℓ
   ₀ = G .object .fst
@@ -392,7 +400,7 @@ $\ht{Ab}$ is a univalent category, an _identification_ of $\hom$-groups.
 
 ```agda
   Tensor⊣Hom : Hom-group (A ⊗ B) C ≡ Hom-group A (Hom-group B C)
-  Tensor⊣Hom = iso→path (Ab _) Ab-is-category $
+  Tensor⊣Hom = Ab-is-category .to-path $
     Ab.make-iso (to-ab-hom , to′) (from-ab-hom , from′)
       (Forget-is-faithful $ funext (equiv→counit (tensor⊣hom .snd)))
       (Forget-is-faithful $ funext (equiv→unit (tensor⊣hom .snd)))

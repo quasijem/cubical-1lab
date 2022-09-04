@@ -1,4 +1,10 @@
+---
+description: |
+  We define discrete fibrations,
+  and explore their relations to presheaves.
+---
 ```agda
+open import Cat.Displayed.Instances.Elements
 open import Cat.Displayed.Cartesian
 open import Cat.Displayed.Fibre
 open import Cat.Displayed.Base
@@ -38,7 +44,7 @@ displayed objects is a set, and such that, for each right corner
 \[\begin{tikzcd}
   & {y'} \\
   x & {y\text{,}}
-  \arrow[Bar-{Triangle[open]}, from=1-2, to=2-2]
+  \arrow[lies over, from=1-2, to=2-2]
   \arrow["f"', from=2-1, to=2-2]
 \end{tikzcd}\]
 ~~~
@@ -47,12 +53,14 @@ there is a contractible space of objects $x'$ over $x$ equipped with
 maps $x' \to_f y'$.
 
 <!--
+
 ```agda
 module _ {o ℓ o′ ℓ′} {B : Precategory o ℓ} (E : Displayed B o′ ℓ′) where
   private
     module B = Cat.Reasoning B
     module E = Displayed E
 ```
+
 -->
 
 ```agda
@@ -90,10 +98,10 @@ So suppose we have an open diagram
   & a && {b,}
   \arrow["{f'}"', from=2-2, to=2-4]
   \arrow["f", from=4-2, to=4-4]
-  \arrow[Bar-{Triangle[open]}, from=2-2, to=4-2]
-  \arrow[Bar-{Triangle[open]}, from=2-4, to=4-4]
+  \arrow[lies over, from=2-2, to=4-2]
+  \arrow[lies over, from=2-4, to=4-4]
   \arrow["m"', from=3-1, to=4-2]
-  \arrow[Bar-{Triangle[open]}, from=1-1, to=3-1]
+  \arrow[lies over, from=1-1, to=3-1]
   \arrow["{h'}", curve={height=-12pt}, from=1-1, to=2-4]
 \end{tikzcd}\]
 ~~~
@@ -135,9 +143,9 @@ into a diagram like
   x && x && {x\text{,}}
   \arrow["f", from=1-1, to=1-3]
   \arrow["g"', from=1-5, to=1-3]
-  \arrow[Bar-{Triangle[open]}, from=1-1, to=3-1]
-  \arrow[Bar-{Triangle[open]}, from=1-3, to=3-3]
-  \arrow[Bar-{Triangle[open]}, from=1-5, to=3-5]
+  \arrow[lies over, from=1-1, to=3-1]
+  \arrow[lies over, from=1-3, to=3-3]
+  \arrow[lies over, from=1-5, to=3-5]
   \arrow["{\mathrm{id}}"{description}, from=3-1, to=3-3]
   \arrow["{\mathrm{id}}"{description}, from=3-5, to=3-3]
   \arrow["\lrcorner"{anchor=center, pos=0.125}, draw=none, from=1-1, to=3-3]
@@ -158,3 +166,72 @@ are unique, we have $f = g$.
     t .Hom-is-prop A B f g = Σ-inj-set (fibre-set x) $
       is-contr→is-prop (lifts B.id B) (A , f) (A , g)
 ```
+
+## Discrete Fibrations are Presheaves
+
+As noted earlier, a discrete fibration over $\ca{B}$ encodes the same
+data as a presheaf on $\ca{B}$. First, let us show that we can construct
+a presheaf from a discrete fibration.
+
+<!--
+```agda
+module _ {o ℓ} (B : Precategory o ℓ)  where
+  private
+    module B = Precategory B
+```
+-->
+
+```agda
+  discrete→presheaf : ∀ {o′ ℓ′} (E : Displayed B o′ ℓ′) → Discrete-fibration E
+                      → Functor (B ^op) (Sets o′)
+  discrete→presheaf {o′ = o′} E disc = psh where
+    module E = Displayed E
+    open Discrete-fibration disc
+```
+
+For each object in $X : \ca{B}$, we take the set of objects $E$ that
+lie over $X$. The functorial action of `f : Hom X Y` is then constructed
+by taking the domain of the lift of `f`. Functoriality follows by
+uniqueness of the lifts.
+
+```agda
+    psh : Functor (B ^op) (Sets o′)
+    psh .Functor.F₀ X = el E.Ob[ X ] (fibre-set X)
+    psh .Functor.F₁ f X′ = lifts f X′ .centre .fst
+    psh .Functor.F-id = funext λ X′ → ap fst (lifts B.id X′ .paths (X′ , E.id′))
+    psh .Functor.F-∘ {X} {Y} {Z} f g = funext λ X′ →
+      let Y′ : E.Ob[ Y ]
+          Y′ = lifts g X′ .centre .fst
+
+          g′ : E.Hom[ g ] Y′ X′
+          g′ = lifts g X′ .centre .snd
+
+          Z′ : E.Ob[ Z ]
+          Z′ = lifts f Y′ .centre .fst 
+
+          f′ : E.Hom[ f ] Z′ Y′
+          f′ = lifts f Y′ .centre .snd
+      in ap fst (lifts (g B.∘ f) X′ .paths (Z′ , (g′ E.∘′ f′ )))
+```
+
+To construct a discrete fibration from a presheaf $P$, we take the
+[(displayed) category of elements] of $P$. This is a natural choice,
+as it encodes the same data as $P$, just rendered down into a soup
+of points and bits of functions. Discreteness follows immediately
+from the contractibilty of singletons.
+
+[(displayed) category of elements]: Cat.Displayed.Instances.Elements.html
+
+```agda
+  presheaf→discrete : ∀ {κ} → Functor (B ^op) (Sets κ)
+                      → Σ[ E ∈ Displayed B κ κ ] Discrete-fibration E
+  presheaf→discrete {κ = κ} P = ∫ B P , discrete where
+    module P = Functor P
+    
+    discrete : Discrete-fibration (∫ B P)
+    discrete .Discrete-fibration.fibre-set X =
+      P.₀ X .is-tr
+    discrete .Discrete-fibration.lifts f P[Y] =
+      contr (P.₁ f P[Y] , refl) Singleton-is-contr
+```
+

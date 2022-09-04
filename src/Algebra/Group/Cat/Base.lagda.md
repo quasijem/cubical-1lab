@@ -88,10 +88,10 @@ same thing as homomorphic equivalences of the groups' underlying types.
 ```agda
 Group-equiv≃Groups-iso
   : ∀ {A B : Group ℓ} → (Σ _ (Group≃ A B)) ≃ (A Groups.≅ B)
-Group-equiv≃Groups-iso {A = A} {B = B} .fst ((f , eqv) , grh) =
-  Groups.make-iso (f , grh) (equiv→inverse eqv , inv-group-hom)
-    (Forget-is-faithful (funext (equiv→counit eqv)))
-    (Forget-is-faithful (funext (equiv→unit eqv)))
+Group-equiv≃Groups-iso {A = A} {B = B} .fst (eqv , grh) =
+  Groups.make-iso (f , grh) (eqv.from , inv-group-hom)
+    (Forget-is-faithful (funext eqv.ε))
+    (Forget-is-faithful (funext eqv.η))
 ```
 
 To build an isomorphism given a homomorphic equivalence, we use
@@ -107,15 +107,16 @@ equivalence is also homomorphic:
     module B = Group-on (B .snd)
     open Group-hom
 
-    g : B .fst → A .fst
-    g = equiv→inverse eqv
+    module eqv = Equiv eqv
+    g = eqv.from
+    f = eqv.to
 
     abstract
       inv-group-hom : Group-hom B A g
       inv-group-hom .pres-⋆ x y =
-        g (x B.⋆ y)             ≡˘⟨ ap₂ (λ x y → g (x B.⋆ y)) (equiv→counit eqv _) (equiv→counit eqv _) ⟩
+        g (x B.⋆ y)             ≡˘⟨ ap₂ (λ x y → g (x B.⋆ y)) (eqv.ε _) (eqv.ε _) ⟩
         g (f (g x) B.⋆ f (g y)) ≡˘⟨ ap g (grh .pres-⋆ _ _) ⟩
-        g (f (g x A.⋆ g y))     ≡⟨ equiv→unit eqv _ ⟩
+        g (f (g x A.⋆ g y))     ≡⟨ eqv.η _ ⟩
         g x A.⋆ g y             ∎
 ```
 
@@ -147,7 +148,10 @@ groups is indeed univalent.
 
 ```agda
 Groups-is-category : is-category (Groups ℓ)
-Groups-is-category = iso≃path→is-category _ eqv where
+Groups-is-category = equiv-path→identity-system (eqv e⁻¹)
+  λ a → Groups.≅-pathp refl refl
+    (Σ-prop-path (λ _ → Group-hom-is-prop) (funext transport-refl))
+  where
   open is-iso
 
   eqv : ∀ {A B} → (A ≡ B) ≃ (A Groups.≅ B)

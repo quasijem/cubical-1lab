@@ -18,7 +18,7 @@ numbers]. Since they're mostly simple inductive arguments written in
 [equational reasoning] style, they are very lightly commented:
 
 [the natural numbers]: Data.Nat.Base.html
-[equational reasoning]: 1Lab.Path.html#equational-reasoning
+[equational reasoning]: 1Lab.Path.html#syntax-sugar
 
 ## Addition
 
@@ -210,6 +210,14 @@ arithmetic operators:
 +-preserves-≤ : (x y x' y' : Nat) → x ≤ y → x' ≤ y' → x + x' ≤ y + y'
 +-preserves-≤ x y x' y' prf prf' = ≤-trans (x + x') (y + x') (y + y')
   (+-preserves-≤r x y x' prf) (+-preserves-≤l x' y' y prf')
+
++-≤l : (x y : Nat) → x ≤ x + y
++-≤l zero y = 0≤x y
++-≤l (suc x) y = +-≤l x y
+
++-≤r : (x y : Nat) → y ≤ x + y
++-≤r x zero = 0≤x (x + 0)
++-≤r x (suc y) = subst (λ p → suc y ≤ p) (sym (+-sucr x y)) (+-≤r x y)
 
 *-preserves-≤l : (x y z : Nat) → x ≤ y → z * x ≤ z * y
 *-preserves-≤l x y zero prf = tt
